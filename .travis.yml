@@ -15,7 +15,8 @@ before_script:
     - cd build
     - cmake -Dtest=ON ..
 
-script: make
+script:
+    - make
 
 notifications:
     email: false
