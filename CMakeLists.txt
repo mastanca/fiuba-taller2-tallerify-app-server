@@ -47,9 +47,9 @@ if(test)
 
     enable_testing()
 
-    add_executable(testTallerify src/api/tests/tests.cpp src/api/tests/TestExample.cpp)
-    target_link_libraries(testTallerify gtest_main)
-    add_test(NAME helloWorldTest COMMAND testTallerify)
+    add_executable(test_tallerify src/api/tests/tests.cpp src/api/tests/TestExample.cpp)
+    target_link_libraries(test_tallerify gtest_main)
+    add_test(NAME helloWorldTest COMMAND test_tallerify)
 endif()
 
 
