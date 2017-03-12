@@ -5,6 +5,7 @@ RUN apt-get install -y lcov
 RUN apt-get install -y git
 RUN apt-get install -y build-essential checkinstall
 RUN apt-get install -y wget
+RUN apt-get install -y rubygems ruby-dev
 
 RUN mkdir $HOME/usr
 RUN export PATH="$HOME/usr/bin:$PATH"
