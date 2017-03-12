@@ -11,22 +11,28 @@ set(SOURCE_FILES
 
 add_executable(fiuba_taller2_tallerify_app_server ${SOURCE_FILES})
 
-if(test)
+if (test)
+    SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
+    SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
+    SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage")
+
+    include(cmake/CodeCoverage.cmake)
+
     ############################ GTEST ##################################
     # Download and unpack googletest at configure time
     configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
     execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
             RESULT_VARIABLE result
-            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
-    if(result)
+            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download)
+    if (result)
         message(FATAL_ERROR "CMake step for googletest failed: ${result}")
-    endif()
+    endif ()
     execute_process(COMMAND ${CMAKE_COMMAND} --build .
             RESULT_VARIABLE result
-            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
-    if(result)
+            WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download)
+    if (result)
         message(FATAL_ERROR "Build step for googletest failed: ${result}")
-    endif()
+    endif ()
 
     # Prevent overriding the parent project's compiler/linker
     # settings on Windows
@@ -42,7 +48,7 @@ if(test)
     # later. Otherwise we have to add them here ourselves.
     if (CMAKE_VERSION VERSION_LESS 2.8.11)
         include_directories("${gtest_SOURCE_DIR}/include")
-    endif()
+    endif ()
     #####################################################################
 
     enable_testing()
@@ -50,7 +56,10 @@ if(test)
     add_executable(test_tallerify src/api/tests/tests.cpp src/api/tests/TestExample.cpp)
     target_link_libraries(test_tallerify gtest_main)
     add_test(NAME helloWorldTest COMMAND test_tallerify)
-endif()
+
+    setup_target_for_coverage(test_tallerify_coverage test_tallerify coverage)
+
+endif ()
 
 
 
