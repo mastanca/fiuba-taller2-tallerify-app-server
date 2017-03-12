@@ -27,7 +27,7 @@ if (test)
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
     SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage")
 
-    include(cmake/CodeCoverage.cmake)
+    #include(cmake/CodeCoverage.cmake)
     enable_testing()
     set(PROJECT_TEST_NAME ${PROJECT_NAME_STR}_test)
     include_directories(${GTEST_INCLUDE_DIRS})
@@ -45,7 +45,7 @@ if (test)
     target_link_libraries(${PROJECT_TEST_NAME} ${CMAKE_THREAD_LIBS_INIT})
 
     add_test(test1 ${PROJECT_TEST_NAME})
-    setup_target_for_coverage(${PROJECT_NAME_STR}_coverage ${PROJECT_TEST_NAME} coverage)
+    #setup_target_for_coverage(${PROJECT_NAME_STR}_coverage ${PROJECT_TEST_NAME} coverage)
 else()
     set(SOURCE_FILES
             README.md src/api/main.cpp)
