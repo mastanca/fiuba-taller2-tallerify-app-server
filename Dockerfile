@@ -19,7 +19,7 @@ RUN lcov --directory . --zerocounter
 
 RUN mkdir build
 RUN cd build
-RUN cmake ..
+RUN $HOME/usr/cmake ..
 RUN make
 RUN make test
 
