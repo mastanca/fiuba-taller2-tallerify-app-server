@@ -1,3 +1,5 @@
+sudo: required
+
 language: cpp
 
 compiler:
@@ -16,7 +18,7 @@ before_script:
     - cmake -Dtest=ON ..
 
 script:
-    - make
+    - make test
 
 notifications:
     email: false
