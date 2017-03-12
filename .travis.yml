@@ -21,16 +21,13 @@ before_script:
 script:
   - mkdir build
   - cd build
-  - cmake -Dtest=ON ..
+  - cmake ..
   - make
+  - make test
 
 after_success:
-  - make test
-  - cd ${TRAVIS_BUILD_DIR}
-  - lcov --directory . --capture --output-file coverage.info
-  - lcov --remove coverage.info 'build/ext/*' '/usr/*' --output-file coverage.info
-  - lcov --list coverage.info
-  - coveralls-lcov --repo-token ${COVERALLS_TOKEN} coverage.info
+  - chmod +x ../coverage.sh
+  - ../coverage.sh
 
 notifications:
     email: false
