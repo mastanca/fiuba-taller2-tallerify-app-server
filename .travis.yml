@@ -2,32 +2,14 @@ sudo: required
 
 language: cpp
 
-compiler:
-  - gcc
+services:
+  - docker
 
 before_install:
-  - sudo apt-get install -y lcov
-  - mkdir $HOME/usr
-  - export PATH="$HOME/usr/bin:$PATH"
-  - wget https://cmake.org/files/v3.6/cmake-3.6.3-Linux-x86_64.sh --no-check-certificate
-  - chmod +x cmake-3.6.3-Linux-x86_64.sh
-  - ./cmake-3.6.3-Linux-x86_64.sh --prefix=$HOME/usr --exclude-subdir --skip-license
-  - gem install coveralls-lcov
-
-before_script:
-  - cd ${TRAVIS_BUILD_DIR}
-  - lcov --directory . --zerocounters
+  - sudo docker build -t fiuba-taller2-tallerify-app-server .
 
 script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make
-  - make test
-
-after_success:
-  - chmod +x ../coverage.sh
-  - ../coverage.sh
+  - sudo docker run -t -i fiuba-taller2-tallerify-app-server /bin/bash -c "./fiuba-taller2-tallerify-app-server/build/fiuba-taller2-tallerify-app-server_test"
 
 notifications:
     email: false
