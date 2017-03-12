@@ -2,6 +2,10 @@ FROM ubuntu:latest
 RUN apt-get update -y
 
 RUN apt-get install -y lcov
+RUN apt-get install -y git
+RUN apt-get install -y build-essential checkinstall
+RUN apt-get install -y wget
+
 RUN mkdir $HOME/usr
 RUN export PATH="$HOME/usr/bin:$PATH"
 RUN wget https://cmake.org/files/v3.6/cmake-3.6.3-Linux-x86_64.sh --no-check-certificate
