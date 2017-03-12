@@ -16,14 +16,10 @@ RUN apt-get install -y cmake
 RUN gem install coveralls-lcov
 
 RUN git clone https://github.com/mastanca/fiuba-taller2-tallerify-app-server.git
-RUN cd fiuba-taller2-tallerify-app-server/
 RUN lcov --directory . --zerocounter
 
-RUN mkdir build
-RUN cd build
-RUN pwd
-RUN ls -l
-RUN cmake ..
+RUN mkdir fiuba-taller2-tallerify-app-server/build
+RUN cd fiuba-taller2-tallerify-app-server/build && cmake ..
 RUN make
 RUN make test
 
