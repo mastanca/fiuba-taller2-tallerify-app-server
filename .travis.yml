@@ -6,6 +6,7 @@ compiler:
   - gcc
 
 before_install:
+  - sudo apt-get install -y lcov
   - mkdir $HOME/usr
   - export PATH="$HOME/usr/bin:$PATH"
   - wget https://cmake.org/files/v3.6/cmake-3.6.3-Linux-x86_64.sh --no-check-certificate
@@ -18,7 +19,6 @@ script:
   - cd build
   - cmake -Dtest=ON ..
   - make
-  - ctest -VV
 
 after_success:
     - make test
