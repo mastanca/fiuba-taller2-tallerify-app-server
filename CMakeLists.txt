@@ -23,7 +23,6 @@ SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
 SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
 SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage")
 
-#include(cmake/CodeCoverage.cmake)
 enable_testing()
 set(PROJECT_TEST_NAME ${PROJECT_NAME_STR}_test)
 include_directories(${GTEST_INCLUDE_DIRS})
@@ -42,6 +41,6 @@ target_link_libraries(${PROJECT_TEST_NAME} ${CMAKE_THREAD_LIBS_INIT})
 add_test(test1 ${PROJECT_TEST_NAME})
 
 set(SOURCE_FILES
-        README.md src/api/main.cpp)
+        src/api/main.cpp)
 
-add_executable(fiuba_taller2_tallerify_app_server ${SOURCE_FILES})
+add_executable(${PROJECT_NAME_STR} ${SOURCE_FILES})
