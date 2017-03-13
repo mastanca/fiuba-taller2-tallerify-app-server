@@ -9,7 +9,7 @@ before_install:
   - sudo docker build -t fiuba-taller2-tallerify-app-server .
 
 script:
-  - sudo docker run -t -i fiuba-taller2-tallerify-app-server /bin/bash -c "./fiuba-taller2-tallerify-app-server/build/fiuba-taller2-tallerify-app-server_test"
+  - sudo docker run -t -i fiuba-taller2-tallerify-app-server /bin/bash -c "./build/fiuba-taller2-tallerify-app-server_test"
 
 notifications:
     email: false
