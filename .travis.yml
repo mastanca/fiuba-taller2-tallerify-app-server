@@ -6,6 +6,7 @@ services:
   - docker
 
 before_install:
+  - ls -l
   - sudo docker build -t fiuba-taller2-tallerify-app-server .
 
 script:
