@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+ADD . fiuba-taller2-tallerify-app-server
 ENV COVERALLS_TOKEN=$COVERALLS_TOKEN
 RUN apt-get update -y
 
@@ -12,8 +13,6 @@ RUN gem install coveralls-lcov
 
 WORKDIR fiuba-taller2-tallerify-app-server
 RUN lcov --directory . --zerocounter
-RUN ls -l
-
 WORKDIR build
 RUN mkdir $HOME/usr && \
     export PATH="$HOME/usr/bin:$PATH" && \
