@@ -23,6 +23,6 @@ RUN mkdir $HOME/usr && \
 RUN make
 RUN make test
 
-RUN cd .. && \
-    chmod +x coverage.sh && \
-    sh coverage.sh
+#RUN cd .. && \
+#    chmod +x coverage.sh && \
+#    sh coverage.sh
