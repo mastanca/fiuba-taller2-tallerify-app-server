@@ -14,7 +14,7 @@ WORKDIR fiuba-taller2-tallerify-app-server
 RUN lcov --directory . --zerocounter
 
 WORKDIR build
-RUN pwd
+RUN ls -l
 RUN mkdir $HOME/usr && \
     export PATH="$HOME/usr/bin:$PATH" && \
     wget https://cmake.org/files/v3.6/cmake-3.6.3-Linux-x86_64.sh --no-check-certificate && \
