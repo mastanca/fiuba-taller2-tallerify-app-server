@@ -11,3 +11,7 @@ WORKDIR build
 RUN $HOME/usr/bin/cmake ..
 RUN make
 RUN make test
+
+RUN if [ "$TRAVIS_BUILD" = true ]; then cd .. && \
+    chmod +x coverage.sh && \
+    sh coverage.sh; fi
