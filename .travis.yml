@@ -5,12 +5,8 @@ language: cpp
 services:
   - docker
 
-before_install:
-  - sudo docker build -t fiuba-taller2-tallerify-app-server .
-
 script:
-  - sudo docker run -t -i fiuba-taller2-tallerify-app-server /bin/bash -c "./build/fiuba-taller2-tallerify-app-server_test"
+  - sudo docker build -t --build-arg coveralls_token=$COVERALLS_TOKEN --build-arg travis_build=true fiuba-taller2-tallerify-app-server .
 
 notifications:
     email: false
-
