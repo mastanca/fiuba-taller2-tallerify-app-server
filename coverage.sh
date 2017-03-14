@@ -20,6 +20,7 @@ find . -name "*.gcno" | while read line ; do
     touch $gcda && echo created empty $gcda;
   fi ;
 done
+
 make test
 cd ${TRAVIS_BUILD_DIR}
 lcov --directory . --capture --output-file coverage.info
