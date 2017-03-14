@@ -8,5 +8,8 @@ services:
 script:
   - sudo docker build --build-arg coveralls_token=$COVERALLS_TOKEN --build-arg travis_build=true -t fiuba-taller2-tallerify-app-server .
 
+after_success:
+  - cd ${TRAVIS_BUILD_DIR}
+  - chmod +x coverage.sh && ./coverage.sh
 notifications:
     email: false
