@@ -41,6 +41,6 @@ target_link_libraries(${PROJECT_TEST_NAME} ${CMAKE_THREAD_LIBS_INIT})
 add_test(test1 ${PROJECT_TEST_NAME})
 
 set(SOURCE_FILES
-        src/api/main.cpp)
+        src/api/main.cpp src/mongoose/mongoose.c)
 
 add_executable(${PROJECT_NAME_STR} ${SOURCE_FILES})
