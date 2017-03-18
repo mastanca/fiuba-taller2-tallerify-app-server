@@ -13,7 +13,6 @@ RUN make
 RUN make test
 
 RUN if [ "$TRAVIS_BUILD" = true ]; then cd .. && \
-    chmod +x coverage.sh && \
-    sh coverage.sh; fi
+    bash coverage.sh; fi
 
 CMD ["./fiuba_taller2_tallerify_app_server_test"]
