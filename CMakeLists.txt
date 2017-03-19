@@ -5,9 +5,9 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(Threads REQUIRED)
 
-if(CMAKE_COMPILER_IS_GNUCXX)
+if (CMAKE_COMPILER_IS_GNUCXX)
     add_definitions(-Wall -ansi -Wno-deprecated -pthread)
-endif()
+endif ()
 
 #-------------------
 # set common include folder for module
@@ -33,9 +33,9 @@ add_executable(${PROJECT_TEST_NAME} ${TEST_SRC_FILES})
 add_dependencies(${PROJECT_TEST_NAME} googletest)
 
 target_link_libraries(${PROJECT_TEST_NAME}
-    ${GTEST_LIBS_DIR}/libgtest.a
-    ${GTEST_LIBS_DIR}/libgtest_main.a
-    )
+        ${GTEST_LIBS_DIR}/libgtest.a
+        ${GTEST_LIBS_DIR}/libgtest_main.a
+        )
 
 target_link_libraries(${PROJECT_TEST_NAME} ${CMAKE_THREAD_LIBS_INIT})
 

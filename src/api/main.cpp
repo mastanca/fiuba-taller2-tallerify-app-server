@@ -5,6 +5,8 @@
 #include <mongocxx/client.hpp>
 #include <mongocxx/instance.hpp>
 
+#include "spdlog/spdlog.h"
+
 int main(int argc, char *argv[]) {
     std::cout << "Hello tallerify!" << std::endl;
 
@@ -22,4 +24,7 @@ int main(int argc, char *argv[]) {
     for (auto &&doc : cursor) {
         std::cout << bsoncxx::to_json(doc) << std::endl;
     }
+
+    auto console = spdlog::stdout_color_mt("console");
+    console->info("Welcome to spdlog!");
 }
