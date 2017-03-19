@@ -10,7 +10,7 @@ RUN lcov --directory . --zerocounter
 WORKDIR build
 RUN $HOME/usr/bin/cmake -DCOVERALLS=ON -DCMAKE_BUILD_TYPE=Debug ..
 RUN make
-RUN make test
+RUN make coveralls
 
 RUN if [ "$TRAVIS_BUILD" = true ]; then cd .. && \
     bash coverage.sh; fi
