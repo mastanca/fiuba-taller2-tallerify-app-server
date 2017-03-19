@@ -8,7 +8,7 @@ ENV TRAVIS_BUILD=$travis_build
 WORKDIR fiuba-taller2-tallerify-app-server
 RUN lcov --directory . --zerocounter
 WORKDIR build
-RUN $HOME/usr/bin/cmake ..
+RUN $HOME/usr/bin/cmake -DCOVERALLS=ON ..
 RUN make
 RUN make test
 
