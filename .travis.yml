@@ -6,7 +6,7 @@ services:
   - docker
 
 before_script:
-  - sudo docker build --build-arg COVERALLS_REPO_TOKEN=$COVERALLS_TOKEN --build-arg COVERALLS_SERVICE_NAME=travis-ci -t tallerify .
+  - sudo docker build --build-arg coveralls_token=$COVERALLS_TOKEN --build-arg travis_build=travis-ci -t tallerify .
 
 script:
   - sudo docker run -t -i tallerify
