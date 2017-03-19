@@ -43,6 +43,7 @@ add_test(test1 ${PROJECT_TEST_NAME})
 
 find_package(libbsoncxx)
 find_package(libmongocxx)
+find_package(spdlog CONFIG REQUIRED)
 
 link_directories(
         ${LIBMONGOCXX_LIBRARY_DIRS}
