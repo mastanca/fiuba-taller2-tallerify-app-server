@@ -30,7 +30,7 @@ if (COVERALLS)
     coveralls_turn_on_coverage()
 endif()
 
-file(GLOB COVERAGE_SRCS ${PROJECT_SOURCE_DIR}/src/api/*.cpp)
+file(GLOB_RECURSE COVERAGE_SRCS ${PROJECT_SOURCE_DIR}/src/api/*.cpp)
 
 if (COVERALLS)
     coveralls_setup(
@@ -65,7 +65,7 @@ link_directories(
         ${LIBBSONCXX_LIBRARY_DIRS}
 )
 
-file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/api/*.cpp ${PROJECT_SOURCE_DIR}/src/mongoose/*.c)
+file(GLOB_RECURSE SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/api/*.cpp ${PROJECT_SOURCE_DIR}/src/mongoose/*.c)
 
 set(SPDLOG_DIR "${PROJECT_SOURCE_DIR}/include")
 include_directories(${SPDLOG_DIR})

@@ -1,9 +1,9 @@
 FROM mastanca/fiuba-tallerify-cpp:latest
 ADD . fiuba-taller2-tallerify-app-server
-ARG coveralls_token=dummy
-ARG travis_build=false
-ENV COVERALLS_TOKEN=$coveralls_token
-ENV TRAVIS_BUILD=$travis_build
+ARG COVERALLS_SERVICE_NAME=dummy
+ARG COVERALLS_SERVICE_NAME=false
+ENV COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN
+ENV COVERALLS_SERVICE_NAME=$COVERALLS_SERVICE_NAME
 
 WORKDIR fiuba-taller2-tallerify-app-server
 RUN lcov --directory . --zerocounter
