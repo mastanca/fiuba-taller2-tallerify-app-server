@@ -19,9 +19,25 @@ add_subdirectory(${EXT_PROJECTS_DIR}/gtest)
 #-------------------
 # Test
 #-------------------
-SET(CMAKE_CXX_FLAGS "-g -O0 --coverage")
-SET(CMAKE_C_FLAGS "-g -O0 --coverage")
-SET(CMAKE_EXE_LINKER_FLAGS "--coverage")
+option(COVERALLS "Turn on coveralls support" OFF)
+option(COVERALLS_UPLOAD "Upload the generated coveralls json" ON)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
+        ${PROJECT_SOURCE_DIR}/cmake)
+
+if (COVERALLS)
+    include(Coveralls)
+    coveralls_turn_on_coverage()
+endif()
+
+file(GLOB COVERAGE_SRCS ${PROJECT_SOURCE_DIR}/src/api/*.cpp)
+
+if (COVERALLS)
+    coveralls_setup(
+            "${COVERAGE_SRCS}"
+            ${COVERALLS_UPLOAD}
+            "${PROJECT_SOURCE_DIR}/cmake")
+endif()
 
 enable_testing()
 set(PROJECT_TEST_NAME ${PROJECT_NAME}_test)
