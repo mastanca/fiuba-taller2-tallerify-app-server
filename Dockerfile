@@ -12,7 +12,7 @@ RUN $HOME/usr/bin/cmake -DCOVERALLS=ON -DCMAKE_BUILD_TYPE=Debug ..
 RUN make
 RUN make coveralls
 
-RUN if [ "$TRAVIS_BUILD" = true ]; then cd .. && \
-    bash coverage.sh; fi
+#RUN if [ "$TRAVIS_BUILD" = true ]; then cd .. && \
+#    bash coverage.sh; fi
 
 CMD ["./fiuba_taller2_tallerify_app_server_test"]
