@@ -48,6 +48,7 @@ find_package(spdlog CONFIG REQUIRED)
 link_directories(
         ${LIBMONGOCXX_LIBRARY_DIRS}
         ${LIBBSONCXX_LIBRARY_DIRS}
+        ${SPDLOG_LIBRARY_DIRS}
 )
 
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/api/*.cpp ${PROJECT_SOURCE_DIR}/src/mongoose/*.c)
@@ -57,9 +58,10 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 target_include_directories(${PROJECT_NAME}
         PRIVATE ${LIBMONGOCXX_INCLUDE_DIRS}
         PRIVATE ${LIBBSONCXX_INCLUDE_DIRS}
+        PRIVATE ${SPDLOG_INCLUDE_DIRS}
         )
 
 target_link_libraries(${PROJECT_NAME}
-        PRIVATE ${LIBMONGOCXX_LIBRARIES} ${LIBBSONCXX_LIBRARIES}
+        PRIVATE ${LIBMONGOCXX_LIBRARIES} ${LIBBSONCXX_LIBRARIES} ${SPDLOG_LIBRARIES}
         )
 
