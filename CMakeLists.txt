@@ -44,12 +44,9 @@ add_test(test1 ${PROJECT_TEST_NAME})
 find_package(libbsoncxx)
 find_package(libmongocxx)
 
-include_directories(include)
-
 link_directories(
         ${LIBMONGOCXX_LIBRARY_DIRS}
         ${LIBBSONCXX_LIBRARY_DIRS}
-        include
 )
 
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/api/*.cpp ${PROJECT_SOURCE_DIR}/src/mongoose/*.c)
