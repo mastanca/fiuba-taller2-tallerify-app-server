@@ -15,6 +15,9 @@ endif ()
 set(EXT_PROJECTS_DIR ${PROJECT_SOURCE_DIR}/ext)
 
 add_subdirectory(${EXT_PROJECTS_DIR}/gtest)
+set(SPDLOG_DIR "${PROJECT_SOURCE_DIR}/include")
+include_directories(${SPDLOG_DIR})
+link_directories(${SPDLOG_DIR})
 
 #-------------------
 # Test
@@ -48,8 +51,6 @@ link_directories(
         ${LIBMONGOCXX_LIBRARY_DIRS}
         ${LIBBSONCXX_LIBRARY_DIRS}
 )
-
-include_directories(include)
 
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/api/*.cpp ${PROJECT_SOURCE_DIR}/src/mongoose/*.c)
 
