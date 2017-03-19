@@ -49,6 +49,8 @@ link_directories(
         ${LIBBSONCXX_LIBRARY_DIRS}
 )
 
+include_directories(include)
+
 file(GLOB SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/api/*.cpp ${PROJECT_SOURCE_DIR}/src/mongoose/*.c)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
