@@ -6,7 +6,6 @@ ENV COVERALLS_REPO_TOKEN=$coveralls_token
 ENV COVERALLS_SERVICE_NAME=$travis_service
 
 WORKDIR fiuba-taller2-tallerify-app-server
-RUN lcov --directory . --zerocounter
 WORKDIR build
 RUN $HOME/usr/bin/cmake -DCOVERALLS=ON -DCMAKE_BUILD_TYPE=Debug ..
 RUN make

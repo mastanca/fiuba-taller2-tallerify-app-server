@@ -65,11 +65,11 @@ link_directories(
         ${LIBBSONCXX_LIBRARY_DIRS}
 )
 
-file(GLOB_RECURSE SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/api/*.cpp ${PROJECT_SOURCE_DIR}/src/mongoose/*.c)
+file(GLOB_RECURSE SOURCE_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp ${PROJECT_SOURCE_DIR}/src/*.c ${PROJECT_SOURCE_DIR}/include/mongoose/*.c)
 
-set(SPDLOG_DIR "${PROJECT_SOURCE_DIR}/include")
-include_directories(${SPDLOG_DIR})
-link_directories(${SPDLOG_DIR})
+set(INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
+include_directories(${INCLUDE_DIR})
+link_directories(${INCLUDE_DIR})
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
