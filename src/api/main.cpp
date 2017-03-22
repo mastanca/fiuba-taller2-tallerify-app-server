@@ -8,6 +8,7 @@
 #include "spdlog/spdlog.h"
 
 #include "networking/Server.h"
+#include "networking/JSONResponse.h"
 
 int main(int argc, char *argv[]) {
     std::cout << "Hello tallerify!" << std::endl;

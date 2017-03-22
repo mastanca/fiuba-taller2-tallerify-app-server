@@ -11,5 +11,6 @@ JSONResponse::~JSONResponse() {
 }
 
 std::string JSONResponse::getBody() {
-    return std::string();
+    Json::FastWriter writer;
+    return writer.write(*this);
 }
