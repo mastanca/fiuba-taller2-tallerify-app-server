@@ -1,0 +1,14 @@
+
+
+#ifndef FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONTROLLER_H
+#define FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONTROLLER_H
+
+
+class Controller {
+public:
+    Controller();
+    virtual ~Controller();
+};
+
+
+#endif //FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONTROLLER_H
