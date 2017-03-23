@@ -10,6 +10,16 @@
 #include "networking/Server.h"
 #include "networking/JSONResponse.h"
 
+volatile static bool running = true;
+
+void handle_signal(int sig)
+{
+    if (running) {
+        std::cout << "Exiting..." << std::endl;
+        running = false;
+    }
+}
+
 int main(int argc, char *argv[]) {
     std::cout << "Hello tallerify!" << std::endl;
 
@@ -31,14 +41,20 @@ int main(int argc, char *argv[]) {
     auto console = spdlog::stdout_color_mt("console");
     console->info("Welcome to spdlog!");
 
+    srand(time(NULL));
+
+    signal(SIGINT, handle_signal);
+
     Controller pingController;
     Server server(8000);
     server.registerController(&pingController);
     server.start();
 
-    while(true) {
+    while(running) {
         sleep(10);
     }
 
     server.stop();
+
+    return EXIT_SUCCESS;
 }

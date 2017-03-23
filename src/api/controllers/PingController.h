@@ -9,7 +9,7 @@ class PingController : public Controller {
 public:
     PingController();
     virtual ~PingController();
-    void get(Request &request, JSONResponse response);
+    //void get(Request &request, JSONResponse response);
 };
 
 
