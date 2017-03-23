@@ -43,7 +43,9 @@ int main(int argc, char *argv[]) {
 
     srand(time(NULL));
 
+#ifdef __APPLE__
     signal(SIGINT, handle_signal);
+#endif
 
     Controller pingController;
     Server server(8000);
