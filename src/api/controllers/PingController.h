@@ -13,6 +13,9 @@ public:
     virtual ~PingController();
 
     void get(Request &request, JSONResponse &response);
+
+protected:
+    void init();
 };
 
 

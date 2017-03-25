@@ -29,6 +29,8 @@ private:
     friend void event_handler(mg_connection *c, int ev, void *p);
 
     Response *handleRequest(Request &request);
+
+    void registerController(Controller *controller);
 };
 
 

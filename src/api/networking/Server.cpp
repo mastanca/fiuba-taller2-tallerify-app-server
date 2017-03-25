@@ -1,6 +1,7 @@
 
 
 #include "Server.h"
+#include "../controllers/PingController.h"
 #include <spdlog/spdlog.h>
 
 void event_handler(struct mg_connection *c, int ev, void *p) {
@@ -21,11 +22,17 @@ void event_handler(struct mg_connection *c, int ev, void *p) {
 }
 
 Server::Server(int port) : server(NULL), connection(NULL), port(port), running(false) {
+    // Initialize controllers
+    PingController *pingController = new PingController();
+    registerController(pingController);
 }
 
 Server::~Server() {
     if (running) {
         mg_mgr_free(server);
+        for (Controller *controller : controllers) {
+            delete controller;
+        }
     }
     delete server;
 }
@@ -81,5 +88,9 @@ Response *Server::handleRequest(Request &request) {
     }
 
     return NULL;
+}
+
+void Server::registerController(Controller *controller) {
+    controllers.push_back(controller);
 }
 

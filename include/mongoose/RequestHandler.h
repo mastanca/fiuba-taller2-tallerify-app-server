@@ -8,8 +8,9 @@
 
 class RequestHandlerBase {
 public:
-    virtual Response *process(Request &request)=0;
-    virtual ~RequestHandlerBase();
+    virtual Response *process(Request &request) = 0;
+
+    virtual ~RequestHandlerBase() {}
 };
 
 template<typename T, typename R>
@@ -35,7 +36,7 @@ public:
         return response;
     }
 
-    virtual ~RequestHandler();
+    virtual ~RequestHandler() {}
 
 protected:
     T *controller;
