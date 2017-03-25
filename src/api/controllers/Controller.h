@@ -13,9 +13,6 @@
 #define HTTP_PUT "PUT"
 #define HTTP_DELETE "DELETE"
 
-#define addRouteResponse(httpMethod, url, controllerType, method, responseType) \
-    addRoute(httpMethod, url, new RequestHandler<controllerType, responseType>(this, &controllerType::method ));
-
 class Controller {
 public:
     Controller();
