@@ -12,7 +12,8 @@ Request::~Request() {
 }
 
 void Request::writeResponse(Response *response) {
-
+    std::string data = response->getData();
+    mg_printf(connection, data.c_str());
 }
 
 void Request::parseMessage(http_message *httpMessage) {

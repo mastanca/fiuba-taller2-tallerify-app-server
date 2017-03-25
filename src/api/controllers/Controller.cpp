@@ -1,6 +1,7 @@
 
 
 #include "Controller.h"
+#include "../networking/JSONResponse.h"
 
 Controller::Controller() {
 
@@ -28,7 +29,8 @@ Response *Controller::process(Request &request) {
 }
 
 Response *Controller::serverInternalError(std::string message) {
-    Response *response = new Response();
+    // Only JSON responses so..
+    JSONResponse *response = new JSONResponse();
 
     response->setCode(HTTP_SERVER_ERROR);
 

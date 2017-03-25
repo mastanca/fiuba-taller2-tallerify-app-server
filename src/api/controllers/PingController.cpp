@@ -1,7 +1,6 @@
 
 
 #include "PingController.h"
-#include "../networking/JSONResponse.h"
 
 PingController::PingController() {
 

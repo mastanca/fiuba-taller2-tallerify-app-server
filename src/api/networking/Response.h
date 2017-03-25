@@ -23,6 +23,14 @@ public:
 
     void setCode(int code);
 
+    int getCode() const;
+
+    virtual std::string getData();
+
+    virtual std::string getBody() = 0;
+
+    virtual bool hasHeader(std::string key);
+
 protected:
     int code;
     std::map<std::string, std::string> headers;

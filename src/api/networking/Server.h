@@ -6,7 +6,6 @@
 #include <vector>
 #include "mongoose/mongoose.h"
 #include "../controllers/Controller.h"
-#include "Response.h"
 
 class Server {
 public:
