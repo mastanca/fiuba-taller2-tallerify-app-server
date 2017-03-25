@@ -3,7 +3,7 @@
 #include "JSONResponse.h"
 
 JSONResponse::JSONResponse() {
-
+    setHeader("Content-Type", "application/json");
 }
 
 JSONResponse::~JSONResponse() {
