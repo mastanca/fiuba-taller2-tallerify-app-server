@@ -4,10 +4,26 @@
 #define FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONTROLLER_H
 
 
+#include "../networking/Request.h"
+#include <mongoose/RequestHandler.h>
+#include <vector>
+
 class Controller {
 public:
     Controller();
+
     virtual ~Controller();
+
+    virtual Response *process(Request &request);
+
+    Response *serverInternalError(std::string message);
+
+    void addRoute(std::string httpVerb, std::string route, RequestHandlerBase *handler);
+
+protected:
+    std::map<std::string, RequestHandlerBase *> routes;
+    std::vector<std::string> urls;
+
 };
 
 

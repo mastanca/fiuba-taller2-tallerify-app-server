@@ -5,9 +5,8 @@
 
 #include <vector>
 #include "mongoose/mongoose.h"
-
-#define SC_INTENAL_SERVER_ERROR 500
-#define SC_OK 200
+#include "../controllers/Controller.h"
+#include "Response.h"
 
 class Server {
 public:
@@ -24,6 +23,13 @@ private:
     mg_connection *connection;
     int port;
     bool running;
+    std::vector<Controller *> controllers;
+
+    int handleRequest(mg_connection *connection, http_message *message);
+
+    friend void event_handler(mg_connection *c, int ev, void *p);
+
+    Response *handleRequest(Request &request);
 };
 
 

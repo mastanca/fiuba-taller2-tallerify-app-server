@@ -9,7 +9,9 @@
 class JSONResponse : public Json::Value, public Response {
 public:
     JSONResponse();
+
     virtual ~JSONResponse();
+
     virtual std::string getBody();
 };
 

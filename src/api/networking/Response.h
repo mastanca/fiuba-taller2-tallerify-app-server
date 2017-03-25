@@ -16,8 +16,11 @@
 class Response {
 public:
     Response();
+
     virtual ~Response();
+
     void setHeader(std::string key, std::string value);
+
     void setCode(int code);
 
 protected:

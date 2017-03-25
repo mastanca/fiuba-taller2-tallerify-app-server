@@ -12,8 +12,7 @@
 
 volatile static bool running = true;
 
-void handle_signal(int sig)
-{
+void handle_signal(int sig) {
     if (running) {
         std::cout << "Exiting..." << std::endl;
         running = false;
@@ -40,7 +39,6 @@ int main(int argc, char *argv[]) {
 
     auto console = spdlog::stdout_color_mt("console");
     spdlog::set_pattern("[%H:%M:%S %z] %v");
-    console->info("Welcome to spdlog!");
 
     srand(time(NULL));
 
@@ -51,7 +49,7 @@ int main(int argc, char *argv[]) {
     Server server;
     server.start();
 
-    while(running) {
+    while (running) {
         sleep(10);
     }
 
