@@ -39,6 +39,7 @@ int main(int argc, char *argv[]) {
     }
 
     auto console = spdlog::stdout_color_mt("console");
+    spdlog::set_pattern("[%H:%M:%S %z] %v");
     console->info("Welcome to spdlog!");
 
     srand(time(NULL));
@@ -47,9 +48,7 @@ int main(int argc, char *argv[]) {
     signal(SIGINT, handle_signal);
 #endif
 
-    Controller pingController;
-    Server server(8000);
-    server.registerController(&pingController);
+    Server server;
     server.start();
 
     while(running) {

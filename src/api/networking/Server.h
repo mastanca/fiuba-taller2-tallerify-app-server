@@ -5,11 +5,13 @@
 
 #include <vector>
 #include "mongoose/mongoose.h"
-#include "../controllers/Controller.h"
+
+#define SC_INTENAL_SERVER_ERROR 500
+#define SC_OK 200
 
 class Server {
 public:
-    Server(int port = 8000);
+    Server(int port = 8080);
 
     virtual ~Server();
 
@@ -17,12 +19,11 @@ public:
 
     void stop();
 
-    void registerController(Controller *controller);
-
 private:
-    mg_server *server;
+    mg_mgr *server;
+    mg_connection *connection;
     int port;
-    std::vector<Controller *> controllers;
+    bool running;
 };
 
 
