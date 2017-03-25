@@ -11,14 +11,6 @@ void event_handler(struct mg_connection *c, int ev, void *p) {
             self->handleRequest(c, (http_message *) p);
         }
     }
-//    if (ev == MG_EV_HTTP_REQUEST) {
-//        struct http_message *hm = (struct http_message *) p;
-//
-//        // We have received an HTTP request. Parsed request is contained in `hm`.
-//        // Send HTTP reply to the client which shows full original request.
-//        mg_send_head(c, 200, hm->message.len, "Content-Type: application/json");
-//        mg_printf(c, "%.*s", hm->message.len, hm->message.p);
-//    }
 }
 
 Server::Server(int port) : server(NULL), connection(NULL), port(port), running(false) {
