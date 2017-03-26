@@ -1,6 +1,7 @@
 
 
 #include "PingController.h"
+#include "../config/Constants.h"
 
 PingController::PingController() {
     init();
@@ -15,7 +16,6 @@ void PingController::get(Request &request, JSONResponse &response) {
 }
 
 void PingController::init() {
-    //addRouteResponse(HTTP_GET, "/ping", PingController, get, JSONResponse);
     addRoute(HTTP_GET, "/ping", new RequestHandler<PingController, JSONResponse>(this, &PingController::get));
 }
 

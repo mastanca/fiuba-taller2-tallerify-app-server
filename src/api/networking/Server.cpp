@@ -2,6 +2,7 @@
 
 #include "Server.h"
 #include "../controllers/PingController.h"
+#include "../config/Constants.h"
 #include <spdlog/spdlog.h>
 
 void event_handler(struct mg_connection *c, int ev, void *p) {
@@ -70,13 +71,20 @@ int Server::handleRequest(mg_connection *connection, http_message *message) {
 
 Response *Server::handleRequest(Request &request) {
     Response *response;
+    Controller *handler = NULL;
 
     for (Controller *controller : controllers) {
-        response = controller->process(request);
+        if (controller->handles(request.getHttpVerb(), request.getUrl())) handler = controller;
+    }
+    if (handler == NULL) {
+        response = new JSONResponse();
+        response->setCode(HTTP_NOT_FOUND);
+    } else {
+        response = handler->process(request);
+    }
 
-        if (response != NULL) {
-            return response;
-        }
+    if (response != NULL) {
+        return response;
     }
 
     return NULL;
