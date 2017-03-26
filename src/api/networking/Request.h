@@ -13,13 +13,13 @@ public:
 
     virtual ~Request();
 
-    void writeResponse(Response *response);
+    virtual void writeResponse(Response *response);
 
-    const std::string &getUrl() const;
+    virtual const std::string &getUrl() const;
 
-    const std::string &getBody() const;
+    virtual const std::string &getBody() const;
 
-    const std::string &getHttpVerb() const;
+    virtual const std::string &getHttpVerb() const;
 
 private:
     mg_connection *connection;

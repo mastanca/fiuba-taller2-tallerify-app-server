@@ -42,9 +42,9 @@ endif ()
 
 enable_testing()
 set(PROJECT_TEST_NAME ${PROJECT_NAME}_test)
-include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(${GTEST_INCLUDE_DIRS} ${GMOCK_INCLUDE_DIRS})
 
-file(GLOB_RECURSE TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp
+file(GLOB_RECURSE TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/tests/*.cpp
         ${PROJECT_SOURCE_DIR}/src/api/networking/*.cpp
         ${PROJECT_SOURCE_DIR}/src/api/domain/*.cpp
         ${PROJECT_SOURCE_DIR}/src/api/dao/*.cpp
@@ -93,6 +93,8 @@ target_link_libraries(${PROJECT_TEST_NAME}
         PRIVATE
         ${GTEST_LIBS_DIR}/libgtest.a
         ${GTEST_LIBS_DIR}/libgtest_main.a
+        ${GMOCK_LIBS_DIR}/libgmock.a
+        ${GMOCK_LIBS_DIR}/libgmock_main.a
         ${CMAKE_THREAD_LIBS_INIT}
         ${LIBMONGOCXX_LIBRARIES} ${LIBBSONCXX_LIBRARIES}
         )
