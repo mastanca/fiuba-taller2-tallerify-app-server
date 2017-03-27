@@ -9,6 +9,5 @@ WORKDIR fiuba-taller2-tallerify-app-server
 WORKDIR build
 RUN $HOME/usr/bin/cmake -DCOVERALLS=ON -DCMAKE_BUILD_TYPE=Debug ..
 RUN make
-#RUN make coveralls
 
-CMD ["./fiuba_taller2_tallerify_app_server_test && python ../tests/functional/api_tests.py"]
+CMD ["./fiuba_taller2_tallerify_app_server"]
