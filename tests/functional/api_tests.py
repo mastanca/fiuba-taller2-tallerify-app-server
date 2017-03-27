@@ -18,7 +18,7 @@ suite = unittest.TestLoader().loadTestsFromTestCase(testTallerifyAppServer)
 
 
 def startAppServer():
-    call(["./build/fiuba_taller2_tallerify_app_server"])
+    call(["/fiuba-taller2-tallerify-app-server/build/fiuba_taller2_tallerify_app_server"])
 
 
 def killAppServer():
