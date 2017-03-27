@@ -6,10 +6,12 @@ from subprocess import call
 from multiprocessing import Process
 import os
 import signal
+from time import sleep
 
 
 class testTallerifyAppServer(unittest.TestCase):
     def testPing(self):
+        sleep(1) # To allow server to start =)
         response = requests.get('http://localhost:8080/ping')
         self.assertEqual(200, response.status_code)
 
