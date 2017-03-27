@@ -7,6 +7,18 @@
 
 #include "spdlog/spdlog.h"
 
+#include "networking/Server.h"
+#include "networking/JSONResponse.h"
+
+volatile static bool running = true;
+
+void handle_signal(int sig) {
+    if (running) {
+        std::cout << "Exiting..." << std::endl;
+        running = false;
+    }
+}
+
 int main(int argc, char *argv[]) {
     std::cout << "Hello tallerify!" << std::endl;
 
@@ -18,7 +30,7 @@ int main(int argc, char *argv[]) {
     auto collection = conn["testdb"]["testcollection"];
     document << "hello" << "world";
 
-    collection.insert_one(document.view());
+    //collection.insert_one(document.view());
     auto cursor = collection.find({});
 
     for (auto &&doc : cursor) {
@@ -26,5 +38,22 @@ int main(int argc, char *argv[]) {
     }
 
     auto console = spdlog::stdout_color_mt("console");
-    console->info("Welcome to spdlog!");
+    spdlog::set_pattern("[%H:%M:%S %z] %v");
+
+    srand(time(NULL));
+
+#ifdef __APPLE__
+    signal(SIGINT, handle_signal);
+#endif
+
+    Server server;
+    server.start();
+
+    while (running) {
+        sleep(10);
+    }
+
+    server.stop();
+
+    return EXIT_SUCCESS;
 }
