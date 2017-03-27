@@ -6,6 +6,8 @@ services:
   - docker
 
 before_script:
+  - rm Dockerfile
+  - mv Dockerfile.travis Dockerfile
   - sudo docker build --build-arg coveralls_token=$COVERALLS_TOKEN --build-arg travis_service=travis-ci -t tallerify .
 
 script:
