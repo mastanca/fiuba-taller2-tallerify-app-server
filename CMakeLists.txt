@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_STANDARD 99)
 
 find_package(Threads REQUIRED)
+find_package(PythonInterp REQUIRED)
 
 if (CMAKE_COMPILER_IS_GNUCXX)
     add_definitions(-Wall -ansi -Wno-deprecated -pthread)
@@ -42,9 +43,9 @@ endif ()
 
 enable_testing()
 set(PROJECT_TEST_NAME ${PROJECT_NAME}_test)
-include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(${GTEST_INCLUDE_DIRS} ${GMOCK_INCLUDE_DIRS})
 
-file(GLOB_RECURSE TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp
+file(GLOB_RECURSE TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/tests/*.cpp
         ${PROJECT_SOURCE_DIR}/src/api/networking/*.cpp
         ${PROJECT_SOURCE_DIR}/src/api/domain/*.cpp
         ${PROJECT_SOURCE_DIR}/src/api/dao/*.cpp
@@ -93,8 +94,15 @@ target_link_libraries(${PROJECT_TEST_NAME}
         PRIVATE
         ${GTEST_LIBS_DIR}/libgtest.a
         ${GTEST_LIBS_DIR}/libgtest_main.a
+        ${GMOCK_LIBS_DIR}/libgmock.a
+        ${GMOCK_LIBS_DIR}/libgmock_main.a
         ${CMAKE_THREAD_LIBS_INIT}
         ${LIBMONGOCXX_LIBRARIES} ${LIBBSONCXX_LIBRARIES}
         )
 
 add_test(responseTest ${PROJECT_TEST_NAME})
+add_test (functionalTests ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/functional/api_tests.py)
+#add_test(NAME functionalTest
+#        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/tests/functional/api_tests.py
+#        WORKING_DIRECTORY ${EXECUTABLE_OUTPUT_PATH} )
+#add_test(functionalTest ${PYTHON_EXECUTABLE} "${PROJECT_SOURCE_DIR}/tests/functional/api_tests.py")

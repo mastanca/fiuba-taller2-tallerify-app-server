@@ -8,11 +8,6 @@
 #include <mongoose/RequestHandler.h>
 #include <vector>
 
-#define HTTP_GET "GET"
-#define HTTP_POST "POST"
-#define HTTP_PUT "PUT"
-#define HTTP_DELETE "DELETE"
-
 class Controller {
 public:
     Controller();
@@ -24,6 +19,8 @@ public:
     Response *serverInternalError(std::string message);
 
     void addRoute(std::string httpVerb, std::string route, RequestHandlerBase *handler);
+
+    virtual bool handles(std::string method, std::string url);
 
 protected:
     std::map<std::string, RequestHandlerBase *> routes;

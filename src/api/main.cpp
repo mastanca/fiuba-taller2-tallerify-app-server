@@ -22,20 +22,20 @@ void handle_signal(int sig) {
 int main(int argc, char *argv[]) {
     std::cout << "Hello tallerify!" << std::endl;
 
-    mongocxx::instance inst{};
-    mongocxx::client conn{mongocxx::uri{}};
-
-    bsoncxx::builder::stream::document document{};
-
-    auto collection = conn["testdb"]["testcollection"];
-    document << "hello" << "world";
-
-    //collection.insert_one(document.view());
-    auto cursor = collection.find({});
-
-    for (auto &&doc : cursor) {
-        std::cout << bsoncxx::to_json(doc) << std::endl;
-    }
+//    mongocxx::instance inst{};
+//    mongocxx::client conn{mongocxx::uri{}};
+//
+//    bsoncxx::builder::stream::document document{};
+//
+//    auto collection = conn["testdb"]["testcollection"];
+//    document << "hello" << "world";
+//
+//    //collection.insert_one(document.view());
+//    auto cursor = collection.find({});
+//
+//    for (auto &&doc : cursor) {
+//        std::cout << bsoncxx::to_json(doc) << std::endl;
+//    }
 
     auto console = spdlog::stdout_color_mt("console");
     spdlog::set_pattern("[%H:%M:%S %z] %v");

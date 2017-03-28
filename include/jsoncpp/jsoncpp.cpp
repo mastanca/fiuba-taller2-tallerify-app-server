@@ -2169,7 +2169,7 @@ static void getValidReaderKeys(std::set<JSONCPP_STRING>* valid_keys)
 bool CharReaderBuilder::validate(Json::Value* invalid) const
 {
   Json::Value my_invalid;
-  if (!invalid) invalid = &my_invalid;  // so we do not need to test for NULL
+  if (!invalid) invalid = &my_invalid;  // so we do not need to tests for NULL
   Json::Value& inv = *invalid;
   std::set<JSONCPP_STRING> valid_keys;
   getValidReaderKeys(&valid_keys);
@@ -5255,7 +5255,7 @@ static void getValidWriterKeys(std::set<JSONCPP_STRING>* valid_keys)
 bool StreamWriterBuilder::validate(Json::Value* invalid) const
 {
   Json::Value my_invalid;
-  if (!invalid) invalid = &my_invalid;  // so we do not need to test for NULL
+  if (!invalid) invalid = &my_invalid;  // so we do not need to tests for NULL
   Json::Value& inv = *invalid;
   std::set<JSONCPP_STRING> valid_keys;
   getValidWriterKeys(&valid_keys);
