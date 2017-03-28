@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_STANDARD 99)
 
 find_package(Threads REQUIRED)
+find_package(PythonInterp REQUIRED)
 
 if (CMAKE_COMPILER_IS_GNUCXX)
     add_definitions(-Wall -ansi -Wno-deprecated -pthread)
@@ -100,3 +101,7 @@ target_link_libraries(${PROJECT_TEST_NAME}
         )
 
 add_test(responseTest ${PROJECT_TEST_NAME})
+#add_test(NAME functionalTest
+#        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/tests/functional/api_tests.py
+#        WORKING_DIRECTORY ${EXECUTABLE_OUTPUT_PATH} )
+#add_test(functionalTest ${PYTHON_EXECUTABLE} "${PROJECT_SOURCE_DIR}/tests/functional/api_tests.py")
