@@ -10,19 +10,30 @@
 class JSONResponseTest : public testing::Test {
 public:
     JSONResponseTest();
+
     void TestBody() {}
+
     void testBodyCreation();
+
     void testCodeSetting();
 };
 
-TEST_F(JSONResponseTest, testBodyCreation) {
-    JSONResponseTest tester;
-    tester.testBodyCreation();
+TEST_F(JSONResponseTest, testBodyCreation
+) {
+JSONResponseTest tester;
+tester.
+
+testBodyCreation();
+
 }
 
-TEST_F(JSONResponseTest, testCodeSetting) {
-    JSONResponseTest tester;
-    tester.testCodeSetting();
+TEST_F(JSONResponseTest, testCodeSetting
+) {
+JSONResponseTest tester;
+tester.
+
+testCodeSetting();
+
 }
 
 

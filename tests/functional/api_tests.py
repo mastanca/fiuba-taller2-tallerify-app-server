@@ -11,7 +11,7 @@ from time import sleep
 
 class testTallerifyAppServer(unittest.TestCase):
     def testPing(self):
-        sleep(1) # To allow server to start =)
+        sleep(1)  # To allow server to start =)
         response = requests.get('http://localhost:8080/ping')
         self.assertEqual(200, response.status_code)
 
