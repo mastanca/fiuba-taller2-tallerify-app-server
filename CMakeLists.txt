@@ -102,7 +102,3 @@ target_link_libraries(${PROJECT_TEST_NAME}
 
 add_test(responseTest ${PROJECT_TEST_NAME})
 add_test (functionalTests ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/functional/api_tests.py)
-#add_test(NAME functionalTest
-#        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/tests/functional/api_tests.py
-#        WORKING_DIRECTORY ${EXECUTABLE_OUTPUT_PATH} )
-#add_test(functionalTest ${PYTHON_EXECUTABLE} "${PROJECT_SOURCE_DIR}/tests/functional/api_tests.py")
