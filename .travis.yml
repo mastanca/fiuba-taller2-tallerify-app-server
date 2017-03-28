@@ -12,7 +12,6 @@ before_script:
 
 script:
   - sudo docker run -t -i tallerify
-  - sudo docker run -t -i tallerify /bin/bash -c "python ../tests/functional/api_tests.py"
 
 after_success:
   - sudo docker run -t -i tallerify /bin/bash -c "make coveralls"

@@ -15,6 +15,10 @@ class testTallerifyAppServer(unittest.TestCase):
         response = requests.get('http://localhost:8080/ping')
         self.assertEqual(200, response.status_code)
 
+    def testNotFound(self):
+        response = requests.get('http://localhost:8080/not_found')
+        self.assertEqual(404, response.status_code)
+
 
 suite = unittest.TestLoader().loadTestsFromTestCase(testTallerifyAppServer)
 
