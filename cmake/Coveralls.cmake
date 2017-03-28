@@ -67,7 +67,6 @@ function(coveralls_setup _COVERAGE_SRCS _COVERALLS_UPLOAD)
 
 		# Run regress tests.
 		COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
-		COMMAND ${PROJECT_SOURCE_DIR}/tests/functional/api_tests.py
 
 		# Generate Gcov and translate it into coveralls JSON.
 		# We do this by executing an external CMake script.
