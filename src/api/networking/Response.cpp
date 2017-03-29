@@ -2,6 +2,7 @@
 
 #include "Response.h"
 #include <sstream>
+#include "../config/Constants.h"
 
 Response::Response() : code(HTTP_OK), headers() {
 

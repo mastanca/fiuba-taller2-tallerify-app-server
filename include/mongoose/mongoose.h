@@ -4706,7 +4706,7 @@ typedef struct mg_str (*mg_fu_fname_fn)(struct mg_connection *nc,
  *
  * ```c
  * struct mg_str upload_fname(struct mg_connection *nc, struct mg_str fname) {
- *   // Just return the same filename. Do not actually do this except in test!
+ *   // Just return the same filename. Do not actually do this except in tests!
  *   // fname is user-controlled and needs to be sanitized.
  *   return fname;
  * }

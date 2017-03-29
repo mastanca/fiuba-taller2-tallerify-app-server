@@ -2,6 +2,7 @@
 
 #include "Server.h"
 #include "../controllers/PingController.h"
+#include "../config/Constants.h"
 #include <spdlog/spdlog.h>
 
 void event_handler(struct mg_connection *c, int ev, void *p) {
@@ -35,10 +36,10 @@ void Server::start() {
         mg_mgr_init(server, NULL);
         spdlog::get("console")->info("Starting server on port {}", port);
         connection = mg_bind(server, std::to_string(port).c_str(), event_handler);
-        connection->user_data = this;
         if (connection == NULL) {
-            spdlog::get("console")->error("Failed to create connection");
+            spdlog::get("console")->error("Failed to create connection (Port in use?)");
         }
+        connection->user_data = this;
         mg_set_protocol_http_websocket(connection);
         running = true;
         for (;;) {
@@ -70,13 +71,22 @@ int Server::handleRequest(mg_connection *connection, http_message *message) {
 
 Response *Server::handleRequest(Request &request) {
     Response *response;
+    Controller *handler = NULL;
 
     for (Controller *controller : controllers) {
-        response = controller->process(request);
+        if (controller->handles(request.getHttpVerb(), request.getUrl())) handler = controller;
+    }
+    if (handler == NULL) {
+        response = new JSONResponse();
+        response->setCode(HTTP_NOT_FOUND);
+        spdlog::get("console")->warn("Response from {0} {1} was {2}", request.getHttpVerb(), request.getUrl(),
+                                     response->getCode());
+    } else {
+        response = handler->process(request);
+    }
 
-        if (response != NULL) {
-            return response;
-        }
+    if (response != NULL) {
+        return response;
     }
 
     return NULL;

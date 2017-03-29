@@ -2,6 +2,7 @@
 
 #include "Controller.h"
 #include "../networking/JSONResponse.h"
+#include "../config/Constants.h"
 
 Controller::Controller() {
 
@@ -41,4 +42,9 @@ void Controller::addRoute(std::string httpVerb, std::string route, RequestHandle
     std::string key = httpVerb + ":" + route;
     routes[key] = handler;
     urls.push_back(route);
+}
+
+bool Controller::handles(std::string method, std::string url) {
+    std::string key = method + ":" + url;
+    return routes.find(key) != routes.end();
 }

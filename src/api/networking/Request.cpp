@@ -1,10 +1,12 @@
 
 
 #include "Request.h"
+#include "spdlog/spdlog.h"
 
 Request::Request(mg_connection *connection, http_message *httpMessage) : connection(connection), url(""), body(""),
                                                                          httpVerb("") {
     parseMessage(httpMessage);
+    spdlog::get("console")->info("Processing request {0} {1}", httpVerb, url);
 }
 
 Request::~Request() {

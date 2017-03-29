@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#
+
 # Copyright (c) 2009 Google Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -445,7 +445,7 @@ _TYPES = re.compile(
 _THIRD_PARTY_HEADERS_PATTERN = re.compile(
     r'^(?:[^/]*[A-Z][^/]*\.h|lua\.h|lauxlib\.h|lualib\.h)$')
 
-# Pattern for matching FileInfo.BaseName() against test file name
+# Pattern for matching FileInfo.BaseName() against tests file name
 _TEST_FILE_SUFFIX = r'(_test|_unittest|_regtest)$'
 
 # Pattern that matches only complete whitespace, possibly across multiple lines.
@@ -1887,7 +1887,7 @@ def CheckForHeaderGuard(filename, clean_lines, error):
 def CheckHeaderFileIncluded(filename, include_state, error):
   """Logs an error if a .cc file does not include its header."""
 
-  # Do not check test files
+  # Do not check tests files
   fileinfo = FileInfo(filename)
   if Search(_TEST_FILE_SUFFIX, fileinfo.BaseName()):
     return
@@ -2667,8 +2667,8 @@ class NestingState(object):
       filename: The name of the current file.
       error: The function to call with any errors found.
     """
-    # Note: This test can result in false positives if #ifdef constructs
-    # get in the way of brace matching. See the testBuildClass test in
+    # Note: This tests can result in false positives if #ifdef constructs
+    # get in the way of brace matching. See the testBuildClass tests in
     # cpplint_unittest.py for an example of this.
     for obj in self.stack:
       if isinstance(obj, _ClassInfo):
@@ -3499,7 +3499,7 @@ def CheckBracesSpacing(filename, clean_lines, linenum, nesting_state, error):
   # an initializer list, for instance), you should have spaces before your
   # braces when they are delimiting blocks, classes, namespaces etc.
   # And since you should never have braces at the beginning of a line,
-  # this is an easy test.  Except that braces used for initialization don't
+  # this is an easy tests.  Except that braces used for initialization don't
   # follow the same rule; we often don't want spaces before those.
   match = Match(r'^(.*[^ ({>]){', line)
 
@@ -4236,7 +4236,7 @@ def CheckStyle(filename, clean_lines, linenum, file_extension, nesting_state,
                error):
   """Checks rules from the 'C++ style rules' section of cppguide.html.
 
-  Most of these rules are hard to test (naming, comment style), but we
+  Most of these rules are hard to tests (naming, comment style), but we
   do what we can.  In particular we check for 2-space indents, line lengths,
   tab usage, spaces inside code, etc.
 
@@ -4380,7 +4380,7 @@ def _DropCommonSuffixes(filename):
   Returns:
     The filename with the common suffix removed.
   """
-  for suffix in ('test.cc', 'regtest.cc', 'unittest.cc',
+  for suffix in ('tests.cc', 'regtest.cc', 'unittest.cc',
                  'inl.h', 'impl.h', 'internal.h'):
     if (filename.endswith(suffix) and len(filename) > len(suffix) and
         filename[-len(suffix) - 1] in ('-', '_')):
@@ -4611,7 +4611,7 @@ def CheckLanguage(filename, clean_lines, linenum, file_extension,
                   include_state, nesting_state, error):
   """Checks rules from the 'C++ language rules' section of cppguide.html.
 
-  Some of these rules are hard to test (function overloading, using
+  Some of these rules are hard to tests (function overloading, using
   uint32 inappropriately), but we do the best we can.
 
   Args:

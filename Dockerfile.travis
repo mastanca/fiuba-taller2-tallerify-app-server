@@ -10,4 +10,4 @@ WORKDIR build
 RUN $HOME/usr/bin/cmake -DCOVERALLS=ON -DCMAKE_BUILD_TYPE=Debug ..
 RUN make
 
-CMD ["./fiuba_taller2_tallerify_app_server"]
+CMD ["./fiuba_taller2_tallerify_app_server_test"]
