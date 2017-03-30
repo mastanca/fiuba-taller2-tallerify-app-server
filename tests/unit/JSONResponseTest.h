@@ -22,28 +22,28 @@ public:
 
 TEST_F(JSONResponseTest, testBodyCreation
 ) {
-JSONResponseTest tester;
-tester.
+    JSONResponseTest tester;
+    tester.
 
-testBodyCreation();
+            testBodyCreation();
 
 }
 
 TEST_F(JSONResponseTest, testCodeSetting
 ) {
-JSONResponseTest tester;
-tester.
+    JSONResponseTest tester;
+    tester.
 
-testCodeSetting();
+            testCodeSetting();
 
 }
 
 TEST_F(JSONResponseTest, testGetData
 ) {
-JSONResponseTest tester;
-tester.
+    JSONResponseTest tester;
+    tester.
 
-testGetData();
+            testGetData();
 
 }
 
