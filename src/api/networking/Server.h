@@ -8,6 +8,7 @@
 #include "../controllers/Controller.h"
 
 class Server {
+    friend class ServerTest;
 public:
     Server(int port = 8080);
 
