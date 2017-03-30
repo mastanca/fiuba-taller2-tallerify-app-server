@@ -100,6 +100,7 @@ target_link_libraries(${PROJECT_TEST_NAME}
         ${LIBMONGOCXX_LIBRARIES} ${LIBBSONCXX_LIBRARIES}
         )
 
+add_test(ControllerTests ${PROJECT_TEST_NAME})
 add_test(JSONresponseTests ${PROJECT_TEST_NAME})
 add_test(PingControllerTests ${PROJECT_TEST_NAME})
 add_test (functionalTests ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/functional/api_tests.py)
