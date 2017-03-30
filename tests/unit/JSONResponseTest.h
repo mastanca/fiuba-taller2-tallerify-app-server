@@ -16,6 +16,8 @@ public:
     void testBodyCreation();
 
     void testCodeSetting();
+
+    void testGetData();
 };
 
 TEST_F(JSONResponseTest, testBodyCreation
@@ -33,6 +35,15 @@ JSONResponseTest tester;
 tester.
 
 testCodeSetting();
+
+}
+
+TEST_F(JSONResponseTest, testGetData
+) {
+JSONResponseTest tester;
+tester.
+
+testGetData();
 
 }
 
