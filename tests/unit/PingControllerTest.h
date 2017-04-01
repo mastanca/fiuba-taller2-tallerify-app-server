@@ -15,7 +15,7 @@ public:
 
     void testRouteMapping();
 
-    //void testGet();
+    void testGet();
 
 };
 
@@ -28,14 +28,14 @@ TEST_F(PingControllerTest, testRouteMapping
 
 }
 
-//TEST_F(PingControllerTest, testGet
-//) {
-//    PingControllerTest tester;
-//    tester.
-//
-//            testGet();
-//
-//}
+TEST_F(PingControllerTest, testGet
+) {
+    PingControllerTest tester;
+    tester.
+
+            testGet();
+
+}
 
 
 #endif //FIUBA_TALLER2_TALLERIFY_APP_SERVER_PINGCONTROLLERTEST_H

@@ -7,7 +7,6 @@
 
 
 void RequestTest::testHttpInitialization() {
-
     http_message message;
     std::string body = "hola";
     std::string method = HTTP_GET;
