@@ -16,6 +16,8 @@ public:
 
     void testNotFound();
 
+    void testEffectiveHandling();
+
 };
 
 TEST_F(ServerTest, testControllersRegistrationOnCreation
@@ -33,6 +35,15 @@ TEST_F(ServerTest, testNotFound
     tester.
 
             testNotFound();
+
+}
+
+TEST_F(ServerTest, testEffectiveHandling
+) {
+    ServerTest tester;
+    tester.
+
+            testEffectiveHandling();
 
 }
 
