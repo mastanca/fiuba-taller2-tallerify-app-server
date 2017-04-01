@@ -25,9 +25,6 @@ public:
 protected:
     std::map<std::string, RequestHandlerBase *> routes;
     std::vector<std::string> urls;
-
-    virtual void init() {}
-
 };
 
 
