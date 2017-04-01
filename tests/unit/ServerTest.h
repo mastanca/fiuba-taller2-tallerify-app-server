@@ -18,6 +18,7 @@ public:
 
     void testEffectiveHandling();
 
+    void testStop();
 };
 
 TEST_F(ServerTest, testControllersRegistrationOnCreation
@@ -44,6 +45,15 @@ TEST_F(ServerTest, testEffectiveHandling
     tester.
 
             testEffectiveHandling();
+
+}
+
+TEST_F(ServerTest, testStop
+) {
+    ServerTest tester;
+    tester.
+
+            testStop();
 
 }
 

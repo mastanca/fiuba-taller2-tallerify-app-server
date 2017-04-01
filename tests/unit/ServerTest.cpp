@@ -48,3 +48,11 @@ void ServerTest::testEffectiveHandling() {
     ASSERT_EQ(server.handleRequest(*request)->getCode(), 200);
     delete request;
 }
+
+void ServerTest::testStop() {
+    Server server;
+    server.running = true;
+
+    server.stop();
+    ASSERT_FALSE(server.running);
+}

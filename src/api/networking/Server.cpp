@@ -21,8 +21,7 @@ Server::Server(int port) : server(NULL), connection(NULL), port(port), running(f
 }
 
 Server::~Server() {
-    if (running) {
-        mg_mgr_free(server);
+    if (!running) {
         for (Controller *controller : controllers) {
             delete controller;
         }
@@ -52,6 +51,7 @@ void Server::start() {
 void Server::stop() {
     if (running) {
         mg_mgr_free(server);
+        running = false;
     }
 }
 
