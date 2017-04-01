@@ -12,16 +12,27 @@ public:
 
     void TestBody() {}
 
-    void controllersRegistrationOnCreation();
+    void testControllersRegistrationOnCreation();
+
+    void testNotFound();
 
 };
 
-TEST_F(ServerTest, controllersRegistrarionOnCreation
+TEST_F(ServerTest, testControllersRegistrationOnCreation
 ) {
     ServerTest tester;
     tester.
 
-            controllersRegistrationOnCreation();
+            testControllersRegistrationOnCreation();
+
+}
+
+TEST_F(ServerTest, testNotFound
+) {
+    ServerTest tester;
+    tester.
+
+            testNotFound();
 
 }
 

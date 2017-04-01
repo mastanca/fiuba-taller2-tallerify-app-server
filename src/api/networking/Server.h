@@ -25,7 +25,7 @@ private:
     bool running;
     std::vector<Controller *> controllers;
 
-    int handleRequest(mg_connection *connection, http_message *message);
+    void handleRequest(mg_connection *connection, http_message *message);
 
     friend void event_handler(mg_connection *c, int ev, void *p);
 
