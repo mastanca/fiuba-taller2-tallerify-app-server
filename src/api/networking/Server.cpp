@@ -21,8 +21,7 @@ Server::Server(int port) : server(NULL), connection(NULL), port(port), running(f
 }
 
 Server::~Server() {
-    if (running) {
-        mg_mgr_free(server);
+    if (!running) {
         for (Controller *controller : controllers) {
             delete controller;
         }
@@ -52,20 +51,18 @@ void Server::start() {
 void Server::stop() {
     if (running) {
         mg_mgr_free(server);
+        running = false;
     }
 }
 
-int Server::handleRequest(mg_connection *connection, http_message *message) {
+void Server::handleRequest(mg_connection *connection, http_message *message) {
     Request request(connection, message);
 
     Response *response = handleRequest(request);
 
-    if (response == NULL) {
-        return EXIT_SUCCESS;
-    } else {
+    if (response != NULL) {
         request.writeResponse(response);
         delete response;
-        return EXIT_FAILURE;
     }
 }
 

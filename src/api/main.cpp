@@ -55,5 +55,7 @@ int main(int argc, char *argv[]) {
 
     server.stop();
 
+    spdlog::drop_all();
+
     return EXIT_SUCCESS;
 }
