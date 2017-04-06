@@ -9,6 +9,7 @@
 
 #include "networking/Server.h"
 #include "networking/JSONResponse.h"
+#include "dao/MongoDao.h"
 
 volatile static bool running = true;
 
@@ -28,7 +29,8 @@ int main(int argc, char *argv[]) {
 //    bsoncxx::builder::stream::document document{};
 //
 //    auto collection = conn["testdb"]["testcollection"];
-//    document << "hello" << "world";
+//    document << "hello" << "world"
+//            << "_id" << "1234";
 //
 //    //collection.insert_one(document.view());
 //    auto cursor = collection.find({});
@@ -39,8 +41,13 @@ int main(int argc, char *argv[]) {
 
     auto console = spdlog::stdout_color_mt("console");
     spdlog::set_pattern("[%H:%M:%S %z] %v");
-
     srand(time(NULL));
+
+    MongoDao dao;
+    int trackId = rand() + 1;
+    dao.saveTrack(trackId,"qwertyuiop");
+    Track *track = dao.getTrack(trackId);
+    std::cout << "id: " << track->getId() << ", song: " << track->getBase64EncodedBytes() << std::endl;
 
 #ifdef __APPLE__
     signal(SIGINT, handle_signal);
