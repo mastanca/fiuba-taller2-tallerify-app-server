@@ -8,7 +8,8 @@
 
 MongoDao::MongoDao() {
     instance = new mongocxx::instance();
-    if (strcmp(getenv("COMPOSE"),"true")) {
+    char *compose = getenv("COMPOSE");
+    if (compose == NULL || strcmp(compose,"true")) {
         client = new mongocxx::client(mongocxx::uri{});
     } else {
         mongocxx::uri uri("mongodb://db:27017");
@@ -17,12 +18,12 @@ MongoDao::MongoDao() {
     db = (*client)["tallerify"];
 }
 
-void MongoDao::saveTrack(int trackId, std::string base64EncodedBytes) {
+void MongoDao::saveTrack(Track *track) {
     bsoncxx::builder::stream::document document{};
 
     mongocxx::collection collection = db["tracks"];
-    document << "_id" << trackId
-             << "base64_encoded_bytes" << base64EncodedBytes;
+    document << "_id" << track->getId()
+             << "base64_encoded_bytes" << track->getBase64EncodedBytes();
     collection.insert_one(document.view());
     spdlog::get("console")->info("Saved track: {0}", bsoncxx::to_json(document.view()));
 }
@@ -40,7 +41,7 @@ Track *MongoDao::getTrack(int trackId) {
     if (found) {
         auto doc = (*found).view();
         bsoncxx::stdx::string_view view = doc["base64_encoded_bytes"].get_utf8().value;
-        return new Track(doc["_id"].get_int32(), view.to_string());
+        return new Track(doc["_id"].get_int32(), view.to_string(), false);
     }
     return NULL;
 }

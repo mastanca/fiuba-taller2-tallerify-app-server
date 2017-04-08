@@ -14,7 +14,7 @@ public:
 
     virtual ~MongoDao();
 
-    void saveTrack(int trackId, std::string base64EncodedBytes);
+    void saveTrack(Track *track);
 
     Track *getTrack(int trackId);
 

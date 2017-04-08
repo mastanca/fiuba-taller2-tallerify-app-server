@@ -44,10 +44,6 @@ int main(int argc, char *argv[]) {
     srand(time(NULL));
 
     MongoDao dao;
-    int trackId = rand() + 1;
-    dao.saveTrack(trackId,"qwertyuiop");
-    Track *track = dao.getTrack(trackId);
-    std::cout << "id: " << track->getId() << ", song: " << track->getBase64EncodedBytes() << std::endl;
 
 #ifdef __APPLE__
     signal(SIGINT, handle_signal);
