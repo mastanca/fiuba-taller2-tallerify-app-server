@@ -8,7 +8,12 @@
 
 MongoDao::MongoDao() {
     instance = new mongocxx::instance();
-    client = new mongocxx::client(mongocxx::uri{});
+    if (strcmp(getenv("COMPOSE"),"true")) {
+        client = new mongocxx::client(mongocxx::uri{});
+    } else {
+        mongocxx::uri uri("mongodb://db:27017");
+        client = new mongocxx::client(uri);
+    }
     db = (*client)["tallerify"];
 }
 

@@ -4,17 +4,25 @@ language: cpp
 
 services:
   - docker
+env:
+  DOCKER_COMPOSE_VERSION: 1.11.2
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
 
 before_script:
   - rm Dockerfile
   - mv Dockerfile.travis Dockerfile
-  - sudo docker build --build-arg coveralls_token=$COVERALLS_TOKEN --build-arg travis_service=travis-ci -t tallerify .
+  - sudo docker-compose up -d
 
 script:
-  - sudo docker run -t -i tallerify
+  - sudo docker-compose run tallerify make test
 
 after_success:
-  - sudo docker run -t -i tallerify /bin/bash -c "make coveralls"
+  - sudo docker-compose run tallerify make coveralls
 
 notifications:
     email: false
