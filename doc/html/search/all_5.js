@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['server',['Server',['../class_server.html',1,'']]]
+  ['request',['Request',['../class_request.html',1,'']]],
+  ['response',['Response',['../class_response.html',1,'']]]
 ];

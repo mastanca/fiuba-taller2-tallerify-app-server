@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['f_5fformatter',['f_formatter',['../classspdlog_1_1details_1_1f__formatter.html',1,'spdlog::details::f_formatter'],['../classspdlog_1_1details_1_1_f__formatter.html',1,'spdlog::details::F_formatter']]],
-  ['factory',['Factory',['../class_json_1_1_char_reader_1_1_factory.html',1,'Json::CharReader::Factory'],['../class_json_1_1_stream_writer_1_1_factory.html',1,'Json::StreamWriter::Factory']]],
-  ['false',['False',['../structfmt_1_1internal_1_1_false.html',1,'fmt::internal']]],
-  ['fastwriter',['FastWriter',['../class_json_1_1_fast_writer.html',1,'Json']]],
-  ['features',['Features',['../class_json_1_1_features.html',1,'Json']]],
-  ['file_5fhelper',['file_helper',['../classspdlog_1_1details_1_1file__helper.html',1,'spdlog::details']]],
-  ['fileinfo',['FileInfo',['../classcpplint_1_1_file_info.html',1,'cpplint']]],
-  ['fixedbuffer',['FixedBuffer',['../classfmt_1_1internal_1_1_fixed_buffer.html',1,'fmt::internal']]],
-  ['flag_5fformatter',['flag_formatter',['../classspdlog_1_1details_1_1flag__formatter.html',1,'spdlog::details']]],
-  ['formatbuf',['FormatBuf',['../classfmt_1_1internal_1_1_format_buf.html',1,'fmt::internal']]],
-  ['formaterror',['FormatError',['../classfmt_1_1_format_error.html',1,'fmt']]],
-  ['formatint',['FormatInt',['../classfmt_1_1_format_int.html',1,'fmt']]],
-  ['formatspec',['FormatSpec',['../structfmt_1_1_format_spec.html',1,'fmt']]],
-  ['formatter',['formatter',['../classspdlog_1_1formatter.html',1,'spdlog']]],
-  ['formatterbase',['FormatterBase',['../classfmt_1_1internal_1_1_formatter_base.html',1,'fmt::internal']]],
-  ['full_5fformatter',['full_formatter',['../classspdlog_1_1details_1_1full__formatter.html',1,'spdlog::details']]]
+  ['track',['Track',['../class_track.html',1,'']]]
 ];
