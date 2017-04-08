@@ -20,10 +20,3 @@ const std::string &Track::getBase64EncodedBytes() const {
     return base64EncodedBytes;
 }
 
-void Track::setId(int id) {
-    this->id = id;
-}
-
-void Track::setBase64EncodedBytes(const std::string &base64EncodedBytes) {
-    this->base64EncodedBytes = base64EncodedBytes;
-}

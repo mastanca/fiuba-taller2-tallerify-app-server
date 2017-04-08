@@ -18,11 +18,7 @@ private:
 public:
     int getId() const;
 
-    void setId(int id);
-
     const std::string &getBase64EncodedBytes() const;
-
-    void setBase64EncodedBytes(const std::string &base64EncodedBytes);
 
     std::string toString();
 
