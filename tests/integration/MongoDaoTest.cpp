@@ -8,7 +8,7 @@
 void MongoDaoTest::testGetting() {
     MongoDao dao;
     std::string song = "Sweet home Alabama";
-    int id = rand();
+    int id = rand() + 1;
     Track track(id, song);
     dao.saveTrack(&track);
 
@@ -21,7 +21,7 @@ void MongoDaoTest::testGetting() {
 void MongoDaoTest::testSaving() {
     MongoDao dao;
     std::string song = "I see a red door and I want to paint it black";
-    int id = rand();
+    int id = rand() + 1;
     Track track(id, song);
     ASSERT_NO_FATAL_FAILURE(dao.saveTrack(&track));
 }
