@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['request',['Request',['../class_request.html',1,'']]],
-  ['response',['Response',['../class_response.html',1,'']]]
+  ['pingcontroller',['PingController',['../class_ping_controller.html',1,'']]]
 ];

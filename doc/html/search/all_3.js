@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pingcontroller',['PingController',['../class_ping_controller.html',1,'']]]
+  ['mongodao',['MongoDao',['../class_mongo_dao.html',1,'']]]
 ];
