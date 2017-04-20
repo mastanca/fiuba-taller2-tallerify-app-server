@@ -5,12 +5,15 @@
 
 
 #include "Controller.h"
+#include "../networking/StreamResponse.h"
 
 class TracksController : public Controller {
 public:
     TracksController();
 
     virtual ~TracksController();
+
+    void get(Request &request, StreamResponse &response);
 
 };
 

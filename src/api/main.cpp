@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
     spdlog::set_pattern("[%H:%M:%S %z] %v");
     srand(time(NULL));
 
-    MongoDao dao;
+    //MongoDao dao;
 
 #ifdef __APPLE__
     signal(SIGINT, handle_signal);

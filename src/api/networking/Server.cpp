@@ -3,6 +3,7 @@
 #include "Server.h"
 #include "../controllers/PingController.h"
 #include "../config/Constants.h"
+#include "../controllers/TracksController.h"
 #include <spdlog/spdlog.h>
 
 void event_handler(struct mg_connection *c, int ev, void *p) {
@@ -17,7 +18,9 @@ void event_handler(struct mg_connection *c, int ev, void *p) {
 Server::Server(int port) : server(NULL), connection(NULL), port(port), running(false) {
     // Initialize controllers
     PingController *pingController = new PingController();
+    TracksController *tracksController = new TracksController();
     registerController(pingController);
+    registerController(tracksController);
 }
 
 Server::~Server() {

@@ -26,7 +26,7 @@ std::string Response::getData() {
     std::string body = getBody();
     std::ostringstream data;
 
-    data << "HTTP/1.0 " << code << "\n";
+    data << "HTTP/1.1 " << code << "\n";
 
     if (!hasHeader("Content-Length")) {
         std::ostringstream length;
