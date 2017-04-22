@@ -12,6 +12,11 @@ void event_handler(struct mg_connection *c, int ev, void *p) {
         if (self != NULL) {
             self->handleRequest(c, (http_message *) p);
         }
+    } else if (ev == MG_EV_RECV) {
+        struct mbuf *io = &c->recv_mbuf;
+        mg_send(c, io->buf, io->len);
+        mbuf_remove(io, io->len);
+        c->flags |= MG_F_SEND_AND_CLOSE;
     }
 }
 
@@ -41,8 +46,11 @@ void Server::start() {
         if (connection == NULL) {
             spdlog::get("console")->error("Failed to create connection (Port in use?)");
         }
+        // UDP trials
+        const char *port = "udp://1234";
+        mg_bind(server, port, event_handler);
         connection->user_data = this;
-        mg_set_protocol_http_websocket(connection);
+        mg_set_protocol_http_websocket(connection); // TODO: ???
         running = true;
         for (;;) {
             // TODO: Send to pooler thread?

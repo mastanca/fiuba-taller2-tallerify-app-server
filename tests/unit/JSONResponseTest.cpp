@@ -20,7 +20,7 @@ void JSONResponseTest::testGetData() {
     std::ostringstream code;
     code << response.getCode();
 
-    ASSERT_EQ(response.getData(), "HTTP/1.0 " + code.str() + "\nContent-Length: " + length.str() + "\n" + "Content-Type: application/json" "\n\n" + response.getBody());
+    ASSERT_EQ(response.getData(), "HTTP/1.1 " + code.str() + "\nContent-Length: " + length.str() + "\n" + "Content-Type: application/json" "\n\n" + response.getBody());
 
 }
 
