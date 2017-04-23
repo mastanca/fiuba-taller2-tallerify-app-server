@@ -1,15 +1,8 @@
 #include <iostream>
-#include <bsoncxx/builder/stream/document.hpp>
-#include <bsoncxx/json.hpp>
-
-#include <mongocxx/client.hpp>
-#include <mongocxx/instance.hpp>
 
 #include "spdlog/spdlog.h"
 
 #include "networking/Server.h"
-#include "networking/JSONResponse.h"
-#include "dao/MongoDao.h"
 
 volatile static bool running = true;
 
@@ -21,29 +14,9 @@ void handle_signal(int sig) {
 }
 
 int main(int argc, char *argv[]) {
-    std::cout << "Hello tallerify!" << std::endl;
-
-//    mongocxx::instance inst{};
-//    mongocxx::client conn{mongocxx::uri{}};
-//
-//    bsoncxx::builder::stream::document document{};
-//
-//    auto collection = conn["testdb"]["testcollection"];
-//    document << "hello" << "world"
-//            << "_id" << "1234";
-//
-//    //collection.insert_one(document.view());
-//    auto cursor = collection.find({});
-//
-//    for (auto &&doc : cursor) {
-//        std::cout << bsoncxx::to_json(doc) << std::endl;
-//    }
-
     auto console = spdlog::stdout_color_mt("console");
     spdlog::set_pattern("[%H:%M:%S %z] %v");
     srand(time(NULL));
-
-    //MongoDao dao;
 
 #ifdef __APPLE__
     signal(SIGINT, handle_signal);

@@ -5,18 +5,20 @@
 #include "../config/Constants.h"
 #include "../controllers/TracksController.h"
 #include <spdlog/spdlog.h>
+static struct mg_serve_http_opts s_http_server_opts;
 
 void event_handler(struct mg_connection *c, int ev, void *p) {
     if (ev == MG_EV_HTTP_REQUEST) {
+        mg_serve_http(c, (struct http_message *) p, s_http_server_opts);
         Server *self = (Server *) c->user_data;
         if (self != NULL) {
             self->handleRequest(c, (http_message *) p);
         }
     } else if (ev == MG_EV_RECV) {
-        struct mbuf *io = &c->recv_mbuf;
-        mg_send(c, io->buf, io->len);
-        mbuf_remove(io, io->len);
-        c->flags |= MG_F_SEND_AND_CLOSE;
+//        struct mbuf *io = &c->recv_mbuf;
+//        mg_send(c, io->buf, io->len);
+//        mbuf_remove(io, io->len);
+//        c->flags |= MG_F_SEND_AND_CLOSE;
     }
 }
 
@@ -47,8 +49,12 @@ void Server::start() {
             spdlog::get("console")->error("Failed to create connection (Port in use?)");
         }
         // UDP trials
-        const char *port = "udp://1234";
-        mg_bind(server, port, event_handler);
+//        const char *port = "udp://1234";
+//        mg_bind(server, port, event_handler);
+
+        s_http_server_opts.document_root = "..";
+        s_http_server_opts.enable_directory_listing = "yes";
+
         connection->user_data = this;
         mg_set_protocol_http_websocket(connection); // TODO: ???
         running = true;
