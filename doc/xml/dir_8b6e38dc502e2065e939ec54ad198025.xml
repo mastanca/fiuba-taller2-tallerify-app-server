@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_8b6e38dc502e2065e939ec54ad198025" kind="dir">
+    <compoundname>src/api/networking</compoundname>
+    <innerfile refid="_j_s_o_n_response_8cpp">JSONResponse.cpp</innerfile>
+    <innerfile refid="_j_s_o_n_response_8h">JSONResponse.h</innerfile>
+    <innerfile refid="_request_8cpp">Request.cpp</innerfile>
+    <innerfile refid="_request_8h">Request.h</innerfile>
+    <innerfile refid="_response_8cpp">Response.cpp</innerfile>
+    <innerfile refid="_response_8h">Response.h</innerfile>
+    <innerfile refid="_server_8cpp">Server.cpp</innerfile>
+    <innerfile refid="_server_8h">Server.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/api/networking/"/>
+  </compounddef>
+</doxygen>

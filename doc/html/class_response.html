@@ -78,8 +78,11 @@ Inheritance diagram for Response:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c639eab3dd2496a7ddbd04c36d96991"><td class="memItemLeft" align="right" valign="top"><a id="a4c639eab3dd2496a7ddbd04c36d96991"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setHeader</b> (std::string key, std::string value)</td></tr>
+<tr class="memitem:aa9b6e391d77fce8daca8bac13730ec8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_response.html#aa9b6e391d77fce8daca8bac13730ec8e">Response</a> ()</td></tr>
+<tr class="separator:aa9b6e391d77fce8daca8bac13730ec8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4a6403aaefce73725f17cf63896f84"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_response.html#a2a4a6403aaefce73725f17cf63896f84">~Response</a> ()</td></tr>
+<tr class="separator:a2a4a6403aaefce73725f17cf63896f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c639eab3dd2496a7ddbd04c36d96991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_response.html#a4c639eab3dd2496a7ddbd04c36d96991">setHeader</a> (std::string key, std::string value)</td></tr>
 <tr class="separator:a4c639eab3dd2496a7ddbd04c36d96991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e74066399cbf35cb38c310b4e73a003"><td class="memItemLeft" align="right" valign="top"><a id="a1e74066399cbf35cb38c310b4e73a003"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setCode</b> (int code)</td></tr>
@@ -106,6 +109,87 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>code</b></td></tr>
 std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>headers</b></td></tr>
 <tr class="separator:a83b9ffd2c506fd147ca17f6c73739f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa9b6e391d77fce8daca8bac13730ec8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b6e391d77fce8daca8bac13730ec8e">&#9670;&nbsp;</a></span>Response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response::Response </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_response.html">Response</a> constructor </p>
+
+</div>
+</div>
+<a id="a2a4a6403aaefce73725f17cf63896f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4a6403aaefce73725f17cf63896f84">&#9670;&nbsp;</a></span>~Response()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Response::~Response </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_response.html">Response</a> destroyer </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4c639eab3dd2496a7ddbd04c36d96991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c639eab3dd2496a7ddbd04c36d96991">&#9670;&nbsp;</a></span>setHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Response::setHeader </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>inserts a new header to the headers map </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>string containign the header key </td></tr>
+    <tr><td class="paramname">value</td><td>string containing the header value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/api/networking/<a class="el" href="_response_8h_source.html">Response.h</a></li>
 <li>src/api/networking/Response.cpp</li>

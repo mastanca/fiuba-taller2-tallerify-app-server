@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_da61e3e9a357748887e3ca8d7c5a0c16" kind="dir">
+    <compoundname>src/api</compoundname>
+    <innerdir refid="dir_175a49cec7332852173394a8d0b0c489">src/api/config</innerdir>
+    <innerdir refid="dir_eeb391a24df1216ed709bbe6155a8e7d">src/api/controllers</innerdir>
+    <innerdir refid="dir_d0b18a6511d1cb46b9d3d92f64e8be99">src/api/dao</innerdir>
+    <innerdir refid="dir_042ed6d28a050727846a19dfd1c505f7">src/api/domain</innerdir>
+    <innerdir refid="dir_8b6e38dc502e2065e939ec54ad198025">src/api/networking</innerdir>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/api/"/>
+  </compounddef>
+</doxygen>

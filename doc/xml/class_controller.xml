@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_controller" kind="class" language="C++" prot="public">
+    <compoundname>Controller</compoundname>
+    <derivedcompoundref refid="class_ping_controller" prot="public" virt="non-virtual">PingController</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, RequestHandlerBase * &gt;</type>
+        <definition>std::map&lt;std::string, RequestHandlerBase *&gt; Controller::routes</definition>
+        <argsstring></argsstring>
+        <name>routes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="26" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1acbabc355661618f30e04c613ae8b3340" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Controller::urls</definition>
+        <argsstring></argsstring>
+        <name>urls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="27" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::Controller</definition>
+        <argsstring>()</argsstring>
+        <name>Controller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="13" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Controller::~Controller</definition>
+        <argsstring>()</argsstring>
+        <name>~Controller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="15" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="11" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1afa78a73d099dc2920b22b2927f7870d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
+        <definition>Response * Controller::process</definition>
+        <argsstring>(Request &amp;request)</argsstring>
+        <name>process</name>
+        <param>
+          <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="17" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="21" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
+        <definition>Response * Controller::serverInternalError</definition>
+        <argsstring>(std::string message)</argsstring>
+        <name>serverInternalError</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="19" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="32" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::addRoute</definition>
+        <argsstring>(std::string httpVerb, std::string route, RequestHandlerBase *handler)</argsstring>
+        <name>addRoute</name>
+        <param>
+          <type>std::string</type>
+          <declname>httpVerb</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>route</declname>
+        </param>
+        <param>
+          <type>RequestHandlerBase *</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="21" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Controller::handles</definition>
+        <argsstring>(std::string method, std::string url)</argsstring>
+        <name>handles</name>
+        <param>
+          <type>std::string</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="23" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+      </node>
+      <node id="1">
+        <label>PingController</label>
+        <link refid="class_ping_controller"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/api/controllers/Controller.h" line="11" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="11" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" virt="non-virtual"><scope>Controller</scope><name>addRoute</name></member>
+      <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" virt="non-virtual"><scope>Controller</scope><name>Controller</name></member>
+      <member refid="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51" prot="public" virt="virtual"><scope>Controller</scope><name>handles</name></member>
+      <member refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" prot="public" virt="virtual"><scope>Controller</scope><name>process</name></member>
+      <member refid="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" prot="protected" virt="non-virtual"><scope>Controller</scope><name>routes</name></member>
+      <member refid="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" prot="public" virt="non-virtual"><scope>Controller</scope><name>serverInternalError</name></member>
+      <member refid="class_controller_1acbabc355661618f30e04c613ae8b3340" prot="protected" virt="non-virtual"><scope>Controller</scope><name>urls</name></member>
+      <member refid="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" virt="virtual"><scope>Controller</scope><name>~Controller</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

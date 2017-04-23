@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>fiuba-taller2-tallerify-app-server</title>
+    <detaileddescription>
+<para>App server for tallerify in C++, using mongoose and mongodb</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>branch </para></entry><entry thead="yes"><para>Travis CI </para></entry><entry thead="yes"><para>Coveralls  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>master</computeroutput> </para></entry><entry thead="no"><para><ulink url="https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server"></ulink> </para></entry><entry thead="no"><para><ulink url="https://coveralls.io/github/tallerify/fiuba-taller2-tallerify-app-server?branch=HEAD"></ulink> </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>develop</computeroutput> </para></entry><entry thead="no"><para><ulink url="https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server"></ulink> </para></entry><entry thead="no"><para><ulink url="https://coveralls.io/github/tallerify/fiuba-taller2-tallerify-app-server?branch=HEAD"></ulink> </para></entry></row>
+</table>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

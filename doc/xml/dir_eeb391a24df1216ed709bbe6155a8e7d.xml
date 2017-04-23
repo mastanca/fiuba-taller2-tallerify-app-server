@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_eeb391a24df1216ed709bbe6155a8e7d" kind="dir">
+    <compoundname>src/api/controllers</compoundname>
+    <innerfile refid="_controller_8cpp">Controller.cpp</innerfile>
+    <innerfile refid="_controller_8h">Controller.h</innerfile>
+    <innerfile refid="_ping_controller_8cpp">PingController.cpp</innerfile>
+    <innerfile refid="_ping_controller_8h">PingController.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/api/controllers/"/>
+  </compounddef>
+</doxygen>

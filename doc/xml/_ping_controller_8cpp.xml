@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_ping_controller_8cpp" kind="file" language="C++">
+    <compoundname>PingController.cpp</compoundname>
+    <includes refid="_ping_controller_8h" local="yes">PingController.h</includes>
+    <includes refid="_constants_8h" local="yes">../config/Constants.h</includes>
+    <incdepgraph>
+      <node id="33">
+        <label>../networking/Request.h</label>
+        <link refid="_request_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>jsoncpp/json/json.h</label>
+      </node>
+      <node id="32">
+        <label>Controller.h</label>
+        <link refid="_controller_8h_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>src/api/controllers/PingController.cpp</label>
+        <link refid="_ping_controller_8cpp"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>string</label>
+      </node>
+      <node id="37">
+        <label>map</label>
+      </node>
+      <node id="42">
+        <label>../config/Constants.h</label>
+        <link refid="_constants_8h_source"/>
+      </node>
+      <node id="38">
+        <label>mongoose/RequestHandler.h</label>
+      </node>
+      <node id="35">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>vector</label>
+      </node>
+      <node id="34">
+        <label>mongoose/mongoose.h</label>
+      </node>
+      <node id="40">
+        <label>../networking/JSONResponse.h</label>
+        <link refid="_j_s_o_n_response_8h_source"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>PingController.h</label>
+        <link refid="_ping_controller_8h_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;PingController.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../config/Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PingController::PingController()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>addRoute(HTTP_GET,<sp/></highlight><highlight class="stringliteral">&quot;/ping&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;PingController,<sp/>JSONResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;PingController::get));</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">PingController::~PingController()<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PingController::get(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;ping&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pong&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/api/controllers/PingController.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_controller_8h" kind="file" language="C++">
+    <compoundname>Controller.h</compoundname>
+    <includes refid="_request_8h" local="yes">../networking/Request.h</includes>
+    <includes local="no">mongoose/RequestHandler.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_controller_8cpp" local="yes">src/api/controllers/Controller.cpp</includedby>
+    <includedby refid="_ping_controller_8h" local="yes">src/api/controllers/PingController.h</includedby>
+    <includedby refid="_server_8h" local="yes">src/api/networking/Server.h</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>../networking/Request.h</label>
+        <link refid="_request_8h_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>src/api/controllers/Controller.h</label>
+        <link refid="_controller_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="24">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>mongoose/RequestHandler.h</label>
+      </node>
+      <node id="22">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>vector</label>
+      </node>
+      <node id="21">
+        <label>mongoose/mongoose.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="27">
+        <label>src/api/controllers/Controller.h</label>
+        <link refid="_controller_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>src/api/networking/Server.h</label>
+        <link refid="_server_8h"/>
+      </node>
+      <node id="28">
+        <label>src/api/controllers/PingController.h</label>
+        <link refid="_ping_controller_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_controller" prot="public">Controller</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../networking/Request.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mongoose/RequestHandler.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_controller" kindref="compound">Controller</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_controller" kindref="compound">Controller</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_controller" kindref="compound">Controller</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*process(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*serverInternalError(std::string<sp/>message);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addRoute(std::string<sp/>httpVerb,<sp/>std::string<sp/>route,<sp/>RequestHandlerBase<sp/>*handler);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>handles(std::string<sp/>method,<sp/>std::string<sp/>url);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>RequestHandlerBase<sp/>*&gt;<sp/>routes;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>urls;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONTROLLER_H</highlight></codeline>
+    </programlisting>
+    <location file="src/api/controllers/Controller.h"/>
+  </compounddef>
+</doxygen>

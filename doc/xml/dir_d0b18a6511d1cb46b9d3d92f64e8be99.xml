@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_d0b18a6511d1cb46b9d3d92f64e8be99" kind="dir">
+    <compoundname>src/api/dao</compoundname>
+    <innerfile refid="_mongo_dao_8cpp">MongoDao.cpp</innerfile>
+    <innerfile refid="_mongo_dao_8h">MongoDao.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/api/dao/"/>
+  </compounddef>
+</doxygen>

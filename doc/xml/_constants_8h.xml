@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_constants_8h" kind="file" language="C++">
+    <compoundname>Constants.h</compoundname>
+    <includedby refid="_controller_8cpp" local="yes">src/api/controllers/Controller.cpp</includedby>
+    <includedby refid="_ping_controller_8cpp" local="yes">src/api/controllers/PingController.cpp</includedby>
+    <includedby refid="_response_8cpp" local="yes">src/api/networking/Response.cpp</includedby>
+    <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_constants_8h_1aa276b433bb7caee9ec1bb1386063707b" prot="public" static="no">
+        <name>HTTP_GET</name>
+        <initializer>&quot;GET&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="6" column="9" bodyfile="src/api/config/Constants.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1ad786c274cc31d7193adba110054555b7" prot="public" static="no">
+        <name>HTTP_POST</name>
+        <initializer>&quot;POST&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="7" column="9" bodyfile="src/api/config/Constants.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1ad0e84459f11d4b8762fa7c5adc775602" prot="public" static="no">
+        <name>HTTP_PUT</name>
+        <initializer>&quot;PUT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="8" column="9" bodyfile="src/api/config/Constants.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a80131cf3bb8aa236a18cb067c14c23b6" prot="public" static="no">
+        <name>HTTP_DELETE</name>
+        <initializer>&quot;DELETE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="9" column="9" bodyfile="src/api/config/Constants.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a02e6d59009dee759528ec81fc9a8eeff" prot="public" static="no">
+        <name>HTTP_OK</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="10" column="9" bodyfile="src/api/config/Constants.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1ac19a79fb4cf575d20efd0633c1669ed9" prot="public" static="no">
+        <name>HTTP_CREATED</name>
+        <initializer>201</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="11" column="9" bodyfile="src/api/config/Constants.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a0c1fdbbb10800664989907cbd3a5a023" prot="public" static="no">
+        <name>HTTP_BAD_REQUEST</name>
+        <initializer>400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="12" column="9" bodyfile="src/api/config/Constants.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1abd505b5244bd18ae61c581484b4bc5a0" prot="public" static="no">
+        <name>HTTP_NOT_FOUND</name>
+        <initializer>404</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="13" column="9" bodyfile="src/api/config/Constants.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a92646f876056a1e5013e0050496dc04d" prot="public" static="no">
+        <name>HTTP_FORBIDDEN</name>
+        <initializer>403</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="14" column="9" bodyfile="src/api/config/Constants.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_constants_8h_1a89eaf5ed7b88cd227c00c942d5245f98" prot="public" static="no">
+        <name>HTTP_SERVER_ERROR</name>
+        <initializer>500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="15" column="9" bodyfile="src/api/config/Constants.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_GET<sp/>&quot;GET&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_POST<sp/>&quot;POST&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_PUT<sp/>&quot;PUT&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_DELETE<sp/>&quot;DELETE&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_OK<sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_CREATED<sp/>201</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_BAD_REQUEST<sp/>400</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_NOT_FOUND<sp/>404</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_FORBIDDEN<sp/>403</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_SERVER_ERROR<sp/>500</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONSTANTS_H</highlight></codeline>
+    </programlisting>
+    <location file="src/api/config/Constants.h"/>
+  </compounddef>
+</doxygen>

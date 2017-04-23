@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_response" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Response</compoundname>
+    <derivedcompoundref refid="class_j_s_o_n_response" prot="public" virt="non-virtual">JSONResponse</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_response_1ac5735ee80a09411fa59bd67bfd8ac6f5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Response::code</definition>
+        <argsstring></argsstring>
+        <name>code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="42" column="1" bodyfile="src/api/networking/Response.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_response_1a83b9ffd2c506fd147ca17f6c73739f7f" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; Response::headers</definition>
+        <argsstring></argsstring>
+        <name>headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="43" column="1" bodyfile="src/api/networking/Response.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_response_1aa9b6e391d77fce8daca8bac13730ec8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Response::Response</definition>
+        <argsstring>()</argsstring>
+        <name>Response</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_response" kindref="compound">Response</ref> constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="17" column="1" bodyfile="src/api/networking/Response.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_response_1a2a4a6403aaefce73725f17cf63896f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Response::~Response</definition>
+        <argsstring>()</argsstring>
+        <name>~Response</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_response" kindref="compound">Response</ref> destroyer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="22" column="1" bodyfile="src/api/networking/Response.cpp" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_response_1a4c639eab3dd2496a7ddbd04c36d96991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Response::setHeader</definition>
+        <argsstring>(std::string key, std::string value)</argsstring>
+        <name>setHeader</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>inserts a new header to the headers map <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string containign the header key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string containing the header value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="29" column="1" bodyfile="src/api/networking/Response.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_response_1a1e74066399cbf35cb38c310b4e73a003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Response::setCode</definition>
+        <argsstring>(int code)</argsstring>
+        <name>setCode</name>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="31" column="1" bodyfile="src/api/networking/Response.cpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_response_1ad0a04692964be0c85e0458a200cfd179" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Response::getCode</definition>
+        <argsstring>() const</argsstring>
+        <name>getCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="33" column="1" bodyfile="src/api/networking/Response.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_response_1af841ae031ce6f12dff50809a73dc771f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string Response::getData</definition>
+        <argsstring>()</argsstring>
+        <name>getData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="35" column="1" bodyfile="src/api/networking/Response.cpp" bodystart="25" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_response_1a5975130b2dd8549a73eaf54be7abd5f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string Response::getBody</definition>
+        <argsstring>()=0</argsstring>
+        <name>getBody</name>
+        <reimplementedby refid="class_j_s_o_n_response_1a2e74ef171632f94220d027210dd0f482">getBody</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_response_1a9877673d70d058facbbf962600926dfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Response::hasHeader</definition>
+        <argsstring>(std::string key)</argsstring>
+        <name>hasHeader</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Response.h" line="39" column="1" bodyfile="src/api/networking/Response.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>Response</label>
+        <link refid="class_response"/>
+      </node>
+      <node id="18">
+        <label>JSONResponse</label>
+        <link refid="class_j_s_o_n_response"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/api/networking/Response.h" line="12" column="1" bodyfile="src/api/networking/Response.h" bodystart="12" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_response_1ac5735ee80a09411fa59bd67bfd8ac6f5" prot="protected" virt="non-virtual"><scope>Response</scope><name>code</name></member>
+      <member refid="class_response_1a5975130b2dd8549a73eaf54be7abd5f4" prot="public" virt="pure-virtual"><scope>Response</scope><name>getBody</name></member>
+      <member refid="class_response_1ad0a04692964be0c85e0458a200cfd179" prot="public" virt="non-virtual"><scope>Response</scope><name>getCode</name></member>
+      <member refid="class_response_1af841ae031ce6f12dff50809a73dc771f" prot="public" virt="virtual"><scope>Response</scope><name>getData</name></member>
+      <member refid="class_response_1a9877673d70d058facbbf962600926dfa" prot="public" virt="virtual"><scope>Response</scope><name>hasHeader</name></member>
+      <member refid="class_response_1a83b9ffd2c506fd147ca17f6c73739f7f" prot="protected" virt="non-virtual"><scope>Response</scope><name>headers</name></member>
+      <member refid="class_response_1aa9b6e391d77fce8daca8bac13730ec8e" prot="public" virt="non-virtual"><scope>Response</scope><name>Response</name></member>
+      <member refid="class_response_1a1e74066399cbf35cb38c310b4e73a003" prot="public" virt="non-virtual"><scope>Response</scope><name>setCode</name></member>
+      <member refid="class_response_1a4c639eab3dd2496a7ddbd04c36d96991" prot="public" virt="non-virtual"><scope>Response</scope><name>setHeader</name></member>
+      <member refid="class_response_1a2a4a6403aaefce73725f17cf63896f84" prot="public" virt="virtual"><scope>Response</scope><name>~Response</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

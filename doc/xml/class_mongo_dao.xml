@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_mongo_dao" kind="class" language="C++" prot="public">
+    <compoundname>MongoDao</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mongo_dao_1a10c441992516dcc5150fd549e230a08a" prot="private" static="no" mutable="no">
+        <type>mongocxx::client *</type>
+        <definition>mongocxx::client* MongoDao::client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/dao/MongoDao.h" line="22" column="1" bodyfile="src/api/dao/MongoDao.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_dao_1a4c2930854cf8b551dec93596754deaa0" prot="private" static="no" mutable="no">
+        <type>mongocxx::instance *</type>
+        <definition>mongocxx::instance* MongoDao::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/dao/MongoDao.h" line="23" column="1" bodyfile="src/api/dao/MongoDao.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mongo_dao_1acfe7cfb70d0935014f8d8fab8e1330dd" prot="private" static="no" mutable="no">
+        <type>mongocxx::database</type>
+        <definition>mongocxx::database MongoDao::db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/dao/MongoDao.h" line="24" column="1" bodyfile="src/api/dao/MongoDao.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mongo_dao_1a8a7855a0cb272a4687749086a3ea061b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MongoDao::MongoDao</definition>
+        <argsstring>()</argsstring>
+        <name>MongoDao</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/dao/MongoDao.h" line="13" column="1" bodyfile="src/api/dao/MongoDao.cpp" bodystart="9" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_dao_1a1997e0557df3c0f05da62fcc35505dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>MongoDao::~MongoDao</definition>
+        <argsstring>()</argsstring>
+        <name>~MongoDao</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/dao/MongoDao.h" line="15" column="1" bodyfile="src/api/dao/MongoDao.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_dao_1a6e2ce85d784142a641d6945251b4746d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MongoDao::saveTrack</definition>
+        <argsstring>(Track *track)</argsstring>
+        <name>saveTrack</name>
+        <param>
+          <type><ref refid="class_track" kindref="compound">Track</ref> *</type>
+          <declname>track</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/dao/MongoDao.h" line="17" column="1" bodyfile="src/api/dao/MongoDao.cpp" bodystart="21" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mongo_dao_1aeeba08599e299353ef9ff99966ce374b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_track" kindref="compound">Track</ref> *</type>
+        <definition>Track * MongoDao::getTrack</definition>
+        <argsstring>(int trackId)</argsstring>
+        <name>getTrack</name>
+        <param>
+          <type>int</type>
+          <declname>trackId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/dao/MongoDao.h" line="19" column="1" bodyfile="src/api/dao/MongoDao.cpp" bodystart="36" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/api/dao/MongoDao.h" line="11" column="1" bodyfile="src/api/dao/MongoDao.h" bodystart="11" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_mongo_dao_1a10c441992516dcc5150fd549e230a08a" prot="private" virt="non-virtual"><scope>MongoDao</scope><name>client</name></member>
+      <member refid="class_mongo_dao_1acfe7cfb70d0935014f8d8fab8e1330dd" prot="private" virt="non-virtual"><scope>MongoDao</scope><name>db</name></member>
+      <member refid="class_mongo_dao_1aeeba08599e299353ef9ff99966ce374b" prot="public" virt="non-virtual"><scope>MongoDao</scope><name>getTrack</name></member>
+      <member refid="class_mongo_dao_1a4c2930854cf8b551dec93596754deaa0" prot="private" virt="non-virtual"><scope>MongoDao</scope><name>instance</name></member>
+      <member refid="class_mongo_dao_1a8a7855a0cb272a4687749086a3ea061b" prot="public" virt="non-virtual"><scope>MongoDao</scope><name>MongoDao</name></member>
+      <member refid="class_mongo_dao_1a6e2ce85d784142a641d6945251b4746d" prot="public" virt="non-virtual"><scope>MongoDao</scope><name>saveTrack</name></member>
+      <member refid="class_mongo_dao_1a1997e0557df3c0f05da62fcc35505dc3" prot="public" virt="virtual"><scope>MongoDao</scope><name>~MongoDao</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
