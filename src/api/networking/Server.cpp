@@ -52,7 +52,7 @@ void Server::start() {
 //        const char *port = "udp://1234";
 //        mg_bind(server, port, event_handler);
 
-        s_http_server_opts.document_root = "..";
+        s_http_server_opts.document_root = ".";
         s_http_server_opts.enable_directory_listing = "yes";
 
         connection->user_data = this;
