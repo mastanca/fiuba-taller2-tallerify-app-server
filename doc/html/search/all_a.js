@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['json',['Json',['../namespace_json.html',1,'']]],
-  ['jsonresponse',['JSONResponse',['../class_j_s_o_n_response.html',1,'']]]
+  ['writeresponse',['writeResponse',['../class_request.html#a1858382756bc45a009856c3158402278',1,'Request']]]
 ];

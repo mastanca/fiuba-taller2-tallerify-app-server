@@ -68,13 +68,110 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6e2ce85d784142a641d6945251b4746d"><td class="memItemLeft" align="right" valign="top"><a id="a6e2ce85d784142a641d6945251b4746d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>saveTrack</b> (<a class="el" href="class_track.html">Track</a> *track)</td></tr>
+<tr class="memitem:a8a7855a0cb272a4687749086a3ea061b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mongo_dao.html#a8a7855a0cb272a4687749086a3ea061b">MongoDao</a> ()</td></tr>
+<tr class="separator:a8a7855a0cb272a4687749086a3ea061b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1997e0557df3c0f05da62fcc35505dc3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mongo_dao.html#a1997e0557df3c0f05da62fcc35505dc3">~MongoDao</a> ()</td></tr>
+<tr class="separator:a1997e0557df3c0f05da62fcc35505dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2ce85d784142a641d6945251b4746d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mongo_dao.html#a6e2ce85d784142a641d6945251b4746d">saveTrack</a> (<a class="el" href="class_track.html">Track</a> *track)</td></tr>
 <tr class="separator:a6e2ce85d784142a641d6945251b4746d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeba08599e299353ef9ff99966ce374b"><td class="memItemLeft" align="right" valign="top"><a id="aeeba08599e299353ef9ff99966ce374b"></a>
-<a class="el" href="class_track.html">Track</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getTrack</b> (int trackId)</td></tr>
+<tr class="memitem:aeeba08599e299353ef9ff99966ce374b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_track.html">Track</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mongo_dao.html#aeeba08599e299353ef9ff99966ce374b">getTrack</a> (int trackId)</td></tr>
 <tr class="separator:aeeba08599e299353ef9ff99966ce374b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8a7855a0cb272a4687749086a3ea061b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7855a0cb272a4687749086a3ea061b">&#9670;&nbsp;</a></span>MongoDao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MongoDao::MongoDao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_mongo_dao.html">MongoDao</a> constructor Creates a valid connection with mongodb </p>
+
+</div>
+</div>
+<a id="a1997e0557df3c0f05da62fcc35505dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1997e0557df3c0f05da62fcc35505dc3">&#9670;&nbsp;</a></span>~MongoDao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MongoDao::~MongoDao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_mongo_dao.html">MongoDao</a> destroyer freed resources allocated on construction </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeeba08599e299353ef9ff99966ce374b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeba08599e299353ef9ff99966ce374b">&#9670;&nbsp;</a></span>getTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_track.html">Track</a> * MongoDao::getTrack </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>trackId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns track fetched from db </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trackId</td><td>track id to search for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>fetched track </dd></dl>
+
+</div>
+</div>
+<a id="a6e2ce85d784142a641d6945251b4746d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2ce85d784142a641d6945251b4746d">&#9670;&nbsp;</a></span>saveTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MongoDao::saveTrack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_track.html">Track</a> *&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Saves new track to db </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">track</td><td>track object to save </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/api/dao/<a class="el" href="_mongo_dao_8h_source.html">MongoDao.h</a></li>
 <li>src/api/dao/MongoDao.cpp</li>

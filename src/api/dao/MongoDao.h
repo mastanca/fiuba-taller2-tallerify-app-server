@@ -8,14 +8,34 @@
 #include <mongocxx/instance.hpp>
 #include "../domain/Track.h"
 
+/**
+ * @file MongoDao.h
+ */
 class MongoDao {
 public:
+    /**
+     * MongoDao constructor
+     * Creates a valid connection with mongodb
+     */
     MongoDao();
 
+    /**
+     * MongoDao destroyer
+     * freed resources allocated on construction
+     */
     virtual ~MongoDao();
 
+    /**
+     * Saves new track to db
+     * @param track track object to save
+     */
     void saveTrack(Track *track);
 
+    /**
+     * Returns track fetched from db
+     * @param trackId track id to search for
+     * @return fetched track
+     */
     Track *getTrack(int trackId);
 
 private:

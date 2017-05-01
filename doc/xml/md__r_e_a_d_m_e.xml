@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>Tallerify&apos;s app server</title>
+    <detaileddescription>
+<para>App server for tallerify in C++, using mongoose and mongodb</para><para><table rows="3" cols="3"><row>
+<entry thead="yes"><para>branch </para></entry><entry thead="yes"><para>Travis CI </para></entry><entry thead="yes"><para>Coveralls  </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>master</computeroutput> </para></entry><entry thead="no"><para><ulink url="https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server"></ulink> </para></entry><entry thead="no"><para><ulink url="https://coveralls.io/github/tallerify/fiuba-taller2-tallerify-app-server?branch=HEAD"></ulink> </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>develop</computeroutput> </para></entry><entry thead="no"><para><ulink url="https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server"></ulink> </para></entry><entry thead="no"><para><ulink url="https://coveralls.io/github/tallerify/fiuba-taller2-tallerify-app-server?branch=HEAD"></ulink> </para></entry></row>
+</table>
+<heading level="3">Docs</heading>
+</para><para>You can find the docs by opening <computeroutput>doc/index.html</computeroutput> with your favorite browser \ \ To get the HEAD version of them you need doxygen and sphinx. Then run</para><para><programlisting><codeline><highlight class="normal">doxygen</highlight></codeline>
+<codeline><highlight class="normal">sphinx-build<sp/>.<sp/>doc/<sp/></highlight></codeline>
+</programlisting></para><para><heading level="3">Running</heading>
+</para><para>To run you only need docker</para><para><programlisting><codeline><highlight class="normal">docker-compose<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">docker-compose<sp/>up</highlight></codeline>
+</programlisting></para><para><heading level="3">API</heading>
+</para><para>See the wiki for api references </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

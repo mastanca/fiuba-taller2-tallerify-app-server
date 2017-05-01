@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="class_controller" kind="class"><name>Controller</name>
+    <member refid="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" kind="variable"><name>routes</name></member>
+    <member refid="class_controller_1acbabc355661618f30e04c613ae8b3340" kind="variable"><name>urls</name></member>
+    <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" kind="function"><name>Controller</name></member>
+    <member refid="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" kind="function"><name>~Controller</name></member>
+    <member refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kind="function"><name>process</name></member>
+    <member refid="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" kind="function"><name>serverInternalError</name></member>
+    <member refid="class_controller_1abe812429430dca0aae5b09b4b304af26" kind="function"><name>addRoute</name></member>
+    <member refid="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51" kind="function"><name>handles</name></member>
+  </compound>
+  <compound refid="class_j_s_o_n_response" kind="class"><name>JSONResponse</name>
+    <member refid="class_j_s_o_n_response_1a4fa37df658255a09325ca4aa96f419ff" kind="function"><name>JSONResponse</name></member>
+    <member refid="class_j_s_o_n_response_1a9e432e672bdaf93256d971f969962cd5" kind="function"><name>~JSONResponse</name></member>
+    <member refid="class_j_s_o_n_response_1a2e74ef171632f94220d027210dd0f482" kind="function"><name>getBody</name></member>
+  </compound>
+  <compound refid="class_mongo_dao" kind="class"><name>MongoDao</name>
+    <member refid="class_mongo_dao_1a10c441992516dcc5150fd549e230a08a" kind="variable"><name>client</name></member>
+    <member refid="class_mongo_dao_1a4c2930854cf8b551dec93596754deaa0" kind="variable"><name>instance</name></member>
+    <member refid="class_mongo_dao_1acfe7cfb70d0935014f8d8fab8e1330dd" kind="variable"><name>db</name></member>
+    <member refid="class_mongo_dao_1a8a7855a0cb272a4687749086a3ea061b" kind="function"><name>MongoDao</name></member>
+    <member refid="class_mongo_dao_1a1997e0557df3c0f05da62fcc35505dc3" kind="function"><name>~MongoDao</name></member>
+    <member refid="class_mongo_dao_1a6e2ce85d784142a641d6945251b4746d" kind="function"><name>saveTrack</name></member>
+    <member refid="class_mongo_dao_1aeeba08599e299353ef9ff99966ce374b" kind="function"><name>getTrack</name></member>
+  </compound>
+  <compound refid="class_ping_controller" kind="class"><name>PingController</name>
+    <member refid="class_ping_controller_1a1b861cccf64c8c1781ee23ed1f7473f8" kind="function"><name>PingController</name></member>
+    <member refid="class_ping_controller_1adf30495ba10318532bc7ac3a692b359a" kind="function"><name>~PingController</name></member>
+    <member refid="class_ping_controller_1a30bed18f546f85a4aebabb596a1a0058" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="class_request" kind="class"><name>Request</name>
+    <member refid="class_request_1a8bb7976c4176a7b406061082a8022cef" kind="variable"><name>connection</name></member>
+    <member refid="class_request_1a30857fa1b1c7f72eae0bf8715afca24e" kind="variable"><name>url</name></member>
+    <member refid="class_request_1ac1fb9c057c617b04af48798c3843b68a" kind="variable"><name>body</name></member>
+    <member refid="class_request_1a6d667096cbc014b4d46e87628201bfcc" kind="variable"><name>httpVerb</name></member>
+    <member refid="class_request_1a135fd74afd31ea5b1934456cd17dbfba" kind="function"><name>Request</name></member>
+    <member refid="class_request_1a4d57c725686701f773eb3630630a7ea2" kind="function"><name>~Request</name></member>
+    <member refid="class_request_1a1858382756bc45a009856c3158402278" kind="function"><name>writeResponse</name></member>
+    <member refid="class_request_1a9dad00a15cff18542801289a24711930" kind="function"><name>getUrl</name></member>
+    <member refid="class_request_1ad88074d323ab7bef3182a5108b8ba387" kind="function"><name>getBody</name></member>
+    <member refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kind="function"><name>getHttpVerb</name></member>
+    <member refid="class_request_1ae6881c90b066551d2550ecd3a705870b" kind="function"><name>parseMessage</name></member>
+  </compound>
+  <compound refid="class_response" kind="class"><name>Response</name>
+    <member refid="class_response_1ac5735ee80a09411fa59bd67bfd8ac6f5" kind="variable"><name>code</name></member>
+    <member refid="class_response_1a83b9ffd2c506fd147ca17f6c73739f7f" kind="variable"><name>headers</name></member>
+    <member refid="class_response_1aa9b6e391d77fce8daca8bac13730ec8e" kind="function"><name>Response</name></member>
+    <member refid="class_response_1a2a4a6403aaefce73725f17cf63896f84" kind="function"><name>~Response</name></member>
+    <member refid="class_response_1a4c639eab3dd2496a7ddbd04c36d96991" kind="function"><name>setHeader</name></member>
+    <member refid="class_response_1a1e74066399cbf35cb38c310b4e73a003" kind="function"><name>setCode</name></member>
+    <member refid="class_response_1ad0a04692964be0c85e0458a200cfd179" kind="function"><name>getCode</name></member>
+    <member refid="class_response_1af841ae031ce6f12dff50809a73dc771f" kind="function"><name>getData</name></member>
+    <member refid="class_response_1a5975130b2dd8549a73eaf54be7abd5f4" kind="function"><name>getBody</name></member>
+    <member refid="class_response_1a9877673d70d058facbbf962600926dfa" kind="function"><name>hasHeader</name></member>
+  </compound>
+  <compound refid="class_server" kind="class"><name>Server</name>
+    <member refid="class_server_1ad28f45770d3f08c840688fb4993911ad" kind="friend"><name>ServerTest</name></member>
+    <member refid="class_server_1aa9fd1e810a95407cddc0bece6b625183" kind="friend"><name>event_handler</name></member>
+    <member refid="class_server_1a766819efc0063a5dac27ab6dc66cbfd9" kind="variable"><name>server</name></member>
+    <member refid="class_server_1a8a6f41215b74791bbe1c1d16cb6acf3e" kind="variable"><name>connection</name></member>
+    <member refid="class_server_1a926c9dae229a62b6d33fdbb41dca6d82" kind="variable"><name>port</name></member>
+    <member refid="class_server_1a4db32e1a16e0423cf619d7914fa9b8c2" kind="variable"><name>running</name></member>
+    <member refid="class_server_1a7e65fc13a3f8c009d8429ba1b78b9ca2" kind="variable"><name>controllers</name></member>
+    <member refid="class_server_1a495b58bef6f0d4ca6260de206cff6291" kind="function"><name>Server</name></member>
+    <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
+    <member refid="class_server_1a7eac07d2582fa01c2671362efa955b31" kind="function"><name>start</name></member>
+    <member refid="class_server_1a07c45a7e101a3926d8f9685c3c5d14e4" kind="function"><name>stop</name></member>
+    <member refid="class_server_1aad7bf25135f467cd6dd74cae2bb951da" kind="function"><name>handleRequest</name></member>
+    <member refid="class_server_1ac9de1554cafa597ec713f3e064c3f2ab" kind="function"><name>handleRequest</name></member>
+    <member refid="class_server_1abc0fb815029cd6a2672f24b8c66a2378" kind="function"><name>registerController</name></member>
+  </compound>
+  <compound refid="class_stream_response" kind="class"><name>StreamResponse</name>
+    <member refid="class_stream_response_1a4107d36ff35120767861f75b37f213f3" kind="function"><name>StreamResponse</name></member>
+    <member refid="class_stream_response_1a6c1b4169e93663a8c34a7b0bcf87e329" kind="function"><name>~StreamResponse</name></member>
+    <member refid="class_stream_response_1a7813a42b59334a3df4af643bbc6a7bd4" kind="function"><name>getBody</name></member>
+  </compound>
+  <compound refid="class_track" kind="class"><name>Track</name>
+    <member refid="class_track_1a4c555d3e591011400c96b1133c7b12ee" kind="variable"><name>id</name></member>
+    <member refid="class_track_1ae83a160c2c3cc2d1bca88422775081f5" kind="variable"><name>base64EncodedBytes</name></member>
+    <member refid="class_track_1ad020b3512debba921dd65d3f59cf8b03" kind="function"><name>Track</name></member>
+    <member refid="class_track_1a416e75e66accc8eb9e3fafc3e8555216" kind="function"><name>~Track</name></member>
+    <member refid="class_track_1a496f793279d918ed573fcc1971c2d983" kind="function"><name>getId</name></member>
+    <member refid="class_track_1ae90e785b8625cf381be9f07349ee39fc" kind="function"><name>getBase64EncodedBytes</name></member>
+    <member refid="class_track_1abc465cc8bc4d568c7031667cb831825e" kind="function"><name>toString</name></member>
+  </compound>
+  <compound refid="class_tracks_controller" kind="class"><name>TracksController</name>
+    <member refid="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" kind="function"><name>TracksController</name></member>
+    <member refid="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" kind="function"><name>~TracksController</name></member>
+    <member refid="class_tracks_controller_1a32c37335229d33b15cfc2941828db55b" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="namespaceconf" kind="namespace"><name>conf</name>
+    <member refid="conf_8py_1a540efa67c53e84c1c353c1df2e37e39c" kind="variable"><name>extensions</name></member>
+    <member refid="conf_8py_1ae850ae634911b713e036b43894fdd525" kind="variable"><name>templates_path</name></member>
+    <member refid="conf_8py_1a10af2a769eb3bd3322e874f677e435b1" kind="variable"><name>source_suffix</name></member>
+    <member refid="conf_8py_1a6fcd7e5236f355b1e1a55f9d95988810" kind="variable"><name>master_doc</name></member>
+    <member refid="conf_8py_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
+    <member refid="conf_8py_1a33fa97cf51dcb25970fbf53f10159589" kind="variable"><name>copyright</name></member>
+    <member refid="conf_8py_1a637c239d256432248aa8d9f3ab0b8c52" kind="variable"><name>author</name></member>
+    <member refid="conf_8py_1ade15c5b54093b64d7c428ec19ca5b1cb" kind="variable"><name>version</name></member>
+    <member refid="conf_8py_1a325dc746d8bf05c54d26351c35a21d90" kind="variable"><name>release</name></member>
+    <member refid="conf_8py_1ad76a2e6d7bfa880ebb4042c08e8b4e12" kind="variable"><name>language</name></member>
+    <member refid="conf_8py_1a7ad48fb6f3e9b129c02346ea0d3527c1" kind="variable"><name>exclude_patterns</name></member>
+    <member refid="conf_8py_1a641130e096b26cba8a5d63ed38684de7" kind="variable"><name>pygments_style</name></member>
+    <member refid="conf_8py_1a8fe7f0d85f975f4ecba5cb6066959a09" kind="variable"><name>todo_include_todos</name></member>
+    <member refid="conf_8py_1a6c3bfcc1a44546c1c75ce20f55bd0fd6" kind="variable"><name>html_theme</name></member>
+    <member refid="conf_8py_1af4fb5d8851ccaade135c2668dd3ced41" kind="variable"><name>html_static_path</name></member>
+    <member refid="conf_8py_1aab7fddb2766ce3c430d8246fbfdbc7b1" kind="variable"><name>htmlhelp_basename</name></member>
+    <member refid="conf_8py_1acb47d2c0c2904fa7d36b63142533f383" kind="variable"><name>breathe_projects</name></member>
+    <member refid="conf_8py_1a6eba2d2c7ae923054b1c49e686ec89b9" kind="variable"><name>breathe_default_project</name></member>
+  </compound>
+  <compound refid="conf_8py" kind="file"><name>conf.py</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_constants_8h" kind="file"><name>Constants.h</name>
+    <member refid="_constants_8h_1aa276b433bb7caee9ec1bb1386063707b" kind="define"><name>HTTP_GET</name></member>
+    <member refid="_constants_8h_1ad786c274cc31d7193adba110054555b7" kind="define"><name>HTTP_POST</name></member>
+    <member refid="_constants_8h_1ad0e84459f11d4b8762fa7c5adc775602" kind="define"><name>HTTP_PUT</name></member>
+    <member refid="_constants_8h_1a80131cf3bb8aa236a18cb067c14c23b6" kind="define"><name>HTTP_DELETE</name></member>
+    <member refid="_constants_8h_1a02e6d59009dee759528ec81fc9a8eeff" kind="define"><name>HTTP_OK</name></member>
+    <member refid="_constants_8h_1ac19a79fb4cf575d20efd0633c1669ed9" kind="define"><name>HTTP_CREATED</name></member>
+    <member refid="_constants_8h_1a0c1fdbbb10800664989907cbd3a5a023" kind="define"><name>HTTP_BAD_REQUEST</name></member>
+    <member refid="_constants_8h_1abd505b5244bd18ae61c581484b4bc5a0" kind="define"><name>HTTP_NOT_FOUND</name></member>
+    <member refid="_constants_8h_1a92646f876056a1e5013e0050496dc04d" kind="define"><name>HTTP_FORBIDDEN</name></member>
+    <member refid="_constants_8h_1a89eaf5ed7b88cd227c00c942d5245f98" kind="define"><name>HTTP_SERVER_ERROR</name></member>
+  </compound>
+  <compound refid="_controller_8cpp" kind="file"><name>Controller.cpp</name>
+  </compound>
+  <compound refid="_controller_8h" kind="file"><name>Controller.h</name>
+  </compound>
+  <compound refid="_ping_controller_8cpp" kind="file"><name>PingController.cpp</name>
+  </compound>
+  <compound refid="_ping_controller_8h" kind="file"><name>PingController.h</name>
+  </compound>
+  <compound refid="_tracks_controller_8cpp" kind="file"><name>TracksController.cpp</name>
+  </compound>
+  <compound refid="_tracks_controller_8h" kind="file"><name>TracksController.h</name>
+  </compound>
+  <compound refid="_mongo_dao_8cpp" kind="file"><name>MongoDao.cpp</name>
+  </compound>
+  <compound refid="_mongo_dao_8h" kind="file"><name>MongoDao.h</name>
+  </compound>
+  <compound refid="_track_8cpp" kind="file"><name>Track.cpp</name>
+  </compound>
+  <compound refid="_track_8h" kind="file"><name>Track.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a7c10027ca174fc9d529796f04aca6bd4" kind="variable"><name>running</name></member>
+    <member refid="main_8cpp_1a48bc8269f9046d40e104a2595f4bc0cb" kind="function"><name>handle_signal</name></member>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_j_s_o_n_response_8cpp" kind="file"><name>JSONResponse.cpp</name>
+  </compound>
+  <compound refid="_j_s_o_n_response_8h" kind="file"><name>JSONResponse.h</name>
+  </compound>
+  <compound refid="_request_8cpp" kind="file"><name>Request.cpp</name>
+  </compound>
+  <compound refid="_request_8h" kind="file"><name>Request.h</name>
+  </compound>
+  <compound refid="_response_8cpp" kind="file"><name>Response.cpp</name>
+  </compound>
+  <compound refid="_response_8h" kind="file"><name>Response.h</name>
+  </compound>
+  <compound refid="_server_8cpp" kind="file"><name>Server.cpp</name>
+    <member refid="_server_8cpp_1a62239f213b7bce96fe94f390327072ce" kind="variable"><name>s_http_server_opts</name></member>
+    <member refid="_server_8cpp_1ae791f4cb7e4c945a2b10249adc43c94c" kind="function"><name>event_handler</name></member>
+  </compound>
+  <compound refid="_server_8h" kind="file"><name>Server.h</name>
+  </compound>
+  <compound refid="_stream_response_8cpp" kind="file"><name>StreamResponse.cpp</name>
+  </compound>
+  <compound refid="_stream_response_8h" kind="file"><name>StreamResponse.h</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_da61e3e9a357748887e3ca8d7c5a0c16" kind="dir"><name>src/api</name>
+  </compound>
+  <compound refid="dir_175a49cec7332852173394a8d0b0c489" kind="dir"><name>src/api/config</name>
+  </compound>
+  <compound refid="dir_eeb391a24df1216ed709bbe6155a8e7d" kind="dir"><name>src/api/controllers</name>
+  </compound>
+  <compound refid="dir_d0b18a6511d1cb46b9d3d92f64e8be99" kind="dir"><name>src/api/dao</name>
+  </compound>
+  <compound refid="dir_042ed6d28a050727846a19dfd1c505f7" kind="dir"><name>src/api/domain</name>
+  </compound>
+  <compound refid="dir_8b6e38dc502e2065e939ec54ad198025" kind="dir"><name>src/api/networking</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_stream_response" kind="class" language="C++" prot="public">
+    <compoundname>StreamResponse</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ostringstream</basecompoundref>
+    <basecompoundref refid="class_response" prot="public" virt="non-virtual">Response</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stream_response_1a4107d36ff35120767861f75b37f213f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StreamResponse::StreamResponse</definition>
+        <argsstring>()</argsstring>
+        <name>StreamResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/StreamResponse.h" line="12" column="1" bodyfile="src/api/networking/StreamResponse.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_response_1a6c1b4169e93663a8c34a7b0bcf87e329" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>StreamResponse::~StreamResponse</definition>
+        <argsstring>()</argsstring>
+        <name>~StreamResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/StreamResponse.h" line="13" column="1" bodyfile="src/api/networking/StreamResponse.cpp" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_response_1a7813a42b59334a3df4af643bbc6a7bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string StreamResponse::getBody</definition>
+        <argsstring>()</argsstring>
+        <name>getBody</name>
+        <reimplements refid="class_response_1a5975130b2dd8549a73eaf54be7abd5f4">getBody</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/StreamResponse.h" line="14" column="1" bodyfile="src/api/networking/StreamResponse.cpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>std::ostringstream</label>
+      </node>
+      <node id="26">
+        <label>Response</label>
+        <link refid="class_response"/>
+      </node>
+      <node id="24">
+        <label>StreamResponse</label>
+        <link refid="class_stream_response"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="28">
+        <label>std::ostringstream</label>
+      </node>
+      <node id="29">
+        <label>Response</label>
+        <link refid="class_response"/>
+      </node>
+      <node id="27">
+        <label>StreamResponse</label>
+        <link refid="class_stream_response"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/api/networking/StreamResponse.h" line="10" column="1" bodyfile="src/api/networking/StreamResponse.h" bodystart="10" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_response_1ac5735ee80a09411fa59bd67bfd8ac6f5" prot="protected" virt="non-virtual"><scope>StreamResponse</scope><name>code</name></member>
+      <member refid="class_stream_response_1a7813a42b59334a3df4af643bbc6a7bd4" prot="public" virt="virtual"><scope>StreamResponse</scope><name>getBody</name></member>
+      <member refid="class_response_1ad0a04692964be0c85e0458a200cfd179" prot="public" virt="non-virtual"><scope>StreamResponse</scope><name>getCode</name></member>
+      <member refid="class_response_1af841ae031ce6f12dff50809a73dc771f" prot="public" virt="virtual"><scope>StreamResponse</scope><name>getData</name></member>
+      <member refid="class_response_1a9877673d70d058facbbf962600926dfa" prot="public" virt="virtual"><scope>StreamResponse</scope><name>hasHeader</name></member>
+      <member refid="class_response_1a83b9ffd2c506fd147ca17f6c73739f7f" prot="protected" virt="non-virtual"><scope>StreamResponse</scope><name>headers</name></member>
+      <member refid="class_response_1aa9b6e391d77fce8daca8bac13730ec8e" prot="public" virt="non-virtual"><scope>StreamResponse</scope><name>Response</name></member>
+      <member refid="class_response_1a1e74066399cbf35cb38c310b4e73a003" prot="public" virt="non-virtual"><scope>StreamResponse</scope><name>setCode</name></member>
+      <member refid="class_response_1a4c639eab3dd2496a7ddbd04c36d96991" prot="public" virt="non-virtual"><scope>StreamResponse</scope><name>setHeader</name></member>
+      <member refid="class_stream_response_1a4107d36ff35120767861f75b37f213f3" prot="public" virt="non-virtual"><scope>StreamResponse</scope><name>StreamResponse</name></member>
+      <member refid="class_response_1a2a4a6403aaefce73725f17cf63896f84" prot="public" virt="virtual"><scope>StreamResponse</scope><name>~Response</name></member>
+      <member refid="class_stream_response_1a6c1b4169e93663a8c34a7b0bcf87e329" prot="public" virt="virtual"><scope>StreamResponse</scope><name>~StreamResponse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
