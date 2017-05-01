@@ -6,7 +6,6 @@
     <includes local="no">map</includes>
     <includedby refid="_request_8h" local="yes">src/api/networking/Request.h</includedby>
     <includedby refid="_j_s_o_n_response_8h" local="yes">src/api/networking/JSONResponse.h</includedby>
-    <includedby refid="_stream_response_8h" local="yes">src/api/networking/StreamResponse.h</includedby>
     <includedby refid="_response_8cpp" local="yes">src/api/networking/Response.cpp</includedby>
     <incdepgraph>
       <node id="167">
@@ -45,12 +44,6 @@
         <label>src/api/controllers/TracksController.h</label>
         <link refid="_tracks_controller_8h_source"/>
       </node>
-      <node id="176">
-        <label>src/api/networking/StreamResponse.h</label>
-        <link refid="_stream_response_8h_source"/>
-        <childnode refid="173" relation="include">
-        </childnode>
-      </node>
       <node id="174">
         <label>src/api/networking/Server.h</label>
         <link refid="_server_8h"/>
@@ -62,13 +55,13 @@
         </childnode>
         <childnode refid="175" relation="include">
         </childnode>
-        <childnode refid="176" relation="include">
-        </childnode>
       </node>
       <node id="175">
         <label>src/api/networking/JSONResponse.h</label>
         <link refid="_j_s_o_n_response_8h"/>
         <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
         </childnode>
       </node>
       <node id="172">

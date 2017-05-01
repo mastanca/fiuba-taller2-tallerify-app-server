@@ -3,7 +3,7 @@
   <compounddef id="_tracks_controller_8h" kind="file" language="C++">
     <compoundname>TracksController.h</compoundname>
     <includes refid="_controller_8h" local="yes">Controller.h</includes>
-    <includes refid="_stream_response_8h" local="yes">../networking/StreamResponse.h</includes>
+    <includes refid="_j_s_o_n_response_8h" local="yes">../networking/JSONResponse.h</includes>
     <includedby refid="_tracks_controller_8cpp" local="yes">src/api/controllers/TracksController.cpp</includedby>
     <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
     <incdepgraph>
@@ -14,6 +14,9 @@
         </childnode>
         <childnode refid="80" relation="include">
         </childnode>
+      </node>
+      <node id="86">
+        <label>jsoncpp/json/json.h</label>
       </node>
       <node id="77">
         <label>Controller.h</label>
@@ -31,14 +34,6 @@
         <childnode refid="77" relation="include">
         </childnode>
         <childnode refid="85" relation="include">
-        </childnode>
-      </node>
-      <node id="85">
-        <label>../networking/StreamResponse.h</label>
-        <link refid="_stream_response_8h_source"/>
-        <childnode refid="86" relation="include">
-        </childnode>
-        <childnode refid="80" relation="include">
         </childnode>
       </node>
       <node id="81">
@@ -64,8 +59,13 @@
       <node id="79">
         <label>mongoose/mongoose.h</label>
       </node>
-      <node id="86">
-        <label>sstream</label>
+      <node id="85">
+        <label>../networking/JSONResponse.h</label>
+        <link refid="_j_s_o_n_response_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="class_tracks_controller" prot="public">TracksController</innerclass>
@@ -81,7 +81,7 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_controller_8h" kindref="compound">Controller.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../networking/StreamResponse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../networking/JSONResponse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10" refid="class_tracks_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tracks_controller" kindref="compound">TracksController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref><sp/>{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
@@ -89,7 +89,7 @@
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_tracks_controller" kindref="compound">TracksController</ref>();</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_stream_response" kindref="compound">StreamResponse</ref><sp/>&amp;response);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response);</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>

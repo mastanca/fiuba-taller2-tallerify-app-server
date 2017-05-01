@@ -23,7 +23,7 @@ void MongoDao::saveTrack(Track *track) {
 
     mongocxx::collection collection = db["tracks"];
     document << "_id" << track->getId()
-             << "base64_encoded_bytes" << track->getBase64EncodedBytes();
+             << "file_location" << track->getFileLocation();
     collection.insert_one(document.view());
     spdlog::get("console")->info("Saved track: {0}", bsoncxx::to_json(document.view()));
 }
@@ -40,8 +40,8 @@ Track *MongoDao::getTrack(int trackId) {
                     bsoncxx::builder::stream::document{} << "_id" << trackId << bsoncxx::builder::stream::finalize);
     if (found) {
         auto doc = (*found).view();
-        bsoncxx::stdx::string_view view = doc["base64_encoded_bytes"].get_utf8().value;
-        return new Track(doc["_id"].get_int32(), view.to_string(), false);
+        bsoncxx::stdx::string_view view = doc["file_location"].get_utf8().value;
+        return new Track(doc["_id"].get_int32(), view.to_string());
     }
     return NULL;
 }

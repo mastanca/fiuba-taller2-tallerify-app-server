@@ -14,6 +14,9 @@
         <childnode refid="63" relation="include">
         </childnode>
       </node>
+      <node id="69">
+        <label>jsoncpp/json/json.h</label>
+      </node>
       <node id="60">
         <label>Controller.h</label>
         <link refid="_controller_8h"/>
@@ -30,14 +33,6 @@
         <childnode refid="60" relation="include">
         </childnode>
         <childnode refid="68" relation="include">
-        </childnode>
-      </node>
-      <node id="68">
-        <label>../networking/StreamResponse.h</label>
-        <link refid="_stream_response_8h_source"/>
-        <childnode refid="69" relation="include">
-        </childnode>
-        <childnode refid="63" relation="include">
         </childnode>
       </node>
       <node id="64">
@@ -90,13 +85,18 @@
       <node id="62">
         <label>mongoose/mongoose.h</label>
       </node>
-      <node id="69">
-        <label>sstream</label>
-      </node>
       <node id="74">
         <label>../domain/Track.h</label>
         <link refid="_track_8h"/>
         <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>../networking/JSONResponse.h</label>
+        <link refid="_j_s_o_n_response_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
         </childnode>
       </node>
       <node id="73">
@@ -116,20 +116,21 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal">TracksController::TracksController()<sp/>{</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_controller_1abe812429430dca0aae5b09b4b304af26" kindref="member">addRoute</ref>(HTTP_GET,<sp/></highlight><highlight class="stringliteral">&quot;/tracks/&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;TracksController,<sp/>StreamResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;TracksController::get));</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;TracksController,<sp/>JSONResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;TracksController::get));</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal">TracksController::~TracksController()<sp/>{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TracksController::get(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_stream_response" kindref="compound">StreamResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TracksController::get(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mongo_dao" kindref="compound">MongoDao</ref><sp/>dao;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_track" kindref="compound">Track</ref><sp/>*track<sp/>=<sp/>dao.<ref refid="class_mongo_dao_1aeeba08599e299353ef9ff99966ce374b" kindref="member">getTrack</ref>(1122265510);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>&lt;&lt;<sp/>track-&gt;getBase64EncodedBytes();</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Open<sp/>new<sp/>udp<sp/>socket<sp/>and<sp/>start<sp/>streaming</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>track;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;songId&quot;</highlight><highlight class="normal">]<sp/>=<sp/>1234;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>baseUrl<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;http://127.0.0.1:8080&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;url&quot;</highlight><highlight class="normal">]<sp/>=<sp/><sp/>baseUrl<sp/>+<sp/>track-&gt;<ref refid="class_track_1ac32b18dbbd331f50775368ad5b27d4f9" kindref="member">getFileLocation</ref>();<sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Get<sp/>the<sp/>real<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>track;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/api/controllers/TracksController.cpp"/>
   </compounddef>

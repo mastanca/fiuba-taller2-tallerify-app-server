@@ -6,71 +6,71 @@
     <includes local="yes">spdlog/spdlog.h</includes>
     <includes refid="_server_8h" local="yes">networking/Server.h</includes>
     <incdepgraph>
-      <node id="121">
+      <node id="120">
         <label>../networking/Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="119" relation="include">
+        <childnode refid="118" relation="include">
         </childnode>
-        <childnode refid="122" relation="include">
-        </childnode>
-      </node>
-      <node id="120">
-        <label>../controllers/Controller.h</label>
-        <link refid="_controller_8h"/>
         <childnode refid="121" relation="include">
         </childnode>
-        <childnode refid="125" relation="include">
-        </childnode>
-        <childnode refid="118" relation="include">
-        </childnode>
       </node>
-      <node id="117">
-        <label>networking/Server.h</label>
-        <link refid="_server_8h"/>
-        <childnode refid="118" relation="include">
-        </childnode>
-        <childnode refid="119" relation="include">
-        </childnode>
+      <node id="119">
+        <label>../controllers/Controller.h</label>
+        <link refid="_controller_8h"/>
         <childnode refid="120" relation="include">
         </childnode>
-      </node>
-      <node id="123">
-        <label>string</label>
-      </node>
-      <node id="124">
-        <label>map</label>
-      </node>
-      <node id="125">
-        <label>mongoose/RequestHandler.h</label>
-      </node>
-      <node id="116">
-        <label>spdlog/spdlog.h</label>
-      </node>
-      <node id="114">
-        <label>src/api/main.cpp</label>
-        <link refid="main_8cpp"/>
-        <childnode refid="115" relation="include">
-        </childnode>
-        <childnode refid="116" relation="include">
+        <childnode refid="124" relation="include">
         </childnode>
         <childnode refid="117" relation="include">
         </childnode>
       </node>
+      <node id="116">
+        <label>networking/Server.h</label>
+        <link refid="_server_8h"/>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
       <node id="122">
-        <label>Response.h</label>
-        <link refid="_response_8h"/>
-        <childnode refid="123" relation="include">
-        </childnode>
-        <childnode refid="124" relation="include">
-        </childnode>
+        <label>string</label>
       </node>
-      <node id="118">
-        <label>vector</label>
+      <node id="123">
+        <label>map</label>
       </node>
-      <node id="119">
-        <label>mongoose/mongoose.h</label>
+      <node id="124">
+        <label>mongoose/RequestHandler.h</label>
       </node>
       <node id="115">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="113">
+        <label>src/api/main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>vector</label>
+      </node>
+      <node id="118">
+        <label>mongoose/mongoose.h</label>
+      </node>
+      <node id="114">
         <label>iostream</label>
       </node>
     </incdepgraph>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/main.cpp" line="16" column="1" bodyfile="src/api/main.cpp" bodystart="16" bodyend="37"/>
+        <location file="src/api/main.cpp" line="16" column="1" bodyfile="src/api/main.cpp" bodystart="16" bodyend="38"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -160,19 +160,20 @@
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>signal(SIGINT,<sp/>handle_signal);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server" kindref="compound">Server</ref><sp/>server;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>server.<ref refid="class_server_1a7eac07d2582fa01c2671362efa955b31" kindref="member">start</ref>();</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(running)<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sleep(10);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>server.<ref refid="class_server_1a07c45a7e101a3926d8f9685c3c5d14e4" kindref="member">stop</ref>();</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::drop_all();</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>ip<sp/>=<sp/>argv[1];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server" kindref="compound">Server</ref><sp/>server(8080,<sp/>ip);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>server.start();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(running)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sleep(10);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>server.stop();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::drop_all();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/api/main.cpp"/>
   </compounddef>

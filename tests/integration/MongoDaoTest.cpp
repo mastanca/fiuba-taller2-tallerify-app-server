@@ -3,25 +3,24 @@
 #include "MongoDaoTest.h"
 #include "../../src/api/domain/Track.h"
 #include "../../src/api/dao/MongoDao.h"
-#include "base64/base64.h"
 
 void MongoDaoTest::testGetting() {
     MongoDao dao;
-    std::string song = "Sweet home Alabama";
+    std::string songLocation = "/music/sweet_home_alabama.mp3";
     int id = rand() + 1;
-    Track track(id, song);
+    Track track(id, songLocation);
     dao.saveTrack(&track);
 
     Track *gotTrack = dao.getTrack(track.getId());
     ASSERT_EQ(gotTrack->getId(), id);
-    ASSERT_EQ(base64_decode(gotTrack->getBase64EncodedBytes()), song);
+    ASSERT_EQ(gotTrack->getFileLocation(), songLocation);
     delete gotTrack;
 }
 
 void MongoDaoTest::testSaving() {
     MongoDao dao;
-    std::string song = "I see a red door and I want to paint it black";
+    std::string songLocation = "/music/paint_it_black.mp3";
     int id = rand() + 1;
-    Track track(id, song);
+    Track track(id, songLocation);
     ASSERT_NO_FATAL_FAILURE(dao.saveTrack(&track));
 }

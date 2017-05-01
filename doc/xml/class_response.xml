@@ -3,7 +3,6 @@
   <compounddef id="class_response" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>Response</compoundname>
     <derivedcompoundref refid="class_j_s_o_n_response" prot="public" virt="non-virtual">JSONResponse</derivedcompoundref>
-    <derivedcompoundref refid="class_stream_response" prot="public" virt="non-virtual">StreamResponse</derivedcompoundref>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_response_1ac5735ee80a09411fa59bd67bfd8ac6f5" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -143,7 +142,6 @@
         <definition>virtual std::string Response::getBody</definition>
         <argsstring>()=0</argsstring>
         <name>getBody</name>
-        <reimplementedby refid="class_stream_response_1a7813a42b59334a3df4af643bbc6a7bd4">getBody</reimplementedby>
         <reimplementedby refid="class_j_s_o_n_response_1a2e74ef171632f94220d027210dd0f482">getBody</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -179,12 +177,6 @@
       <node id="18">
         <label>Response</label>
         <link refid="class_response"/>
-      </node>
-      <node id="20">
-        <label>StreamResponse</label>
-        <link refid="class_stream_response"/>
-        <childnode refid="18" relation="public-inheritance">
-        </childnode>
       </node>
       <node id="19">
         <label>JSONResponse</label>

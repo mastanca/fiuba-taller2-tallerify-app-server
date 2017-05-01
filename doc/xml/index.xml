@@ -60,9 +60,10 @@
     <member refid="class_server_1a766819efc0063a5dac27ab6dc66cbfd9" kind="variable"><name>server</name></member>
     <member refid="class_server_1a8a6f41215b74791bbe1c1d16cb6acf3e" kind="variable"><name>connection</name></member>
     <member refid="class_server_1a926c9dae229a62b6d33fdbb41dca6d82" kind="variable"><name>port</name></member>
+    <member refid="class_server_1a7f083ca011556b40eccca5ff694776e7" kind="variable"><name>localIp</name></member>
     <member refid="class_server_1a4db32e1a16e0423cf619d7914fa9b8c2" kind="variable"><name>running</name></member>
     <member refid="class_server_1a7e65fc13a3f8c009d8429ba1b78b9ca2" kind="variable"><name>controllers</name></member>
-    <member refid="class_server_1a495b58bef6f0d4ca6260de206cff6291" kind="function"><name>Server</name></member>
+    <member refid="class_server_1a1ec901fc55efaa9be38ab73335a9e677" kind="function"><name>Server</name></member>
     <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
     <member refid="class_server_1a7eac07d2582fa01c2671362efa955b31" kind="function"><name>start</name></member>
     <member refid="class_server_1a07c45a7e101a3926d8f9685c3c5d14e4" kind="function"><name>stop</name></member>
@@ -70,24 +71,18 @@
     <member refid="class_server_1ac9de1554cafa597ec713f3e064c3f2ab" kind="function"><name>handleRequest</name></member>
     <member refid="class_server_1abc0fb815029cd6a2672f24b8c66a2378" kind="function"><name>registerController</name></member>
   </compound>
-  <compound refid="class_stream_response" kind="class"><name>StreamResponse</name>
-    <member refid="class_stream_response_1a4107d36ff35120767861f75b37f213f3" kind="function"><name>StreamResponse</name></member>
-    <member refid="class_stream_response_1a6c1b4169e93663a8c34a7b0bcf87e329" kind="function"><name>~StreamResponse</name></member>
-    <member refid="class_stream_response_1a7813a42b59334a3df4af643bbc6a7bd4" kind="function"><name>getBody</name></member>
-  </compound>
   <compound refid="class_track" kind="class"><name>Track</name>
     <member refid="class_track_1a4c555d3e591011400c96b1133c7b12ee" kind="variable"><name>id</name></member>
-    <member refid="class_track_1ae83a160c2c3cc2d1bca88422775081f5" kind="variable"><name>base64EncodedBytes</name></member>
-    <member refid="class_track_1ad020b3512debba921dd65d3f59cf8b03" kind="function"><name>Track</name></member>
+    <member refid="class_track_1a755c360b2a48b4598d2d4593da173663" kind="variable"><name>fileLocation</name></member>
+    <member refid="class_track_1a92f6322397b174b830e3c127c852d665" kind="function"><name>Track</name></member>
     <member refid="class_track_1a416e75e66accc8eb9e3fafc3e8555216" kind="function"><name>~Track</name></member>
     <member refid="class_track_1a496f793279d918ed573fcc1971c2d983" kind="function"><name>getId</name></member>
-    <member refid="class_track_1ae90e785b8625cf381be9f07349ee39fc" kind="function"><name>getBase64EncodedBytes</name></member>
-    <member refid="class_track_1abc465cc8bc4d568c7031667cb831825e" kind="function"><name>toString</name></member>
+    <member refid="class_track_1ac32b18dbbd331f50775368ad5b27d4f9" kind="function"><name>getFileLocation</name></member>
   </compound>
   <compound refid="class_tracks_controller" kind="class"><name>TracksController</name>
     <member refid="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" kind="function"><name>TracksController</name></member>
     <member refid="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" kind="function"><name>~TracksController</name></member>
-    <member refid="class_tracks_controller_1a32c37335229d33b15cfc2941828db55b" kind="function"><name>get</name></member>
+    <member refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" kind="function"><name>get</name></member>
   </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="conf_8py_1a540efa67c53e84c1c353c1df2e37e39c" kind="variable"><name>extensions</name></member>
@@ -167,10 +162,6 @@
     <member refid="_server_8cpp_1ae791f4cb7e4c945a2b10249adc43c94c" kind="function"><name>event_handler</name></member>
   </compound>
   <compound refid="_server_8h" kind="file"><name>Server.h</name>
-  </compound>
-  <compound refid="_stream_response_8cpp" kind="file"><name>StreamResponse.cpp</name>
-  </compound>
-  <compound refid="_stream_response_8h" kind="file"><name>StreamResponse.h</name>
   </compound>
   <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>
