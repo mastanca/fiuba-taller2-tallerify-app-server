@@ -13,7 +13,7 @@
  */
 
 class Server {
-    //! Frield class for testing private methods
+    //! Friend class for testing private methods
     friend class ServerTest;
 public:
     /**
