@@ -22,7 +22,8 @@ int main(int argc, char *argv[]) {
     signal(SIGINT, handle_signal);
 #endif
 
-    Server server;
+    std::string ip = argv[1];
+    Server server(8080, ip);
     server.start();
 
     while (running) {

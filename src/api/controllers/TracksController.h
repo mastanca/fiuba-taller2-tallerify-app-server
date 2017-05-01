@@ -5,7 +5,7 @@
 
 
 #include "Controller.h"
-#include "../networking/StreamResponse.h"
+#include "../networking/JSONResponse.h"
 
 class TracksController : public Controller {
 public:
@@ -13,7 +13,7 @@ public:
 
     virtual ~TracksController();
 
-    void get(Request &request, StreamResponse &response);
+    void get(Request &request, JSONResponse &response);
 
 };
 
