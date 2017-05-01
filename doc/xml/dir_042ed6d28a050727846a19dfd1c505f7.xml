@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_042ed6d28a050727846a19dfd1c505f7" kind="dir">
+    <compoundname>src/api/domain</compoundname>
+    <innerfile refid="_track_8cpp">Track.cpp</innerfile>
+    <innerfile refid="_track_8h">Track.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/api/domain/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MongoDao &mdash; Tallerify App Server 0.2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Tallerify App Server 0.2.0 documentation" href="../../index.html"/>
+        <link rel="next" title="PingController" href="ping_controller.html"/>
+        <link rel="prev" title="JSONResponse" href="json_response.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Tallerify App Server
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="controller.html">Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="json_response.html">JSONResponse</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MongoDao</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ping_controller.html">PingController</a></li>
+<li class="toctree-l1"><a class="reference internal" href="request.html">Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="response.html">Response</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="track.html">Track</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Tallerify App Server</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>MongoDao</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/doc/rst/mongo_dao.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mongodao">
+<h1>MongoDao<a class="headerlink" href="#mongodao" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv28MongoDao">
+<span id="MongoDao"></span><span class="target" id="tallerify_app_serverclass_mongo_dao"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">MongoDao</code><a class="headerlink" href="#_CPPv28MongoDao" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8MongoDao8MongoDaoEv">
+<span id="MongoDao::MongoDao"></span><span class="target" id="tallerify_app_serverclass_mongo_dao_1a8a7855a0cb272a4687749086a3ea061b"></span><code class="descname">MongoDao</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8MongoDao8MongoDaoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#tallerify_app_serverclass_mongo_dao"><span class="std std-ref">MongoDao</span></a> constructor Creates a valid connection with mongodb </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8MongoDaoD0Ev">
+<span id="MongoDao::~MongoDao"></span><span class="target" id="tallerify_app_serverclass_mongo_dao_1a1997e0557df3c0f05da62fcc35505dc3"></span><code class="descname">~MongoDao</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8MongoDaoD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#tallerify_app_serverclass_mongo_dao"><span class="std std-ref">MongoDao</span></a> destroyer freed resources allocated on construction </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8MongoDao9saveTrackEP5Track">
+<span id="MongoDao::saveTrack__TrackP"></span><span class="target" id="tallerify_app_serverclass_mongo_dao_1a6e2ce85d784142a641d6945251b4746d"></span>void <code class="descname">saveTrack</code><span class="sig-paren">(</span><a class="reference internal" href="track.html#_CPPv25Track" title="Track">Track</a> *<em>track</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8MongoDao9saveTrackEP5Track" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Saves new track to db <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">track</span></code>: track object to save </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8MongoDao8getTrackEi">
+<span id="MongoDao::getTrack__i"></span><span class="target" id="tallerify_app_serverclass_mongo_dao_1aeeba08599e299353ef9ff99966ce374b"></span><a class="reference internal" href="track.html#_CPPv25Track" title="Track">Track</a> *<code class="descname">getTrack</code><span class="sig-paren">(</span>int <em>trackId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8MongoDao8getTrackEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns track fetched from db <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>fetched track </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">trackId</span></code>: track id to search for </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ping_controller.html" class="btn btn-neutral float-right" title="PingController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="json_response.html" class="btn btn-neutral" title="JSONResponse" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Fortify Software.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

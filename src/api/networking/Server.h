@@ -7,15 +7,34 @@
 #include "mongoose/mongoose.h"
 #include "../controllers/Controller.h"
 
+/**
+ * \file Server.h
+ * Mongoose server wrapper
+ */
+
 class Server {
+    //! Friend class for testing private methods
     friend class ServerTest;
 public:
+    /**
+     * Server constructor
+     * \param port server port, defaults to 8080
+     */
     Server(int port = 8080);
 
+    /**
+     * Server destroyer
+     */
     virtual ~Server();
 
+    /**
+     * Starts the server
+     */
     void start();
 
+    /**
+     * Stops the server, cleaning associated resources
+     */
     void stop();
 
 private:
