@@ -1,4 +1,4 @@
-# fiuba-taller2-tallerify-app-server
+# Tallerify's app server
 App server for tallerify in C++, using mongoose and mongodb
 
 branch | Travis CI | Coveralls
