@@ -6,6 +6,9 @@
 
 #include <string>
 
+/**
+ * @file Track.h
+ */
 class Track {
 public:
     // TODO: Receive bytes

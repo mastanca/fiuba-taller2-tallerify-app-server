@@ -6,12 +6,26 @@
 #include "Controller.h"
 #include "../networking/JSONResponse.h"
 
+/**
+ * @file PingController.h
+ */
 class PingController : public Controller {
 public:
+    /**
+     * PingController constructor
+     */
     PingController();
 
+    /**
+     * PingController destroyer
+     */
     virtual ~PingController();
 
+    /**
+     * ping method, resturns built jsonresponse with pong
+     * @param request the request to get data from
+     * @param response the prepared response, ready to serve
+     */
     void get(Request &request, JSONResponse &response);
 };
 

@@ -3,6 +3,9 @@
 #ifndef FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONSTANTS_H
 #define FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONSTANTS_H
 
+/**
+ * @file Constants.h
+ */
 #define HTTP_GET "GET"
 #define HTTP_POST "POST"
 #define HTTP_PUT "PUT"

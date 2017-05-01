@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_175a49cec7332852173394a8d0b0c489" kind="dir">
+    <compoundname>src/api/config</compoundname>
+    <innerfile refid="_constants_8h">Constants.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/api/config/"/>
+  </compounddef>
+</doxygen>
