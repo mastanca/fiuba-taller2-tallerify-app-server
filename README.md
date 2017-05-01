@@ -7,14 +7,14 @@ branch | Travis CI | Coveralls
 `develop` | [![Build Status](https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server.svg?branch=develop)](https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server) | [![Coverage Status](https://coveralls.io/repos/github/tallerify/fiuba-taller2-tallerify-app-server/badge.svg?branch=HEAD)](https://coveralls.io/github/tallerify/fiuba-taller2-tallerify-app-server?branch=HEAD)
 
 ###Docs
-To get the docs you need doxygen and sphinx. Once you get them run
+You can find the docs by opening `doc/index.html` with your favorite browser \
+\
+To get the HEAD version of them you need doxygen and sphinx. Then run
 
 ```bash
 doxygen
 sphinx-build . doc/ 
 ```
-
-Then open doc/index.html with your favorite browser
 
 ###Running
 
