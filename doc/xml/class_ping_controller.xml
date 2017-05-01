@@ -12,10 +12,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_ping_controller" kindref="compound">PingController</ref> constructor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/PingController.h" line="11" column="1" bodyfile="src/api/controllers/PingController.cpp" bodystart="6" bodyend="8"/>
+        <location file="src/api/controllers/PingController.h" line="17" column="1" bodyfile="src/api/controllers/PingController.cpp" bodystart="6" bodyend="8"/>
       </memberdef>
       <memberdef kind="function" id="class_ping_controller_1adf30495ba10318532bc7ac3a692b359a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -25,10 +25,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_ping_controller" kindref="compound">PingController</ref> destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/PingController.h" line="13" column="1" bodyfile="src/api/controllers/PingController.cpp" bodystart="10" bodyend="12"/>
+        <location file="src/api/controllers/PingController.h" line="22" column="1" bodyfile="src/api/controllers/PingController.cpp" bodystart="10" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="class_ping_controller_1a30bed18f546f85a4aebabb596a1a0058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,10 +46,25 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>ping method, resturns built jsonresponse with pong <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request to get data from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the prepared response, ready to serve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/PingController.h" line="15" column="1" bodyfile="src/api/controllers/PingController.cpp" bodystart="14" bodyend="16"/>
+        <location file="src/api/controllers/PingController.h" line="29" column="1" bodyfile="src/api/controllers/PingController.cpp" bodystart="14" bodyend="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,7 +95,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/api/controllers/PingController.h" line="9" column="1" bodyfile="src/api/controllers/PingController.h" bodystart="9" bodyend="16"/>
+    <location file="src/api/controllers/PingController.h" line="12" column="1" bodyfile="src/api/controllers/PingController.h" bodystart="12" bodyend="30"/>
     <listofallmembers>
       <member refid="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" virt="non-virtual"><scope>PingController</scope><name>addRoute</name></member>
       <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" virt="non-virtual"><scope>PingController</scope><name>Controller</name></member>

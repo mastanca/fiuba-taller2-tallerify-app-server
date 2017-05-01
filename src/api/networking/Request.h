@@ -28,7 +28,7 @@ public:
 
     /**
      * Writes response back to client
-     * @param response
+     * @param response the response to write
      */
     virtual void writeResponse(Response *response);
 

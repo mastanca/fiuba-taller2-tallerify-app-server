@@ -23,7 +23,7 @@ public:
 
     /**
      * inserts a new header to the headers map
-     * @param key string containign the header key
+     * @param key string containing the header key
      * @param value string containing the header value
      */
     void setHeader(std::string key, std::string value);

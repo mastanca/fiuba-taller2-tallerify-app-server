@@ -79,7 +79,7 @@
 <parametername>key</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>string containign the header key </para></parameterdescription>
+<para>string containing the header key </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>

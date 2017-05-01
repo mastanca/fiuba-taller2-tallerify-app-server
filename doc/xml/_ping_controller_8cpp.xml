@@ -7,7 +7,7 @@
     <incdepgraph>
       <node id="33">
         <label>../networking/Request.h</label>
-        <link refid="_request_8h_source"/>
+        <link refid="_request_8h"/>
         <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
@@ -18,7 +18,7 @@
       </node>
       <node id="32">
         <label>Controller.h</label>
-        <link refid="_controller_8h_source"/>
+        <link refid="_controller_8h"/>
         <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="38" relation="include">
@@ -42,7 +42,7 @@
       </node>
       <node id="42">
         <label>../config/Constants.h</label>
-        <link refid="_constants_8h_source"/>
+        <link refid="_constants_8h"/>
       </node>
       <node id="38">
         <label>mongoose/RequestHandler.h</label>
@@ -63,7 +63,7 @@
       </node>
       <node id="40">
         <label>../networking/JSONResponse.h</label>
-        <link refid="_j_s_o_n_response_8h_source"/>
+        <link refid="_j_s_o_n_response_8h"/>
         <childnode refid="41" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
@@ -71,7 +71,7 @@
       </node>
       <node id="31">
         <label>PingController.h</label>
-        <link refid="_ping_controller_8h_source"/>
+        <link refid="_ping_controller_8h"/>
         <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="40" relation="include">
@@ -85,18 +85,18 @@
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;PingController.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ping_controller_8h" kindref="compound">PingController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../config/Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">PingController::PingController()<sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>addRoute(HTTP_GET,<sp/></highlight><highlight class="stringliteral">&quot;/ping&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;PingController,<sp/>JSONResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;PingController::get));</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="class_ping_controller_1a1b861cccf64c8c1781ee23ed1f7473f8" kindref="member">PingController::PingController</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_controller_1abe812429430dca0aae5b09b4b304af26" kindref="member">addRoute</ref>(HTTP_GET,<sp/></highlight><highlight class="stringliteral">&quot;/ping&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;PingController,<sp/>JSONResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_ping_controller_1a30bed18f546f85a4aebabb596a1a0058" kindref="member">PingController::get</ref>));</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal">PingController::~PingController()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="class_ping_controller_1adf30495ba10318532bc7ac3a692b359a" kindref="member">PingController::~PingController</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PingController::get(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ping_controller_1a30bed18f546f85a4aebabb596a1a0058" kindref="member">PingController::get</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;ping&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pong&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>

@@ -10,7 +10,7 @@
     <incdepgraph>
       <node id="171">
         <label>../networking/Request.h</label>
-        <link refid="_request_8h_source"/>
+        <link refid="_request_8h"/>
         <childnode refid="169" relation="include">
         </childnode>
         <childnode refid="172" relation="include">
@@ -18,7 +18,7 @@
       </node>
       <node id="170">
         <label>../controllers/Controller.h</label>
-        <link refid="_controller_8h_source"/>
+        <link refid="_controller_8h"/>
         <childnode refid="171" relation="include">
         </childnode>
         <childnode refid="175" relation="include">

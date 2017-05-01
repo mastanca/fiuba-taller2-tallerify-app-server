@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="25" column="1" bodyfile="src/api/networking/Request.h" bodystart="25" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="54" column="1" bodyfile="src/api/networking/Request.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_request_1a30857fa1b1c7f72eae0bf8715afca24e" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="26" column="1" bodyfile="src/api/networking/Request.h" bodystart="26" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="55" column="1" bodyfile="src/api/networking/Request.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_request_1ac1fb9c057c617b04af48798c3843b68a" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="27" column="1" bodyfile="src/api/networking/Request.h" bodystart="27" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="56" column="1" bodyfile="src/api/networking/Request.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_request_1a6d667096cbc014b4d46e87628201bfcc" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="28" column="1" bodyfile="src/api/networking/Request.h" bodystart="28" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="57" column="1" bodyfile="src/api/networking/Request.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -73,10 +73,25 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_request" kindref="compound">Request</ref> constructor Builds request from the mongoose connection and httpmessage Parses httpmethod, body and url <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>connection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>httpMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="12" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="6" bodyend="10"/>
+        <location file="src/api/networking/Request.h" line="22" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="6" bodyend="10"/>
       </memberdef>
       <memberdef kind="function" id="class_request_1a4d57c725686701f773eb3630630a7ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -86,10 +101,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_request" kindref="compound">Request</ref> destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="14" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="12" bodyend="14"/>
+        <location file="src/api/networking/Request.h" line="27" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="12" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="class_request_1a1858382756bc45a009856c3158402278" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -103,10 +118,18 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Writes response back to client <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the response to write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="16" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="16" bodyend="19"/>
+        <location file="src/api/networking/Request.h" line="33" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_request_1a9dad00a15cff18542801289a24711930" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const std::string &amp;</type>
@@ -116,10 +139,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_request" kindref="compound">Request</ref> url getter <simplesect kind="return"><para>associated url </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="18" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="35" bodyend="37"/>
+        <location file="src/api/networking/Request.h" line="39" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="35" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_request_1ad88074d323ab7bef3182a5108b8ba387" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const std::string &amp;</type>
@@ -129,10 +153,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_request" kindref="compound">Request</ref> body getter <simplesect kind="return"><para>parsed body </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="20" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="39" bodyend="41"/>
+        <location file="src/api/networking/Request.h" line="45" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="39" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const std::string &amp;</type>
@@ -142,10 +167,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_request" kindref="compound">Request</ref> http verb getter <simplesect kind="return"><para>parsed http verb </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="22" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="43" bodyend="45"/>
+        <location file="src/api/networking/Request.h" line="51" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="43" bodyend="45"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -164,14 +190,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="30" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="21" bodyend="33"/>
+        <location file="src/api/networking/Request.h" line="59" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="21" bodyend="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/api/networking/Request.h" line="10" column="1" bodyfile="src/api/networking/Request.h" bodystart="10" bodyend="31"/>
+    <location file="src/api/networking/Request.h" line="13" column="1" bodyfile="src/api/networking/Request.h" bodystart="13" bodyend="60"/>
     <listofallmembers>
       <member refid="class_request_1ac1fb9c057c617b04af48798c3843b68a" prot="private" virt="non-virtual"><scope>Request</scope><name>body</name></member>
       <member refid="class_request_1a8bb7976c4176a7b406061082a8022cef" prot="private" virt="non-virtual"><scope>Request</scope><name>connection</name></member>

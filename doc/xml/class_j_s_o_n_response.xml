@@ -13,10 +13,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref> constructor Sets json headers </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/JSONResponse.h" line="11" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="5" bodyend="7"/>
+        <location file="src/api/networking/JSONResponse.h" line="19" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="5" bodyend="7"/>
       </memberdef>
       <memberdef kind="function" id="class_j_s_o_n_response_1a9e432e672bdaf93256d971f969962cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -26,10 +26,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref> destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/JSONResponse.h" line="13" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="9" bodyend="11"/>
+        <location file="src/api/networking/JSONResponse.h" line="24" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="9" bodyend="11"/>
       </memberdef>
       <memberdef kind="function" id="class_j_s_o_n_response_1a2e74ef171632f94220d027210dd0f482" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>std::string</type>
@@ -40,10 +40,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Returns current response body, json formatted <simplesect kind="return"><para>the body as a string </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/JSONResponse.h" line="15" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="13" bodyend="16"/>
+        <location file="src/api/networking/JSONResponse.h" line="30" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="13" bodyend="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -84,7 +85,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/api/networking/JSONResponse.h" line="9" column="1" bodyfile="src/api/networking/JSONResponse.h" bodystart="9" bodyend="16"/>
+    <location file="src/api/networking/JSONResponse.h" line="13" column="1" bodyfile="src/api/networking/JSONResponse.h" bodystart="13" bodyend="31"/>
     <listofallmembers>
       <member refid="class_response_1ac5735ee80a09411fa59bd67bfd8ac6f5" prot="protected" virt="non-virtual"><scope>JSONResponse</scope><name>code</name></member>
       <member refid="class_j_s_o_n_response_1a2e74ef171632f94220d027210dd0f482" prot="public" virt="virtual"><scope>JSONResponse</scope><name>getBody</name></member>

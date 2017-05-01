@@ -14,7 +14,7 @@
     <incdepgraph>
       <node id="93">
         <label>../networking/Request.h</label>
-        <link refid="_request_8h_source"/>
+        <link refid="_request_8h"/>
         <childnode refid="91" relation="include">
         </childnode>
         <childnode refid="94" relation="include">
@@ -25,7 +25,7 @@
       </node>
       <node id="92">
         <label>../controllers/Controller.h</label>
-        <link refid="_controller_8h_source"/>
+        <link refid="_controller_8h"/>
         <childnode refid="93" relation="include">
         </childnode>
         <childnode refid="97" relation="include">
@@ -54,7 +54,7 @@
       </node>
       <node id="100">
         <label>dao/MongoDao.h</label>
-        <link refid="_mongo_dao_8h_source"/>
+        <link refid="_mongo_dao_8h"/>
         <childnode refid="101" relation="include">
         </childnode>
         <childnode refid="87" relation="include">
@@ -109,7 +109,7 @@
       </node>
       <node id="102">
         <label>../domain/Track.h</label>
-        <link refid="_track_8h_source"/>
+        <link refid="_track_8h"/>
         <childnode refid="95" relation="include">
         </childnode>
       </node>
@@ -118,7 +118,7 @@
       </node>
       <node id="98">
         <label>networking/JSONResponse.h</label>
-        <link refid="_j_s_o_n_response_8h_source"/>
+        <link refid="_j_s_o_n_response_8h"/>
         <childnode refid="99" relation="include">
         </childnode>
         <childnode refid="94" relation="include">
@@ -206,8 +206,8 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_server_8h" kindref="compound">networking/Server.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;networking/JSONResponse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dao/MongoDao.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_j_s_o_n_response_8h" kindref="compound">networking/JSONResponse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mongo_dao_8h" kindref="compound">dao/MongoDao.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>running<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>

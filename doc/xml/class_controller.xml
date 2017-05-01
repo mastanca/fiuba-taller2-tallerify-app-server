@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="26" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="26" bodyend="-1"/>
+        <location file="src/api/controllers/Controller.h" line="58" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_controller_1acbabc355661618f30e04c613ae8b3340" prot="protected" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="27" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="27" bodyend="-1"/>
+        <location file="src/api/controllers/Controller.h" line="59" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -40,10 +40,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_controller" kindref="compound">Controller</ref> constructor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="13" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="7" bodyend="9"/>
+        <location file="src/api/controllers/Controller.h" line="19" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="7" bodyend="9"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -53,10 +53,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_controller" kindref="compound">Controller</ref> destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="15" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="11" bodyend="19"/>
+        <location file="src/api/controllers/Controller.h" line="24" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="11" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1afa78a73d099dc2920b22b2927f7870d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
@@ -70,10 +70,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>processes passed request gets the corresponding method from its routes and calls method <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request to process </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>built response, with status code </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="17" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="21" bodyend="30"/>
+        <location file="src/api/controllers/Controller.h" line="32" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="21" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
@@ -87,10 +96,19 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Prepares 500 error in case of error during process <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error response message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>500 status code response </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="19" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="32" bodyend="39"/>
+        <location file="src/api/controllers/Controller.h" line="39" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="32" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -112,10 +130,32 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Adds route to controller&apos;s routes map. Mongoose&apos;s requesthandlerbase does the mapping <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>httpVerb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of GET/POST/PUT/DELETE </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>route</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>route to handle. ex: /tracks </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mongoose&apos;s request handler </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="21" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="41" bodyend="45"/>
+        <location file="src/api/controllers/Controller.h" line="47" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="41" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -133,10 +173,26 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Checks if controller handles the given url <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of GET/POST/PUT/DELETE </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the one to verify. ex: /ping </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if it handles, false otherwise </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="23" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="47" bodyend="50"/>
+        <location file="src/api/controllers/Controller.h" line="55" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="47" bodyend="50"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -155,7 +211,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="src/api/controllers/Controller.h" line="11" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="11" bodyend="28"/>
+    <location file="src/api/controllers/Controller.h" line="14" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="14" bodyend="60"/>
     <listofallmembers>
       <member refid="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" virt="non-virtual"><scope>Controller</scope><name>addRoute</name></member>
       <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" virt="non-virtual"><scope>Controller</scope><name>Controller</name></member>

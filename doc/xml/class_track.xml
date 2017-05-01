@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="17" column="1" bodyfile="src/api/domain/Track.h" bodystart="17" bodyend="-1"/>
+        <location file="src/api/domain/Track.h" line="20" column="1" bodyfile="src/api/domain/Track.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_track_1ae83a160c2c3cc2d1bca88422775081f5" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="26" column="1" bodyfile="src/api/domain/Track.h" bodystart="26" bodyend="-1"/>
+        <location file="src/api/domain/Track.h" line="29" column="1" bodyfile="src/api/domain/Track.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="12" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="7" bodyend="9"/>
+        <location file="src/api/domain/Track.h" line="15" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="7" bodyend="9"/>
       </memberdef>
       <memberdef kind="function" id="class_track_1a416e75e66accc8eb9e3fafc3e8555216" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="14" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="11" bodyend="13"/>
+        <location file="src/api/domain/Track.h" line="17" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="11" bodyend="13"/>
       </memberdef>
       <memberdef kind="function" id="class_track_1a496f793279d918ed573fcc1971c2d983" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="19" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="15" bodyend="17"/>
+        <location file="src/api/domain/Track.h" line="22" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="15" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_track_1ae90e785b8625cf381be9f07349ee39fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const std::string &amp;</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="21" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="19" bodyend="21"/>
+        <location file="src/api/domain/Track.h" line="24" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="19" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="class_track_1abc465cc8bc4d568c7031667cb831825e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -107,14 +107,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="23" column="1"/>
+        <location file="src/api/domain/Track.h" line="26" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/api/domain/Track.h" line="9" column="1" bodyfile="src/api/domain/Track.h" bodystart="9" bodyend="27"/>
+    <location file="src/api/domain/Track.h" line="12" column="1" bodyfile="src/api/domain/Track.h" bodystart="12" bodyend="30"/>
     <listofallmembers>
       <member refid="class_track_1ae83a160c2c3cc2d1bca88422775081f5" prot="private" virt="non-virtual"><scope>Track</scope><name>base64EncodedBytes</name></member>
       <member refid="class_track_1ae90e785b8625cf381be9f07349ee39fc" prot="public" virt="non-virtual"><scope>Track</scope><name>getBase64EncodedBytes</name></member>

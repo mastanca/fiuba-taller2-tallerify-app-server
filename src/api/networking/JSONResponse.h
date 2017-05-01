@@ -25,7 +25,7 @@ public:
 
     /**
      * Returns current response body, json formatted
-     * @return
+     * @return the body as a string
      */
     virtual std::string getBody();
 };

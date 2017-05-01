@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['response',['Response',['../class_response.html#aa9b6e391d77fce8daca8bac13730ec8e',1,'Response']]]
+  ['addroute',['addRoute',['../class_controller.html#abe812429430dca0aae5b09b4b304af26',1,'Controller']]]
 ];

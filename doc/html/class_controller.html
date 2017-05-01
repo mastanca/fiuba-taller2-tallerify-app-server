@@ -78,17 +78,17 @@ Inheritance diagram for Controller:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa78a73d099dc2920b22b2927f7870d6"><td class="memItemLeft" align="right" valign="top"><a id="afa78a73d099dc2920b22b2927f7870d6"></a>
-virtual <a class="el" href="class_response.html">Response</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>process</b> (<a class="el" href="class_request.html">Request</a> &amp;request)</td></tr>
+<tr class="memitem:a95c56822d667e94b031451729ce069a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a> ()</td></tr>
+<tr class="separator:a95c56822d667e94b031451729ce069a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">~Controller</a> ()</td></tr>
+<tr class="separator:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa78a73d099dc2920b22b2927f7870d6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_response.html">Response</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#afa78a73d099dc2920b22b2927f7870d6">process</a> (<a class="el" href="class_request.html">Request</a> &amp;request)</td></tr>
 <tr class="separator:afa78a73d099dc2920b22b2927f7870d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53ed1daa58f8458d71a5526e6fe6fcb6"><td class="memItemLeft" align="right" valign="top"><a id="a53ed1daa58f8458d71a5526e6fe6fcb6"></a>
-<a class="el" href="class_response.html">Response</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>serverInternalError</b> (std::string message)</td></tr>
+<tr class="memitem:a53ed1daa58f8458d71a5526e6fe6fcb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_response.html">Response</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a53ed1daa58f8458d71a5526e6fe6fcb6">serverInternalError</a> (std::string message)</td></tr>
 <tr class="separator:a53ed1daa58f8458d71a5526e6fe6fcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe812429430dca0aae5b09b4b304af26"><td class="memItemLeft" align="right" valign="top"><a id="abe812429430dca0aae5b09b4b304af26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addRoute</b> (std::string httpVerb, std::string route, RequestHandlerBase *handler)</td></tr>
+<tr class="memitem:abe812429430dca0aae5b09b4b304af26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#abe812429430dca0aae5b09b4b304af26">addRoute</a> (std::string httpVerb, std::string route, RequestHandlerBase *handler)</td></tr>
 <tr class="separator:abe812429430dca0aae5b09b4b304af26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c8c0a4a4e853a3b33c1afcf55795f51"><td class="memItemLeft" align="right" valign="top"><a id="a0c8c0a4a4e853a3b33c1afcf55795f51"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>handles</b> (std::string method, std::string url)</td></tr>
+<tr class="memitem:a0c8c0a4a4e853a3b33c1afcf55795f51"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a0c8c0a4a4e853a3b33c1afcf55795f51">handles</a> (std::string method, std::string url)</td></tr>
 <tr class="separator:a0c8c0a4a4e853a3b33c1afcf55795f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -100,6 +100,196 @@ std::map&lt; std::string, RequestHandlerBase * &gt;&#160;</td><td class="memItem
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>urls</b></td></tr>
 <tr class="separator:acbabc355661618f30e04c613ae8b3340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a95c56822d667e94b031451729ce069a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c56822d667e94b031451729ce069a9">&#9670;&nbsp;</a></span>Controller()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Controller::Controller </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_controller.html">Controller</a> constructor </p>
+
+</div>
+</div>
+<a id="a0ab87934c4f7a266cfdb86e0f36bc1b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab87934c4f7a266cfdb86e0f36bc1b5">&#9670;&nbsp;</a></span>~Controller()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Controller::~Controller </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_controller.html">Controller</a> destroyer </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abe812429430dca0aae5b09b4b304af26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe812429430dca0aae5b09b4b304af26">&#9670;&nbsp;</a></span>addRoute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::addRoute </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>httpVerb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>route</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RequestHandlerBase *&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds route to controller's routes map. Mongoose's requesthandlerbase does the mapping </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">httpVerb</td><td>one of GET/POST/PUT/DELETE </td></tr>
+    <tr><td class="paramname">route</td><td>route to handle. ex: /tracks </td></tr>
+    <tr><td class="paramname">handler</td><td>Mongoose's request handler </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c8c0a4a4e853a3b33c1afcf55795f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8c0a4a4e853a3b33c1afcf55795f51">&#9670;&nbsp;</a></span>handles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Controller::handles </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>url</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if controller handles the given url </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>one of GET/POST/PUT/DELETE </td></tr>
+    <tr><td class="paramname">url</td><td>the one to verify. ex: /ping </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if it handles, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="afa78a73d099dc2920b22b2927f7870d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa78a73d099dc2920b22b2927f7870d6">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_response.html">Response</a> * Controller::process </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_request.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>processes passed request gets the corresponding method from its routes and calls method </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>the request to process </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>built response, with status code </dd></dl>
+
+</div>
+</div>
+<a id="a53ed1daa58f8458d71a5526e6fe6fcb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ed1daa58f8458d71a5526e6fe6fcb6">&#9670;&nbsp;</a></span>serverInternalError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_response.html">Response</a> * Controller::serverInternalError </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prepares 500 error in case of error during process </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>error response message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>500 status code response </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/api/controllers/<a class="el" href="_controller_8h_source.html">Controller.h</a></li>
 <li>src/api/controllers/Controller.cpp</li>

@@ -26,7 +26,7 @@
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">#<sp/>add<sp/>these<sp/>directories<sp/>to<sp/>sys.path<sp/>here.<sp/>If<sp/>the<sp/>directory<sp/>is<sp/>relative<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">#<sp/>documentation<sp/>root,<sp/>use<sp/>os.path.abspath<sp/>to<sp/>make<sp/>it<sp/>absolute,<sp/>like<sp/>shown<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#<sp/>import<sp/>os</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">#<sp/>sys.path.insert(0,<sp/>os.path.abspath(&apos;.&apos;))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
@@ -56,17 +56,17 @@
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">#<sp/>General<sp/>information<sp/>about<sp/>the<sp/>project.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal">project<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;Tallerify<sp/>App<sp/>Server&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">copyright<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;2017,<sp/>Martin<sp/>Stancanelli&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">author<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;Martin<sp/>Stancanelli&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">copyright<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;2017,<sp/>Fortify<sp/>Software&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">author<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;Fortify<sp/>Software&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>version<sp/>info<sp/>for<sp/>the<sp/>project<sp/>you&apos;re<sp/>documenting,<sp/>acts<sp/>as<sp/>replacement<sp/>for</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">#<sp/>|version|<sp/>and<sp/>|release|,<sp/>also<sp/>used<sp/>in<sp/>various<sp/>other<sp/>places<sp/>throughout<sp/>the</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">#<sp/>built<sp/>documents.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>short<sp/>X.Y<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">version<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;0.1.0&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">version<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;0.2.0&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>full<sp/>version,<sp/>including<sp/>alpha/beta/rc<sp/>tags.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">release<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;0.1.0&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">release<sp/>=<sp/></highlight><highlight class="stringliteral">u&apos;0.2.0&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>language<sp/>for<sp/>content<sp/>autogenerated<sp/>by<sp/>Sphinx.<sp/>Refer<sp/>to<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">#<sp/>for<sp/>a<sp/>list<sp/>of<sp/>supported<sp/>languages.</highlight><highlight class="normal"></highlight></codeline>
@@ -91,7 +91,7 @@
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>theme<sp/>to<sp/>use<sp/>for<sp/>HTML<sp/>and<sp/>HTML<sp/>Help<sp/>pages.<sp/><sp/>See<sp/>the<sp/>documentation<sp/>for</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">#<sp/>a<sp/>list<sp/>of<sp/>builtin<sp/>themes.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">html_theme<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;alabaster&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">html_theme<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;sphinx_rtd_theme&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Theme<sp/>options<sp/>are<sp/>theme-specific<sp/>and<sp/>customize<sp/>the<sp/>look<sp/>and<sp/>feel<sp/>of<sp/>a<sp/>theme</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">#<sp/>further.<sp/><sp/>For<sp/>a<sp/>list<sp/>of<sp/>options<sp/>available<sp/>for<sp/>each<sp/>theme,<sp/>see<sp/>the</highlight><highlight class="normal"></highlight></codeline>

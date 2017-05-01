@@ -9,7 +9,7 @@
     <incdepgraph>
       <node id="156">
         <label>../networking/Request.h</label>
-        <link refid="_request_8h_source"/>
+        <link refid="_request_8h"/>
         <childnode refid="154" relation="include">
         </childnode>
         <childnode refid="157" relation="include">
@@ -20,7 +20,7 @@
       </node>
       <node id="155">
         <label>../controllers/Controller.h</label>
-        <link refid="_controller_8h_source"/>
+        <link refid="_controller_8h"/>
         <childnode refid="156" relation="include">
         </childnode>
         <childnode refid="160" relation="include">
@@ -46,7 +46,7 @@
       </node>
       <node id="164">
         <label>../config/Constants.h</label>
-        <link refid="_constants_8h_source"/>
+        <link refid="_constants_8h"/>
       </node>
       <node id="160">
         <label>mongoose/RequestHandler.h</label>
@@ -70,7 +70,7 @@
       </node>
       <node id="162">
         <label>../networking/JSONResponse.h</label>
-        <link refid="_j_s_o_n_response_8h_source"/>
+        <link refid="_j_s_o_n_response_8h"/>
         <childnode refid="163" relation="include">
         </childnode>
         <childnode refid="157" relation="include">
@@ -90,7 +90,7 @@
       </node>
       <node id="161">
         <label>../controllers/PingController.h</label>
-        <link refid="_ping_controller_8h_source"/>
+        <link refid="_ping_controller_8h"/>
         <childnode refid="155" relation="include">
         </childnode>
         <childnode refid="162" relation="include">
@@ -202,15 +202,15 @@
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_controller" kindref="compound">Controller</ref><sp/>*handler<sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="class_controller" kindref="compound">Controller</ref><sp/>*controller<sp/>:<sp/>controllers)<sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(controller-&gt;handles(request.getHttpVerb(),<sp/>request.getUrl()))<sp/>handler<sp/>=<sp/>controller;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(controller-&gt;handles(request.<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>(),<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>()))<sp/>handler<sp/>=<sp/>controller;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handler<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref>();</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response-&gt;setCode(HTTP_NOT_FOUND);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::get(</highlight><highlight class="stringliteral">&quot;console&quot;</highlight><highlight class="normal">)-&gt;warn(</highlight><highlight class="stringliteral">&quot;Response<sp/>from<sp/>{0}<sp/>{1}<sp/>was<sp/>{2}&quot;</highlight><highlight class="normal">,<sp/>request.getHttpVerb(),<sp/>request.getUrl(),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::get(</highlight><highlight class="stringliteral">&quot;console&quot;</highlight><highlight class="normal">)-&gt;warn(</highlight><highlight class="stringliteral">&quot;Response<sp/>from<sp/>{0}<sp/>{1}<sp/>was<sp/>{2}&quot;</highlight><highlight class="normal">,<sp/>request.<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>(),<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>(),</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response-&gt;getCode());</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>handler-&gt;process(request);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>handler-&gt;<ref refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kindref="member">process</ref>(request);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(response<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>

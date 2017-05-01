@@ -24,7 +24,7 @@
       </node>
       <node id="140">
         <label>../config/Constants.h</label>
-        <link refid="_constants_8h_source"/>
+        <link refid="_constants_8h"/>
       </node>
       <node id="136">
         <label>Response.h</label>
@@ -68,7 +68,7 @@
 <codeline lineno="23"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal">std::string<sp/>Response::getData()<sp/>{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>body<sp/>=<sp/>getBody();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>body<sp/>=<sp/><ref refid="class_request_1ad88074d323ab7bef3182a5108b8ba387" kindref="member">getBody</ref>();</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>data;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>data<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;HTTP/1.0<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>code<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>

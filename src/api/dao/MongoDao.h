@@ -27,13 +27,13 @@ public:
 
     /**
      * Saves new track to db
-     * @param track
+     * @param track track object to save
      */
     void saveTrack(Track *track);
 
     /**
      * Returns track fetched from db
-     * @param trackId
+     * @param trackId track id to search for
      * @return fetched track
      */
     Track *getTrack(int trackId);

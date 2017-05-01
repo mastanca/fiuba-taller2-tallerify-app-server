@@ -17,14 +17,14 @@ public:
     PingController();
 
     /**
-     * PingCOntroller destroyer
+     * PingController destroyer
      */
     virtual ~PingController();
 
     /**
      * ping method, resturns built jsonresponse with pong
-     * @param request
-     * @param response
+     * @param request the request to get data from
+     * @param response the prepared response, ready to serve
      */
     void get(Request &request, JSONResponse &response);
 };

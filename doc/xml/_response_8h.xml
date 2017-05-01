@@ -26,13 +26,13 @@
     <invincdepgraph>
       <node id="146">
         <label>src/api/networking/Request.h</label>
-        <link refid="_request_8h_source"/>
+        <link refid="_request_8h"/>
         <childnode refid="147" relation="include">
         </childnode>
       </node>
       <node id="147">
         <label>src/api/controllers/Controller.h</label>
-        <link refid="_controller_8h_source"/>
+        <link refid="_controller_8h"/>
         <childnode refid="148" relation="include">
         </childnode>
         <childnode refid="149" relation="include">
@@ -52,13 +52,13 @@
       </node>
       <node id="150">
         <label>src/api/networking/JSONResponse.h</label>
-        <link refid="_j_s_o_n_response_8h_source"/>
+        <link refid="_j_s_o_n_response_8h"/>
         <childnode refid="148" relation="include">
         </childnode>
       </node>
       <node id="148">
         <label>src/api/controllers/PingController.h</label>
-        <link refid="_ping_controller_8h_source"/>
+        <link refid="_ping_controller_8h"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_response" prot="public">Response</innerclass>

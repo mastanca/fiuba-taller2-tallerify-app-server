@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['server_2eh',['Server.h',['../_server_8h.html',1,'']]]
+  ['jsonresponse_2eh',['JSONResponse.h',['../_j_s_o_n_response_8h.html',1,'']]]
 ];

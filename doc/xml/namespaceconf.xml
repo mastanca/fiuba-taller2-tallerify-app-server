@@ -78,7 +78,7 @@
         <definition>string conf.copyright</definition>
         <argsstring></argsstring>
         <name>copyright</name>
-        <initializer>=  u&apos;2017, Martin Stancanelli&apos;</initializer>
+        <initializer>=  u&apos;2017, Fortify Software&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -92,7 +92,7 @@
         <definition>string conf.author</definition>
         <argsstring></argsstring>
         <name>author</name>
-        <initializer>=  u&apos;Martin Stancanelli&apos;</initializer>
+        <initializer>=  u&apos;Fortify Software&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -106,7 +106,7 @@
         <definition>string conf.version</definition>
         <argsstring></argsstring>
         <name>version</name>
-        <initializer>=  u&apos;0.1.0&apos;</initializer>
+        <initializer>=  u&apos;0.2.0&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -120,7 +120,7 @@
         <definition>string conf.release</definition>
         <argsstring></argsstring>
         <name>release</name>
-        <initializer>=  u&apos;0.1.0&apos;</initializer>
+        <initializer>=  u&apos;0.2.0&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -190,7 +190,7 @@
         <definition>string conf.html_theme</definition>
         <argsstring></argsstring>
         <name>html_theme</name>
-        <initializer>=  &apos;alabaster&apos;</initializer>
+        <initializer>=  &apos;sphinx_rtd_theme&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

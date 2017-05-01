@@ -9,7 +9,7 @@
         <argsstring></argsstring>
         <name>ServerTest</name>
         <briefdescription>
-<para>Frield class for testing private methods. </para>        </briefdescription>
+<para>Friend class for testing private methods. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
