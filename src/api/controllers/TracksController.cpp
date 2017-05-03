@@ -30,7 +30,7 @@ void TracksController::get(Request &request, JSONResponse &response) {
 }
 
 bool TracksController::handles(std::string method, std::string url) {
-    if (std::regex_match(url, tracksRegex)) {
+    if (method == HTTP_GET && url != "/tracks" && std::regex_match(url, tracksRegex)) {
         return true;
     } else {
         return Controller::handles(method, url);
@@ -41,7 +41,7 @@ Response *TracksController::process(Request &request) {
     Response *response = NULL;
 
     response = Controller::process(request);
-    if (!response) {
+    if (!response && request.getHttpVerb() == HTTP_GET) {
         // It's a GET /tracks/$id
         std::string elementIdString;
         std::size_t found = request.getUrl().rfind("/");
