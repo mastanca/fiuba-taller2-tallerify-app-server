@@ -4,7 +4,7 @@
 #include "spdlog/spdlog.h"
 
 Request::Request(mg_connection *connection, http_message *httpMessage) : connection(connection), url(""), body(""),
-                                                                         httpVerb("") {
+                                                                         httpVerb(""), elementId(-1) {
     parseMessage(httpMessage);
     spdlog::get("console")->info("Processing request {0} {1}", httpVerb, url);
 }
@@ -42,4 +42,16 @@ const std::string &Request::getBody() const {
 
 const std::string &Request::getHttpVerb() const {
     return httpVerb;
+}
+
+int Request::getElementId() const {
+    return elementId;
+}
+
+void Request::setElementId(int elementId) {
+    Request::elementId = elementId;
+}
+
+void Request::setUrl(const std::string &url) {
+    Request::url = url;
 }

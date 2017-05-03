@@ -6,6 +6,7 @@
 
 #include "Controller.h"
 #include "../networking/JSONResponse.h"
+#include <regex>
 
 class TracksController : public Controller {
 public:
@@ -15,6 +16,11 @@ public:
 
     void get(Request &request, JSONResponse &response);
 
+    bool handles(std::string method, std::string url);
+
+    Response *process(Request &request);
+private:
+    std::regex tracksRegex;
 };
 
 
