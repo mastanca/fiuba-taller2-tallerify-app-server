@@ -21,8 +21,7 @@ sphinx-build . doc/
 To run you only need docker
 
 ```bash
-docker-compose build
-docker-compose up
+docker-compose up --build
 ```
 
 
