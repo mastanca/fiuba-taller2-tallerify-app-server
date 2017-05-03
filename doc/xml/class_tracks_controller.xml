@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/TracksController.h" line="49" column="1" bodyfile="src/api/controllers/TracksController.h" bodystart="49" bodyend="-1"/>
+        <location file="src/api/controllers/TracksController.h" line="56" column="1" bodyfile="src/api/controllers/TracksController.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -146,6 +146,42 @@
         </inbodydescription>
         <location file="src/api/controllers/TracksController.h" line="46" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="45" bodyend="57"/>
       </memberdef>
+      <memberdef kind="function" id="class_tracks_controller_1a2e356d83c71e374f2768aed68f855cae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TracksController::post</definition>
+        <argsstring>(Request &amp;request, JSONResponse &amp;response)</argsstring>
+        <name>post</name>
+        <param>
+          <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref> &amp;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Post a track to create it <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>with the song </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ok if track was saved, 500 otherwise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/TracksController.h" line="53" column="1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -175,12 +211,13 @@
         <link refid="class_controller"/>
       </node>
     </collaborationgraph>
-    <location file="src/api/controllers/TracksController.h" line="14" column="1" bodyfile="src/api/controllers/TracksController.h" bodystart="14" bodyend="50"/>
+    <location file="src/api/controllers/TracksController.h" line="14" column="1" bodyfile="src/api/controllers/TracksController.h" bodystart="14" bodyend="57"/>
     <listofallmembers>
       <member refid="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" virt="non-virtual"><scope>TracksController</scope><name>addRoute</name></member>
       <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" virt="non-virtual"><scope>TracksController</scope><name>Controller</name></member>
       <member refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" prot="public" virt="non-virtual"><scope>TracksController</scope><name>get</name></member>
       <member refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" prot="public" virt="virtual"><scope>TracksController</scope><name>handles</name></member>
+      <member refid="class_tracks_controller_1a2e356d83c71e374f2768aed68f855cae" prot="public" virt="non-virtual"><scope>TracksController</scope><name>post</name></member>
       <member refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" prot="public" virt="virtual"><scope>TracksController</scope><name>process</name></member>
       <member refid="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" prot="protected" virt="non-virtual"><scope>TracksController</scope><name>routes</name></member>
       <member refid="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" prot="public" virt="non-virtual"><scope>TracksController</scope><name>serverInternalError</name></member>

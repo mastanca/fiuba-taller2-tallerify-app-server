@@ -90,6 +90,7 @@
     <member refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" kind="function"><name>handles</name></member>
     <member refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" kind="function"><name>process</name></member>
     <member refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" kind="function"><name>get</name></member>
+    <member refid="class_tracks_controller_1a2e356d83c71e374f2768aed68f855cae" kind="function"><name>post</name></member>
   </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="conf_8py_1a540efa67c53e84c1c353c1df2e37e39c" kind="variable"><name>extensions</name></member>

@@ -45,6 +45,13 @@ public:
      */
     void get(Request &request, JSONResponse &response);
 
+    /**
+     * Post a track to create it
+     * @param request with the song
+     * @param response ok if track was saved, 500 otherwise
+     */
+    void post(Request &request, JSONResponse &response);
+
 private:
     std::regex tracksRegex;
 };
