@@ -1,0 +1,17 @@
+version: '2'
+services:
+    tallerify:
+        build: 
+            context: .
+            args:
+                coveralls_token: ${COVERALLS_TOKEN}
+                travis_service: travis-ci
+        environment:
+            - COMPOSE=true
+        ports:
+            - "8080:8080"
+        links:
+            - "db:database"
+    db:
+        image: mongo:latest
+

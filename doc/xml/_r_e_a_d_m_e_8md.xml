@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>fiuba-taller2-tallerify-app-server</highlight></codeline>
+<codeline><highlight class="normal">App<sp/>server<sp/>for<sp/>tallerify<sp/>in<sp/>C++,<sp/>using<sp/>mongoose<sp/>and<sp/>mongodb</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">branch<sp/>|<sp/>Travis<sp/>CI<sp/>|<sp/>Coveralls</highlight></codeline>
+<codeline><highlight class="normal">------<sp/>|<sp/>---------<sp/>|<sp/>--------</highlight></codeline>
+<codeline><highlight class="normal">`master`<sp/>|<sp/>[![Build<sp/>Status](https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server.svg?branch=master)](https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server)<sp/>|<sp/>[![Coverage<sp/>Status](https://coveralls.io/repos/github/tallerify/fiuba-taller2-tallerify-app-server/badge.svg?branch=HEAD)](https://coveralls.io/github/tallerify/fiuba-taller2-tallerify-app-server?branch=HEAD)</highlight></codeline>
+<codeline><highlight class="normal">`develop`<sp/>|<sp/>[![Build<sp/>Status](https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server.svg?branch=develop)](https://travis-ci.org/tallerify/fiuba-taller2-tallerify-app-server)<sp/>|<sp/>[![Coverage<sp/>Status](https://coveralls.io/repos/github/tallerify/fiuba-taller2-tallerify-app-server/badge.svg?branch=HEAD)](https://coveralls.io/github/tallerify/fiuba-taller2-tallerify-app-server?branch=HEAD)</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

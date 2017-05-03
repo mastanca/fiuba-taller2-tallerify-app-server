@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_ping_controller_8h" kind="file" language="C++">
+    <compoundname>PingController.h</compoundname>
+    <includes refid="_controller_8h" local="yes">Controller.h</includes>
+    <includes refid="_j_s_o_n_response_8h" local="yes">../networking/JSONResponse.h</includes>
+    <includedby refid="_ping_controller_8cpp" local="yes">src/api/controllers/PingController.cpp</includedby>
+    <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
+    <incdepgraph>
+      <node id="46">
+        <label>../networking/Request.h</label>
+        <link refid="_request_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>jsoncpp/json/json.h</label>
+      </node>
+      <node id="45">
+        <label>Controller.h</label>
+        <link refid="_controller_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>string</label>
+      </node>
+      <node id="50">
+        <label>map</label>
+      </node>
+      <node id="51">
+        <label>mongoose/RequestHandler.h</label>
+      </node>
+      <node id="48">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>vector</label>
+      </node>
+      <node id="47">
+        <label>mongoose/mongoose.h</label>
+      </node>
+      <node id="53">
+        <label>../networking/JSONResponse.h</label>
+        <link refid="_j_s_o_n_response_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>src/api/controllers/PingController.h</label>
+        <link refid="_ping_controller_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_ping_controller" prot="public">PingController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_PINGCONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_PINGCONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_controller_8h" kindref="compound">Controller.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../networking/JSONResponse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_ping_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ping_controller" kindref="compound">PingController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ping_controller_1a1b861cccf64c8c1781ee23ed1f7473f8" kindref="member">PingController</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_ping_controller_1adf30495ba10318532bc7ac3a692b359a" kindref="member">~PingController</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_PINGCONTROLLER_H</highlight></codeline>
+    </programlisting>
+    <location file="src/api/controllers/PingController.h"/>
+  </compounddef>
+</doxygen>

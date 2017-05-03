@@ -6,12 +6,26 @@
 #include <string>
 #include <map>
 
+/**
+ * @file Response.h
+ */
 class Response {
 public:
+    /**
+     * Response constructor
+     */
     Response();
 
+    /**
+     * Response destroyer
+     */
     virtual ~Response();
 
+    /**
+     * inserts a new header to the headers map
+     * @param key string containing the header key
+     * @param value string containing the header value
+     */
     void setHeader(std::string key, std::string value);
 
     void setCode(int code);

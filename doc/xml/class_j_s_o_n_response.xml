@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_j_s_o_n_response" kind="class" language="C++" prot="public">
+    <compoundname>JSONResponse</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Value</basecompoundref>
+    <basecompoundref refid="class_response" prot="public" virt="non-virtual">Response</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_s_o_n_response_1a4fa37df658255a09325ca4aa96f419ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JSONResponse::JSONResponse</definition>
+        <argsstring>()</argsstring>
+        <name>JSONResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref> constructor Sets json headers </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/JSONResponse.h" line="19" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_response_1a9e432e672bdaf93256d971f969962cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>JSONResponse::~JSONResponse</definition>
+        <argsstring>()</argsstring>
+        <name>~JSONResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref> destroyer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/JSONResponse.h" line="24" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_response_1a2e74ef171632f94220d027210dd0f482" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string JSONResponse::getBody</definition>
+        <argsstring>()</argsstring>
+        <name>getBody</name>
+        <reimplements refid="class_response_1a5975130b2dd8549a73eaf54be7abd5f4">getBody</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns current response body, json formatted <simplesect kind="return"><para>the body as a string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/JSONResponse.h" line="30" column="1" bodyfile="src/api/networking/JSONResponse.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>Response</label>
+        <link refid="class_response"/>
+      </node>
+      <node id="4">
+        <label>Json::Value</label>
+      </node>
+      <node id="3">
+        <label>JSONResponse</label>
+        <link refid="class_j_s_o_n_response"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>Response</label>
+        <link refid="class_response"/>
+      </node>
+      <node id="7">
+        <label>Json::Value</label>
+      </node>
+      <node id="6">
+        <label>JSONResponse</label>
+        <link refid="class_j_s_o_n_response"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/api/networking/JSONResponse.h" line="13" column="1" bodyfile="src/api/networking/JSONResponse.h" bodystart="13" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_response_1ac5735ee80a09411fa59bd67bfd8ac6f5" prot="protected" virt="non-virtual"><scope>JSONResponse</scope><name>code</name></member>
+      <member refid="class_j_s_o_n_response_1a2e74ef171632f94220d027210dd0f482" prot="public" virt="virtual"><scope>JSONResponse</scope><name>getBody</name></member>
+      <member refid="class_response_1ad0a04692964be0c85e0458a200cfd179" prot="public" virt="non-virtual"><scope>JSONResponse</scope><name>getCode</name></member>
+      <member refid="class_response_1af841ae031ce6f12dff50809a73dc771f" prot="public" virt="virtual"><scope>JSONResponse</scope><name>getData</name></member>
+      <member refid="class_response_1a9877673d70d058facbbf962600926dfa" prot="public" virt="virtual"><scope>JSONResponse</scope><name>hasHeader</name></member>
+      <member refid="class_response_1a83b9ffd2c506fd147ca17f6c73739f7f" prot="protected" virt="non-virtual"><scope>JSONResponse</scope><name>headers</name></member>
+      <member refid="class_j_s_o_n_response_1a4fa37df658255a09325ca4aa96f419ff" prot="public" virt="non-virtual"><scope>JSONResponse</scope><name>JSONResponse</name></member>
+      <member refid="class_response_1aa9b6e391d77fce8daca8bac13730ec8e" prot="public" virt="non-virtual"><scope>JSONResponse</scope><name>Response</name></member>
+      <member refid="class_response_1a1e74066399cbf35cb38c310b4e73a003" prot="public" virt="non-virtual"><scope>JSONResponse</scope><name>setCode</name></member>
+      <member refid="class_response_1a4c639eab3dd2496a7ddbd04c36d96991" prot="public" virt="non-virtual"><scope>JSONResponse</scope><name>setHeader</name></member>
+      <member refid="class_j_s_o_n_response_1a9e432e672bdaf93256d971f969962cd5" prot="public" virt="virtual"><scope>JSONResponse</scope><name>~JSONResponse</name></member>
+      <member refid="class_response_1a2a4a6403aaefce73725f17cf63896f84" prot="public" virt="virtual"><scope>JSONResponse</scope><name>~Response</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
