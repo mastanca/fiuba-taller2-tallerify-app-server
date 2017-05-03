@@ -118,6 +118,17 @@
         </inbodydescription>
         <location file="src/api/config/Constants.h" line="18" column="9" bodyfile="src/api/config/Constants.h" bodystart="18" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="_constants_8h_1acbb11c1e34784cf1e3147029f942bfd6" prot="public" static="no">
+        <name>BASE_URL</name>
+        <initializer>&quot;http://127.0.0.1:8080&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/config/Constants.h" line="19" column="9" bodyfile="src/api/config/Constants.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -139,8 +150,9 @@
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_NOT_FOUND<sp/>404</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_FORBIDDEN<sp/>403</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_SERVER_ERROR<sp/>500</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONSTANTS_H</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASE_URL<sp/>&quot;http://127.0.0.1:8080&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_CONSTANTS_H</highlight></codeline>
     </programlisting>
     <location file="src/api/config/Constants.h"/>
   </compounddef>

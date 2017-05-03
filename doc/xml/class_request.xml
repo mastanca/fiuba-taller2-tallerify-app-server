@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="54" column="1" bodyfile="src/api/networking/Request.h" bodystart="54" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="72" column="1" bodyfile="src/api/networking/Request.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_request_1a30857fa1b1c7f72eae0bf8715afca24e" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="55" column="1" bodyfile="src/api/networking/Request.h" bodystart="55" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="73" column="1" bodyfile="src/api/networking/Request.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_request_1ac1fb9c057c617b04af48798c3843b68a" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="56" column="1" bodyfile="src/api/networking/Request.h" bodystart="56" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="74" column="1" bodyfile="src/api/networking/Request.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_request_1a6d667096cbc014b4d46e87628201bfcc" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -53,7 +53,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="57" column="1" bodyfile="src/api/networking/Request.h" bodystart="57" bodyend="-1"/>
+        <location file="src/api/networking/Request.h" line="75" column="1" bodyfile="src/api/networking/Request.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_request_1a363792022122212cbf9eb264de6e73dd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Request::elementId</definition>
+        <argsstring></argsstring>
+        <name>elementId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Request.h" line="76" column="1" bodyfile="src/api/networking/Request.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -173,6 +186,70 @@
         </inbodydescription>
         <location file="src/api/networking/Request.h" line="51" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="43" bodyend="45"/>
       </memberdef>
+      <memberdef kind="function" id="class_request_1a7f7e7e642947164fab1440d42de239f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Request::getElementId</definition>
+        <argsstring>() const</argsstring>
+        <name>getElementId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get request&apos;s element id <simplesect kind="return"><para>element id </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Request.h" line="57" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Request::setElementId</definition>
+        <argsstring>(int elementId)</argsstring>
+        <name>setElementId</name>
+        <param>
+          <type>int</type>
+          <declname>elementId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the request&apos;s element id <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>elementId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element id to set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Request.h" line="63" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_request_1ab48497486f7a2f86a5354576d66e3472" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Request::setUrl</definition>
+        <argsstring>(const std::string &amp;url)</argsstring>
+        <name>setUrl</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the url of the request <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Request.h" line="69" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
       <memberdef kind="function" id="class_request_1ae6881c90b066551d2550ecd3a705870b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -190,23 +267,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Request.h" line="59" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="21" bodyend="33"/>
+        <location file="src/api/networking/Request.h" line="79" column="1" bodyfile="src/api/networking/Request.cpp" bodystart="21" bodyend="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/api/networking/Request.h" line="13" column="1" bodyfile="src/api/networking/Request.h" bodystart="13" bodyend="60"/>
+    <location file="src/api/networking/Request.h" line="13" column="1" bodyfile="src/api/networking/Request.h" bodystart="13" bodyend="80"/>
     <listofallmembers>
       <member refid="class_request_1ac1fb9c057c617b04af48798c3843b68a" prot="private" virt="non-virtual"><scope>Request</scope><name>body</name></member>
       <member refid="class_request_1a8bb7976c4176a7b406061082a8022cef" prot="private" virt="non-virtual"><scope>Request</scope><name>connection</name></member>
+      <member refid="class_request_1a363792022122212cbf9eb264de6e73dd" prot="private" virt="non-virtual"><scope>Request</scope><name>elementId</name></member>
       <member refid="class_request_1ad88074d323ab7bef3182a5108b8ba387" prot="public" virt="virtual"><scope>Request</scope><name>getBody</name></member>
+      <member refid="class_request_1a7f7e7e642947164fab1440d42de239f8" prot="public" virt="non-virtual"><scope>Request</scope><name>getElementId</name></member>
       <member refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" prot="public" virt="virtual"><scope>Request</scope><name>getHttpVerb</name></member>
       <member refid="class_request_1a9dad00a15cff18542801289a24711930" prot="public" virt="virtual"><scope>Request</scope><name>getUrl</name></member>
       <member refid="class_request_1a6d667096cbc014b4d46e87628201bfcc" prot="private" virt="non-virtual"><scope>Request</scope><name>httpVerb</name></member>
       <member refid="class_request_1ae6881c90b066551d2550ecd3a705870b" prot="private" virt="non-virtual"><scope>Request</scope><name>parseMessage</name></member>
       <member refid="class_request_1a135fd74afd31ea5b1934456cd17dbfba" prot="public" virt="non-virtual"><scope>Request</scope><name>Request</name></member>
+      <member refid="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" prot="public" virt="non-virtual"><scope>Request</scope><name>setElementId</name></member>
+      <member refid="class_request_1ab48497486f7a2f86a5354576d66e3472" prot="public" virt="non-virtual"><scope>Request</scope><name>setUrl</name></member>
       <member refid="class_request_1a30857fa1b1c7f72eae0bf8715afca24e" prot="private" virt="non-virtual"><scope>Request</scope><name>url</name></member>
       <member refid="class_request_1a1858382756bc45a009856c3158402278" prot="public" virt="virtual"><scope>Request</scope><name>writeResponse</name></member>
       <member refid="class_request_1a4d57c725686701f773eb3630630a7ea2" prot="public" virt="virtual"><scope>Request</scope><name>~Request</name></member>

@@ -65,7 +65,7 @@
       </node>
       <node id="30">
         <label>src/api/controllers/TracksController.h</label>
-        <link refid="_tracks_controller_8h_source"/>
+        <link refid="_tracks_controller_8h"/>
       </node>
       <node id="31">
         <label>src/api/networking/Server.h</label>

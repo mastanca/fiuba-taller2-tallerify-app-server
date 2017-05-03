@@ -4,67 +4,73 @@
     <compoundname>TracksController.h</compoundname>
     <includes refid="_controller_8h" local="yes">Controller.h</includes>
     <includes refid="_j_s_o_n_response_8h" local="yes">../networking/JSONResponse.h</includes>
+    <includes local="no">regex</includes>
     <includedby refid="_tracks_controller_8cpp" local="yes">src/api/controllers/TracksController.cpp</includedby>
     <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
     <incdepgraph>
-      <node id="78">
+      <node id="80">
         <label>../networking/Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="79" relation="include">
-        </childnode>
-        <childnode refid="80" relation="include">
-        </childnode>
-      </node>
-      <node id="86">
-        <label>jsoncpp/json/json.h</label>
-      </node>
-      <node id="77">
-        <label>Controller.h</label>
-        <link refid="_controller_8h"/>
-        <childnode refid="78" relation="include">
-        </childnode>
-        <childnode refid="83" relation="include">
-        </childnode>
-        <childnode refid="84" relation="include">
-        </childnode>
-      </node>
-      <node id="76">
-        <label>src/api/controllers/TracksController.h</label>
-        <link refid="_tracks_controller_8h"/>
-        <childnode refid="77" relation="include">
-        </childnode>
-        <childnode refid="85" relation="include">
-        </childnode>
-      </node>
-      <node id="81">
-        <label>string</label>
-      </node>
-      <node id="82">
-        <label>map</label>
-      </node>
-      <node id="83">
-        <label>mongoose/RequestHandler.h</label>
-      </node>
-      <node id="80">
-        <label>Response.h</label>
-        <link refid="_response_8h"/>
         <childnode refid="81" relation="include">
         </childnode>
         <childnode refid="82" relation="include">
         </childnode>
       </node>
-      <node id="84">
-        <label>vector</label>
+      <node id="88">
+        <label>jsoncpp/json/json.h</label>
       </node>
       <node id="79">
-        <label>mongoose/mongoose.h</label>
-      </node>
-      <node id="85">
-        <label>../networking/JSONResponse.h</label>
-        <link refid="_j_s_o_n_response_8h"/>
+        <label>Controller.h</label>
+        <link refid="_controller_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
         <childnode refid="86" relation="include">
         </childnode>
-        <childnode refid="80" relation="include">
+      </node>
+      <node id="78">
+        <label>src/api/controllers/TracksController.h</label>
+        <link refid="_tracks_controller_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>string</label>
+      </node>
+      <node id="84">
+        <label>map</label>
+      </node>
+      <node id="89">
+        <label>regex</label>
+      </node>
+      <node id="85">
+        <label>mongoose/RequestHandler.h</label>
+      </node>
+      <node id="82">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>vector</label>
+      </node>
+      <node id="81">
+        <label>mongoose/mongoose.h</label>
+      </node>
+      <node id="87">
+        <label>../networking/JSONResponse.h</label>
+        <link refid="_j_s_o_n_response_8h"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -82,19 +88,26 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_controller_8h" kindref="compound">Controller.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../networking/JSONResponse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="class_tracks_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tracks_controller" kindref="compound">TracksController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref><sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_tracks_controller" kindref="compound">TracksController</ref>();</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_tracks_controller" kindref="compound">TracksController</ref>();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_tracks_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tracks_controller" kindref="compound">TracksController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" kindref="member">TracksController</ref>();</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_TRACKSCONTROLLER_H</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" kindref="member">~TracksController</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" kindref="member">handles</ref>(std::string<sp/>method,<sp/>std::string<sp/>url);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*<ref refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" kindref="member">process</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::regex<sp/>tracksRegex;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_TRACKSCONTROLLER_H</highlight></codeline>
     </programlisting>
     <location file="src/api/controllers/TracksController.h"/>
   </compounddef>

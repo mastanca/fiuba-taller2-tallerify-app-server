@@ -80,6 +80,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad88074d323ab7bef3182a5108b8ba387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f2ed8ff9dcde8f21a53449a177af6da"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a7f2ed8ff9dcde8f21a53449a177af6da">getHttpVerb</a> () const</td></tr>
 <tr class="separator:a7f2ed8ff9dcde8f21a53449a177af6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7e7e642947164fab1440d42de239f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a7f7e7e642947164fab1440d42de239f8">getElementId</a> () const</td></tr>
+<tr class="separator:a7f7e7e642947164fab1440d42de239f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5a44a249ca50f0be6414b95a48bed9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a6a5a44a249ca50f0be6414b95a48bed9">setElementId</a> (int elementId)</td></tr>
+<tr class="separator:a6a5a44a249ca50f0be6414b95a48bed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48497486f7a2f86a5354576d66e3472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#ab48497486f7a2f86a5354576d66e3472">setUrl</a> (const std::string &amp;url)</td></tr>
+<tr class="separator:ab48497486f7a2f86a5354576d66e3472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a135fd74afd31ea5b1934456cd17dbfba"></a>
@@ -170,6 +176,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7f7e7e642947164fab1440d42de239f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f7e7e642947164fab1440d42de239f8">&#9670;&nbsp;</a></span>getElementId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Request::getElementId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get request's element id </p><dl class="section return"><dt>Returns</dt><dd>element id </dd></dl>
+
+</div>
+</div>
 <a id="a7f2ed8ff9dcde8f21a53449a177af6da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f2ed8ff9dcde8f21a53449a177af6da">&#9670;&nbsp;</a></span>getHttpVerb()</h2>
 
@@ -219,6 +243,54 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p><a class="el" href="class_request.html">Request</a> url getter </p><dl class="section return"><dt>Returns</dt><dd>associated url </dd></dl>
+
+</div>
+</div>
+<a id="a6a5a44a249ca50f0be6414b95a48bed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a5a44a249ca50f0be6414b95a48bed9">&#9670;&nbsp;</a></span>setElementId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Request::setElementId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>elementId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the request's element id </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elementId</td><td>the element id to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab48497486f7a2f86a5354576d66e3472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48497486f7a2f86a5354576d66e3472">&#9670;&nbsp;</a></span>setUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Request::setUrl </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the url of the request </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>to set </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

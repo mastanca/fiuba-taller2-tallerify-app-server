@@ -7,5 +7,6 @@ var searchData=
   ['_7erequest',['~Request',['../class_request.html#a4d57c725686701f773eb3630630a7ea2',1,'Request']]],
   ['_7eresponse',['~Response',['../class_response.html#a2a4a6403aaefce73725f17cf63896f84',1,'Response']]],
   ['_7eserver',['~Server',['../class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server']]],
-  ['_7etrack',['~Track',['../class_track.html#a416e75e66accc8eb9e3fafc3e8555216',1,'Track']]]
+  ['_7etrack',['~Track',['../class_track.html#a416e75e66accc8eb9e3fafc3e8555216',1,'Track']]],
+  ['_7etrackscontroller',['~TracksController',['../class_tracks_controller.html#af6236ccbd57548cb5ef149c361b1316c',1,'TracksController']]]
 ];

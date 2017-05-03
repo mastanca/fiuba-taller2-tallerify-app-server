@@ -64,6 +64,7 @@
         <definition>Response * Controller::process</definition>
         <argsstring>(Request &amp;request)</argsstring>
         <name>process</name>
+        <reimplementedby refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95">process</reimplementedby>
         <param>
           <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
           <declname>request</declname>
@@ -163,6 +164,7 @@
         <definition>bool Controller::handles</definition>
         <argsstring>(std::string method, std::string url)</argsstring>
         <name>handles</name>
+        <reimplementedby refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc">handles</reimplementedby>
         <param>
           <type>std::string</type>
           <declname>method</declname>

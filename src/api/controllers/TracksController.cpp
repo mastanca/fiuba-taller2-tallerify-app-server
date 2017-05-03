@@ -15,20 +15,6 @@ TracksController::~TracksController() {
 
 }
 
-void TracksController::get(Request &request, JSONResponse &response) {
-    MongoDao dao;
-    Track *track = dao.getTrack(request.getElementId());
-    if (!track) {
-        response.setCode(HTTP_NOT_FOUND);
-        spdlog::get("console")->warn("Response from {0} {1} was {2}", request.getHttpVerb(), request.getUrl(),
-                                     response.getCode());
-        return;
-    }
-    response["songId"] = track->getId();
-    response["url"] = BASE_URL + track->getFileLocation(); // TODO: Get the real one
-    delete track;
-}
-
 bool TracksController::handles(std::string method, std::string url) {
     if (method == HTTP_GET && url != "/tracks" && std::regex_match(url, tracksRegex)) {
         return true;
@@ -54,4 +40,18 @@ Response *TracksController::process(Request &request) {
     }
 
     return response;
+}
+
+void TracksController::get(Request &request, JSONResponse &response) {
+    MongoDao dao;
+    Track *track = dao.getTrack(request.getElementId());
+    if (!track) {
+        response.setCode(HTTP_NOT_FOUND);
+        spdlog::get("console")->warn("Response from {0} {1} was {2}", request.getHttpVerb(), request.getUrl(),
+                                     response.getCode());
+        return;
+    }
+    response["songId"] = track->getId();
+    response["url"] = BASE_URL + track->getFileLocation(); // TODO: Get the real one
+    delete track;
 }

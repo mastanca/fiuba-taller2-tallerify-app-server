@@ -5,7 +5,9 @@ var searchData=
   ['server_2eh',['Server.h',['../_server_8h.html',1,'']]],
   ['serverinternalerror',['serverInternalError',['../class_controller.html#a53ed1daa58f8458d71a5526e6fe6fcb6',1,'Controller']]],
   ['servertest',['ServerTest',['../class_server.html#ad28f45770d3f08c840688fb4993911ad',1,'Server']]],
+  ['setelementid',['setElementId',['../class_request.html#a6a5a44a249ca50f0be6414b95a48bed9',1,'Request']]],
   ['setheader',['setHeader',['../class_response.html#a4c639eab3dd2496a7ddbd04c36d96991',1,'Response']]],
+  ['seturl',['setUrl',['../class_request.html#ab48497486f7a2f86a5354576d66e3472',1,'Request']]],
   ['start',['start',['../class_server.html#a7eac07d2582fa01c2671362efa955b31',1,'Server']]],
   ['stop',['stop',['../class_server.html#a07c45a7e101a3926d8f9685c3c5d14e4',1,'Server']]]
 ];

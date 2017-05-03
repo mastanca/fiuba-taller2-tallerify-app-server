@@ -3,6 +3,21 @@
   <compounddef id="class_tracks_controller" kind="class" language="C++" prot="public">
     <compoundname>TracksController</compoundname>
     <basecompoundref refid="class_controller" prot="public" virt="non-virtual">Controller</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tracks_controller_1ac22a9d208e121c572aca7350f422efc2" prot="private" static="no" mutable="no">
+        <type>std::regex</type>
+        <definition>std::regex TracksController::tracksRegex</definition>
+        <argsstring></argsstring>
+        <name>tracksRegex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/TracksController.h" line="49" column="1" bodyfile="src/api/controllers/TracksController.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -12,10 +27,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>constructor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/TracksController.h" line="12" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="7" bodyend="10"/>
+        <location file="src/api/controllers/TracksController.h" line="19" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="8" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -25,10 +40,75 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/TracksController.h" line="14" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="12" bodyend="14"/>
+        <location file="src/api/controllers/TracksController.h" line="24" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TracksController::handles</definition>
+        <argsstring>(std::string method, std::string url)</argsstring>
+        <name>handles</name>
+        <reimplements refid="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51">handles</reimplements>
+        <param>
+          <type>std::string</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns if the controller handles the given method and url <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the http method </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request url </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if handles, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/TracksController.h" line="32" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
+        <definition>Response * TracksController::process</definition>
+        <argsstring>(Request &amp;request)</argsstring>
+        <name>process</name>
+        <reimplements refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6">process</reimplements>
+        <param>
+          <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Process the given request and respond accordingly <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to process </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding response </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/TracksController.h" line="39" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="26" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,10 +126,25 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Get the given track <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>with the track id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>containing the track id and the play url </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/TracksController.h" line="16" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="16" bodyend="23"/>
+        <location file="src/api/controllers/TracksController.h" line="46" column="1" bodyfile="src/api/controllers/TracksController.cpp" bodystart="45" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,16 +175,17 @@
         <link refid="class_controller"/>
       </node>
     </collaborationgraph>
-    <location file="src/api/controllers/TracksController.h" line="10" column="1" bodyfile="src/api/controllers/TracksController.h" bodystart="10" bodyend="18"/>
+    <location file="src/api/controllers/TracksController.h" line="14" column="1" bodyfile="src/api/controllers/TracksController.h" bodystart="14" bodyend="50"/>
     <listofallmembers>
       <member refid="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" virt="non-virtual"><scope>TracksController</scope><name>addRoute</name></member>
       <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" virt="non-virtual"><scope>TracksController</scope><name>Controller</name></member>
       <member refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" prot="public" virt="non-virtual"><scope>TracksController</scope><name>get</name></member>
-      <member refid="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51" prot="public" virt="virtual"><scope>TracksController</scope><name>handles</name></member>
-      <member refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" prot="public" virt="virtual"><scope>TracksController</scope><name>process</name></member>
+      <member refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" prot="public" virt="virtual"><scope>TracksController</scope><name>handles</name></member>
+      <member refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" prot="public" virt="virtual"><scope>TracksController</scope><name>process</name></member>
       <member refid="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" prot="protected" virt="non-virtual"><scope>TracksController</scope><name>routes</name></member>
       <member refid="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" prot="public" virt="non-virtual"><scope>TracksController</scope><name>serverInternalError</name></member>
       <member refid="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" prot="public" virt="non-virtual"><scope>TracksController</scope><name>TracksController</name></member>
+      <member refid="class_tracks_controller_1ac22a9d208e121c572aca7350f422efc2" prot="private" virt="non-virtual"><scope>TracksController</scope><name>tracksRegex</name></member>
       <member refid="class_controller_1acbabc355661618f30e04c613ae8b3340" prot="protected" virt="non-virtual"><scope>TracksController</scope><name>urls</name></member>
       <member refid="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" virt="virtual"><scope>TracksController</scope><name>~Controller</name></member>
       <member refid="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" prot="public" virt="virtual"><scope>TracksController</scope><name>~TracksController</name></member>

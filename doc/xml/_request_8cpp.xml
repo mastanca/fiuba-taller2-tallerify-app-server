@@ -5,40 +5,40 @@
     <includes refid="_request_8h" local="yes">Request.h</includes>
     <includes local="yes">spdlog/spdlog.h</includes>
     <incdepgraph>
-      <node id="142">
+      <node id="145">
         <label>Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="143" relation="include">
-        </childnode>
-        <childnode refid="144" relation="include">
-        </childnode>
-      </node>
-      <node id="141">
-        <label>src/api/networking/Request.cpp</label>
-        <link refid="_request_8cpp"/>
-        <childnode refid="142" relation="include">
+        <childnode refid="146" relation="include">
         </childnode>
         <childnode refid="147" relation="include">
         </childnode>
       </node>
-      <node id="145">
-        <label>string</label>
-      </node>
-      <node id="146">
-        <label>map</label>
-      </node>
-      <node id="147">
-        <label>spdlog/spdlog.h</label>
-      </node>
       <node id="144">
-        <label>Response.h</label>
-        <link refid="_response_8h"/>
+        <label>src/api/networking/Request.cpp</label>
+        <link refid="_request_8cpp"/>
         <childnode refid="145" relation="include">
         </childnode>
-        <childnode refid="146" relation="include">
+        <childnode refid="150" relation="include">
         </childnode>
       </node>
-      <node id="143">
+      <node id="148">
+        <label>string</label>
+      </node>
+      <node id="149">
+        <label>map</label>
+      </node>
+      <node id="150">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="147">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+      </node>
+      <node id="146">
         <label>mongoose/mongoose.h</label>
       </node>
     </incdepgraph>
@@ -53,7 +53,7 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spdlog/spdlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><ref refid="class_request_1a135fd74afd31ea5b1934456cd17dbfba" kindref="member">Request::Request</ref>(mg_connection<sp/>*connection,<sp/>http_message<sp/>*httpMessage)<sp/>:<sp/>connection(connection),<sp/>url(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),<sp/>body(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>httpVerb(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>httpVerb(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),<sp/>elementId(-1)<sp/>{</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>parseMessage(httpMessage);</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>spdlog::get(</highlight><highlight class="stringliteral">&quot;console&quot;</highlight><highlight class="normal">)-&gt;info(</highlight><highlight class="stringliteral">&quot;Processing<sp/>request<sp/>{0}<sp/>{1}&quot;</highlight><highlight class="normal">,<sp/>httpVerb,<sp/>url);</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">}</highlight></codeline>
@@ -92,6 +92,18 @@
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">Request::getHttpVerb</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>httpVerb;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_request_1a7f7e7e642947164fab1440d42de239f8" kindref="member">Request::getElementId</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>elementId;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" kindref="member">Request::setElementId</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elementId)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>Request::elementId<sp/>=<sp/>elementId;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1ab48497486f7a2f86a5354576d66e3472" kindref="member">Request::setUrl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>Request::url<sp/>=<sp/>url;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/api/networking/Request.cpp"/>
   </compounddef>
