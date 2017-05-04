@@ -167,7 +167,6 @@
   <compound refid="_response_8h" kind="file"><name>Response.h</name>
   </compound>
   <compound refid="_server_8cpp" kind="file"><name>Server.cpp</name>
-    <member refid="_server_8cpp_1a62239f213b7bce96fe94f390327072ce" kind="variable"><name>s_http_server_opts</name></member>
     <member refid="_server_8cpp_1ae791f4cb7e4c945a2b10249adc43c94c" kind="function"><name>event_handler</name></member>
   </compound>
   <compound refid="_server_8h" kind="file"><name>Server.h</name>

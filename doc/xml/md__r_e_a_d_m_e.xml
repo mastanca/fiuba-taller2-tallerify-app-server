@@ -15,8 +15,7 @@
 </para><para>You can find the docs by opening <computeroutput>doc/index.html</computeroutput> with your favorite browser \ \ To get the HEAD version of them you need doxygen and sphinx. Then run</para><para><programlisting><codeline><highlight class="normal">doxygen</highlight></codeline>
 <codeline><highlight class="normal">sphinx-build<sp/>.<sp/>doc/<sp/></highlight></codeline>
 </programlisting></para><para><heading level="3">Running</heading>
-</para><para>To run you only need docker</para><para><programlisting><codeline><highlight class="normal">docker-compose<sp/>build</highlight></codeline>
-<codeline><highlight class="normal">docker-compose<sp/>up</highlight></codeline>
+</para><para>To run you only need docker</para><para><programlisting><codeline><highlight class="normal">docker-compose<sp/>up<sp/>--build</highlight></codeline>
 </programlisting></para><para><heading level="3">API</heading>
 </para><para>See the wiki for api references </para>    </detaileddescription>
   </compounddef>
