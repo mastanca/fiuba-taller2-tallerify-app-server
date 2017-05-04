@@ -68,19 +68,114 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad020b3512debba921dd65d3f59cf8b03"><td class="memItemLeft" align="right" valign="top"><a id="ad020b3512debba921dd65d3f59cf8b03"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Track</b> (int id, std::string bytes, bool encode=true)</td></tr>
-<tr class="separator:ad020b3512debba921dd65d3f59cf8b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496f793279d918ed573fcc1971c2d983"><td class="memItemLeft" align="right" valign="top"><a id="a496f793279d918ed573fcc1971c2d983"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="memitem:a92f6322397b174b830e3c127c852d665"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_track.html#a92f6322397b174b830e3c127c852d665">Track</a> (int id, std::string fileLocation)</td></tr>
+<tr class="separator:a92f6322397b174b830e3c127c852d665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416e75e66accc8eb9e3fafc3e8555216"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_track.html#a416e75e66accc8eb9e3fafc3e8555216">~Track</a> ()</td></tr>
+<tr class="separator:a416e75e66accc8eb9e3fafc3e8555216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496f793279d918ed573fcc1971c2d983"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_track.html#a496f793279d918ed573fcc1971c2d983">getId</a> () const</td></tr>
 <tr class="separator:a496f793279d918ed573fcc1971c2d983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae90e785b8625cf381be9f07349ee39fc"><td class="memItemLeft" align="right" valign="top"><a id="ae90e785b8625cf381be9f07349ee39fc"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getBase64EncodedBytes</b> () const</td></tr>
-<tr class="separator:ae90e785b8625cf381be9f07349ee39fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc465cc8bc4d568c7031667cb831825e"><td class="memItemLeft" align="right" valign="top"><a id="abc465cc8bc4d568c7031667cb831825e"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()</td></tr>
-<tr class="separator:abc465cc8bc4d568c7031667cb831825e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac32b18dbbd331f50775368ad5b27d4f9"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_track.html#ac32b18dbbd331f50775368ad5b27d4f9">getFileLocation</a> () const</td></tr>
+<tr class="separator:ac32b18dbbd331f50775368ad5b27d4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a92f6322397b174b830e3c127c852d665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f6322397b174b830e3c127c852d665">&#9670;&nbsp;</a></span>Track()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Track::Track </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileLocation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_track.html">Track</a> constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id of the track </td></tr>
+    <tr><td class="paramname">fileLocation</td><td>location of the associated file in filesystem </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a416e75e66accc8eb9e3fafc3e8555216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416e75e66accc8eb9e3fafc3e8555216">&#9670;&nbsp;</a></span>~Track()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Track::~Track </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_track.html">Track</a> destroyer </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac32b18dbbd331f50775368ad5b27d4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac32b18dbbd331f50775368ad5b27d4f9">&#9670;&nbsp;</a></span>getFileLocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Track::getFileLocation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>file location getter </p><dl class="section return"><dt>Returns</dt><dd>file location </dd></dl>
+
+</div>
+</div>
+<a id="a496f793279d918ed573fcc1971c2d983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496f793279d918ed573fcc1971c2d983">&#9670;&nbsp;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Track::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>id getter </p><dl class="section return"><dt>Returns</dt><dd>track's id </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/api/domain/<a class="el" href="_track_8h_source.html">Track.h</a></li>
 <li>src/api/domain/Track.cpp</li>

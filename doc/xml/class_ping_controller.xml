@@ -72,26 +72,26 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="12">
+      <node id="13">
         <label>Controller</label>
         <link refid="class_controller"/>
       </node>
-      <node id="11">
+      <node id="12">
         <label>PingController</label>
         <link refid="class_ping_controller"/>
-        <childnode refid="12" relation="public-inheritance">
+        <childnode refid="13" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="14">
+      <node id="15">
         <label>Controller</label>
         <link refid="class_controller"/>
       </node>
-      <node id="13">
+      <node id="14">
         <label>PingController</label>
         <link refid="class_ping_controller"/>
-        <childnode refid="14" relation="public-inheritance">
+        <childnode refid="15" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

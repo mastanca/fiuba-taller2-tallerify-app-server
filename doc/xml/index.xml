@@ -34,12 +34,16 @@
     <member refid="class_request_1a30857fa1b1c7f72eae0bf8715afca24e" kind="variable"><name>url</name></member>
     <member refid="class_request_1ac1fb9c057c617b04af48798c3843b68a" kind="variable"><name>body</name></member>
     <member refid="class_request_1a6d667096cbc014b4d46e87628201bfcc" kind="variable"><name>httpVerb</name></member>
+    <member refid="class_request_1a363792022122212cbf9eb264de6e73dd" kind="variable"><name>elementId</name></member>
     <member refid="class_request_1a135fd74afd31ea5b1934456cd17dbfba" kind="function"><name>Request</name></member>
     <member refid="class_request_1a4d57c725686701f773eb3630630a7ea2" kind="function"><name>~Request</name></member>
     <member refid="class_request_1a1858382756bc45a009856c3158402278" kind="function"><name>writeResponse</name></member>
     <member refid="class_request_1a9dad00a15cff18542801289a24711930" kind="function"><name>getUrl</name></member>
     <member refid="class_request_1ad88074d323ab7bef3182a5108b8ba387" kind="function"><name>getBody</name></member>
     <member refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kind="function"><name>getHttpVerb</name></member>
+    <member refid="class_request_1a7f7e7e642947164fab1440d42de239f8" kind="function"><name>getElementId</name></member>
+    <member refid="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" kind="function"><name>setElementId</name></member>
+    <member refid="class_request_1ab48497486f7a2f86a5354576d66e3472" kind="function"><name>setUrl</name></member>
     <member refid="class_request_1ae6881c90b066551d2550ecd3a705870b" kind="function"><name>parseMessage</name></member>
   </compound>
   <compound refid="class_response" kind="class"><name>Response</name>
@@ -60,9 +64,10 @@
     <member refid="class_server_1a766819efc0063a5dac27ab6dc66cbfd9" kind="variable"><name>server</name></member>
     <member refid="class_server_1a8a6f41215b74791bbe1c1d16cb6acf3e" kind="variable"><name>connection</name></member>
     <member refid="class_server_1a926c9dae229a62b6d33fdbb41dca6d82" kind="variable"><name>port</name></member>
+    <member refid="class_server_1a7f083ca011556b40eccca5ff694776e7" kind="variable"><name>localIp</name></member>
     <member refid="class_server_1a4db32e1a16e0423cf619d7914fa9b8c2" kind="variable"><name>running</name></member>
     <member refid="class_server_1a7e65fc13a3f8c009d8429ba1b78b9ca2" kind="variable"><name>controllers</name></member>
-    <member refid="class_server_1a495b58bef6f0d4ca6260de206cff6291" kind="function"><name>Server</name></member>
+    <member refid="class_server_1a1ec901fc55efaa9be38ab73335a9e677" kind="function"><name>Server</name></member>
     <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
     <member refid="class_server_1a7eac07d2582fa01c2671362efa955b31" kind="function"><name>start</name></member>
     <member refid="class_server_1a07c45a7e101a3926d8f9685c3c5d14e4" kind="function"><name>stop</name></member>
@@ -72,12 +77,20 @@
   </compound>
   <compound refid="class_track" kind="class"><name>Track</name>
     <member refid="class_track_1a4c555d3e591011400c96b1133c7b12ee" kind="variable"><name>id</name></member>
-    <member refid="class_track_1ae83a160c2c3cc2d1bca88422775081f5" kind="variable"><name>base64EncodedBytes</name></member>
-    <member refid="class_track_1ad020b3512debba921dd65d3f59cf8b03" kind="function"><name>Track</name></member>
+    <member refid="class_track_1a755c360b2a48b4598d2d4593da173663" kind="variable"><name>fileLocation</name></member>
+    <member refid="class_track_1a92f6322397b174b830e3c127c852d665" kind="function"><name>Track</name></member>
     <member refid="class_track_1a416e75e66accc8eb9e3fafc3e8555216" kind="function"><name>~Track</name></member>
     <member refid="class_track_1a496f793279d918ed573fcc1971c2d983" kind="function"><name>getId</name></member>
-    <member refid="class_track_1ae90e785b8625cf381be9f07349ee39fc" kind="function"><name>getBase64EncodedBytes</name></member>
-    <member refid="class_track_1abc465cc8bc4d568c7031667cb831825e" kind="function"><name>toString</name></member>
+    <member refid="class_track_1ac32b18dbbd331f50775368ad5b27d4f9" kind="function"><name>getFileLocation</name></member>
+  </compound>
+  <compound refid="class_tracks_controller" kind="class"><name>TracksController</name>
+    <member refid="class_tracks_controller_1ac22a9d208e121c572aca7350f422efc2" kind="variable"><name>tracksRegex</name></member>
+    <member refid="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" kind="function"><name>TracksController</name></member>
+    <member refid="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" kind="function"><name>~TracksController</name></member>
+    <member refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" kind="function"><name>handles</name></member>
+    <member refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" kind="function"><name>process</name></member>
+    <member refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" kind="function"><name>get</name></member>
+    <member refid="class_tracks_controller_1a2e356d83c71e374f2768aed68f855cae" kind="function"><name>post</name></member>
   </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="conf_8py_1a540efa67c53e84c1c353c1df2e37e39c" kind="variable"><name>extensions</name></member>
@@ -114,6 +127,7 @@
     <member refid="_constants_8h_1abd505b5244bd18ae61c581484b4bc5a0" kind="define"><name>HTTP_NOT_FOUND</name></member>
     <member refid="_constants_8h_1a92646f876056a1e5013e0050496dc04d" kind="define"><name>HTTP_FORBIDDEN</name></member>
     <member refid="_constants_8h_1a89eaf5ed7b88cd227c00c942d5245f98" kind="define"><name>HTTP_SERVER_ERROR</name></member>
+    <member refid="_constants_8h_1acbb11c1e34784cf1e3147029f942bfd6" kind="define"><name>BASE_URL</name></member>
   </compound>
   <compound refid="_controller_8cpp" kind="file"><name>Controller.cpp</name>
   </compound>
@@ -122,6 +136,10 @@
   <compound refid="_ping_controller_8cpp" kind="file"><name>PingController.cpp</name>
   </compound>
   <compound refid="_ping_controller_8h" kind="file"><name>PingController.h</name>
+  </compound>
+  <compound refid="_tracks_controller_8cpp" kind="file"><name>TracksController.cpp</name>
+  </compound>
+  <compound refid="_tracks_controller_8h" kind="file"><name>TracksController.h</name>
   </compound>
   <compound refid="_mongo_dao_8cpp" kind="file"><name>MongoDao.cpp</name>
   </compound>
@@ -149,6 +167,7 @@
   <compound refid="_response_8h" kind="file"><name>Response.h</name>
   </compound>
   <compound refid="_server_8cpp" kind="file"><name>Server.cpp</name>
+    <member refid="_server_8cpp_1a62239f213b7bce96fe94f390327072ce" kind="variable"><name>s_http_server_opts</name></member>
     <member refid="_server_8cpp_1ae791f4cb7e4c945a2b10249adc43c94c" kind="function"><name>event_handler</name></member>
   </compound>
   <compound refid="_server_8h" kind="file"><name>Server.h</name>

@@ -50,11 +50,31 @@ public:
      */
     virtual const std::string &getHttpVerb() const;
 
+    /**
+     * Get request's element id
+     * @return element id
+     */
+    int getElementId() const;
+
+    /**
+     * Set the request's element id
+     * @param elementId the element id to set
+     */
+    void setElementId(int elementId);
+
+    /**
+     * Set the url of the request
+     * @param url to set
+     */
+    void setUrl(const std::string &url);
+
 private:
     mg_connection *connection;
     std::string url;
     std::string body;
     std::string httpVerb;
+    int elementId;
+private:
 
     void parseMessage(http_message *httpMessage);
 };
