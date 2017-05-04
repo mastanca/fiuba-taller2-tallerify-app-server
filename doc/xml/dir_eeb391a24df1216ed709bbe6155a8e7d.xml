@@ -6,6 +6,8 @@
     <innerfile refid="_controller_8h">Controller.h</innerfile>
     <innerfile refid="_ping_controller_8cpp">PingController.cpp</innerfile>
     <innerfile refid="_ping_controller_8h">PingController.h</innerfile>
+    <innerfile refid="_tracks_controller_8cpp">TracksController.cpp</innerfile>
+    <innerfile refid="_tracks_controller_8h">TracksController.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

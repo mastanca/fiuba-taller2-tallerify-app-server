@@ -3,6 +3,7 @@
   <compounddef id="class_controller" kind="class" language="C++" prot="public">
     <compoundname>Controller</compoundname>
     <derivedcompoundref refid="class_ping_controller" prot="public" virt="non-virtual">PingController</derivedcompoundref>
+    <derivedcompoundref refid="class_tracks_controller" prot="public" virt="non-virtual">TracksController</derivedcompoundref>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" prot="protected" static="no" mutable="no">
         <type>std::map&lt; std::string, RequestHandlerBase * &gt;</type>
@@ -43,7 +44,7 @@
 <para><ref refid="class_controller" kindref="compound">Controller</ref> constructor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="19" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="7" bodyend="9"/>
+        <location file="src/api/controllers/Controller.h" line="19" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="8" bodyend="10"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -56,13 +57,14 @@
 <para><ref refid="class_controller" kindref="compound">Controller</ref> destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="24" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="11" bodyend="19"/>
+        <location file="src/api/controllers/Controller.h" line="24" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="12" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1afa78a73d099dc2920b22b2927f7870d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
         <definition>Response * Controller::process</definition>
         <argsstring>(Request &amp;request)</argsstring>
         <name>process</name>
+        <reimplementedby refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95">process</reimplementedby>
         <param>
           <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
           <declname>request</declname>
@@ -82,7 +84,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="32" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="21" bodyend="30"/>
+        <location file="src/api/controllers/Controller.h" line="32" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="22" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
@@ -108,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/controllers/Controller.h" line="39" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="32" bodyend="39"/>
+        <location file="src/api/controllers/Controller.h" line="39" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="33" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,6 +164,7 @@
         <definition>bool Controller::handles</definition>
         <argsstring>(std::string method, std::string url)</argsstring>
         <name>handles</name>
+        <reimplementedby refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc">handles</reimplementedby>
         <param>
           <type>std::string</type>
           <declname>method</declname>
@@ -200,6 +203,12 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="2">
+        <label>TracksController</label>
+        <link refid="class_tracks_controller"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="0">
         <label>Controller</label>
         <link refid="class_controller"/>

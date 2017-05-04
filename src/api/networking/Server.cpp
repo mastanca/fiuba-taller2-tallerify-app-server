@@ -3,7 +3,10 @@
 #include "Server.h"
 #include "../controllers/PingController.h"
 #include "../config/Constants.h"
+#include "../controllers/TracksController.h"
 #include <spdlog/spdlog.h>
+
+static struct mg_serve_http_opts s_http_server_opts;
 
 void event_handler(struct mg_connection *c, int ev, void *p) {
     if (ev == MG_EV_HTTP_REQUEST) {
@@ -14,10 +17,12 @@ void event_handler(struct mg_connection *c, int ev, void *p) {
     }
 }
 
-Server::Server(int port) : server(NULL), connection(NULL), port(port), running(false) {
+Server::Server(int port, std::string ip) : server(NULL), connection(NULL), port(port), localIp(ip), running(false) {
     // Initialize controllers
     PingController *pingController = new PingController();
+    TracksController *tracksController = new TracksController();
     registerController(pingController);
+    registerController(tracksController);
 }
 
 Server::~Server() {
@@ -39,7 +44,7 @@ void Server::start() {
             spdlog::get("console")->error("Failed to create connection (Port in use?)");
         }
         connection->user_data = this;
-        mg_set_protocol_http_websocket(connection);
+        mg_set_protocol_http_websocket(connection); // TODO: ???
         running = true;
         for (;;) {
             // TODO: Send to pooler thread?
