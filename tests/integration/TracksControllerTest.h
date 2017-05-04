@@ -17,23 +17,23 @@ public:
     void testTrackFound();
 };
 
-// TEST_F(TracksControllerTest, testTrackNotFound
-// ) {
-// TracksControllerTest tester;
-// tester.
-//
-// testTrackNotFound();
-//
-// }
-//
-// TEST_F(TracksControllerTest, testTrackFound
-// ) {
-// TracksControllerTest tester;
-// tester.
-//
-// testTrackFound();
-//
-// }
+TEST_F(TracksControllerTest, testTrackNotFound
+) {
+TracksControllerTest tester;
+tester.
+
+testTrackNotFound();
+
+}
+
+TEST_F(TracksControllerTest, testTrackFound
+) {
+TracksControllerTest tester;
+tester.
+
+testTrackFound();
+
+}
 
 
 #endif //FIUBA_TALLER2_TALLERIFY_APP_SERVER_TRACKSCONTROLLERTEST_H
