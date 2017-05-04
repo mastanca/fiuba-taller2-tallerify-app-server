@@ -16,7 +16,7 @@ before_install:
 before_script:
   - rm Dockerfile
   - mv Dockerfile.travis Dockerfile
-  - sudo docker-compose build
+  - sudo docker-compose up --build
 
 script:
   - sudo docker-compose run tallerify make test
