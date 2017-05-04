@@ -174,14 +174,14 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="17">
+      <node id="18">
         <label>Response</label>
         <link refid="class_response"/>
       </node>
-      <node id="18">
+      <node id="19">
         <label>JSONResponse</label>
         <link refid="class_j_s_o_n_response"/>
-        <childnode refid="17" relation="public-inheritance">
+        <childnode refid="18" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

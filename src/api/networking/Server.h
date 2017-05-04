@@ -15,12 +15,14 @@
 class Server {
     //! Friend class for testing private methods
     friend class ServerTest;
+
 public:
     /**
      * Server constructor
-     * \param port server port, defaults to 8080
+     * @param port server port, defaults to 8080
+     * @param ip server local ip, defaults to 127.0.0.1
      */
-    Server(int port = 8080);
+    Server(int port = 8080, std::string ip = "127.0.0.1");
 
     /**
      * Server destroyer
@@ -41,6 +43,7 @@ private:
     mg_mgr *server;
     mg_connection *connection;
     int port;
+    std::string localIp;
     bool running;
     std::vector<Controller *> controllers;
 

@@ -8,55 +8,55 @@
     <includedby refid="main_8cpp" local="yes">src/api/main.cpp</includedby>
     <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
     <incdepgraph>
-      <node id="171">
+      <node id="201">
         <label>../networking/Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="169" relation="include">
+        <childnode refid="199" relation="include">
         </childnode>
-        <childnode refid="172" relation="include">
+        <childnode refid="202" relation="include">
         </childnode>
       </node>
-      <node id="170">
+      <node id="200">
         <label>../controllers/Controller.h</label>
         <link refid="_controller_8h"/>
-        <childnode refid="171" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
-        <childnode refid="175" relation="include">
+        <childnode refid="205" relation="include">
         </childnode>
-        <childnode refid="168" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
       </node>
-      <node id="167">
+      <node id="197">
         <label>src/api/networking/Server.h</label>
         <link refid="_server_8h"/>
-        <childnode refid="168" relation="include">
+        <childnode refid="198" relation="include">
         </childnode>
-        <childnode refid="169" relation="include">
+        <childnode refid="199" relation="include">
         </childnode>
-        <childnode refid="170" relation="include">
+        <childnode refid="200" relation="include">
         </childnode>
       </node>
-      <node id="173">
+      <node id="203">
         <label>string</label>
       </node>
-      <node id="174">
+      <node id="204">
         <label>map</label>
       </node>
-      <node id="175">
+      <node id="205">
         <label>mongoose/RequestHandler.h</label>
       </node>
-      <node id="172">
+      <node id="202">
         <label>Response.h</label>
         <link refid="_response_8h"/>
-        <childnode refid="173" relation="include">
+        <childnode refid="203" relation="include">
         </childnode>
-        <childnode refid="174" relation="include">
+        <childnode refid="204" relation="include">
         </childnode>
       </node>
-      <node id="168">
+      <node id="198">
         <label>vector</label>
       </node>
-      <node id="169">
+      <node id="199">
         <label>mongoose/mongoose.h</label>
       </node>
     </incdepgraph>
@@ -77,33 +77,35 @@
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15" refid="class_server" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_server" kindref="compound">Server</ref><sp/>{</highlight></codeline>
 <codeline lineno="17" refid="class_server_1ad28f45770d3f08c840688fb4993911ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_server_1ad28f45770d3f08c840688fb4993911ad" kindref="member">ServerTest</ref>;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_1a495b58bef6f0d4ca6260de206cff6291" kindref="member">Server</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port<sp/>=<sp/>8080);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kindref="member">~Server</ref>();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_server_1a7eac07d2582fa01c2671362efa955b31" kindref="member">start</ref>();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_server_1a07c45a7e101a3926d8f9685c3c5d14e4" kindref="member">stop</ref>();</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_mgr<sp/>*server;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_connection<sp/>*connection;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>running;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Controller<sp/>*&gt;<sp/>controllers;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleRequest(mg_connection<sp/>*connection,<sp/>http_message<sp/>*message);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>event_handler(mg_connection<sp/>*c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ev,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*handleRequest(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>registerController(<ref refid="class_controller" kindref="compound">Controller</ref><sp/>*controller);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_1a1ec901fc55efaa9be38ab73335a9e677" kindref="member">Server</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port<sp/>=<sp/>8080,<sp/>std::string<sp/>ip<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;127.0.0.1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kindref="member">~Server</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_server_1a7eac07d2582fa01c2671362efa955b31" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_server_1a07c45a7e101a3926d8f9685c3c5d14e4" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_mgr<sp/>*server;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_connection<sp/>*connection;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>port;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>localIp;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>running;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Controller<sp/>*&gt;<sp/>controllers;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleRequest(mg_connection<sp/>*connection,<sp/>http_message<sp/>*message);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>event_handler(mg_connection<sp/>*c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ev,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*handleRequest(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_SERVER_H</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>registerController(<ref refid="class_controller" kindref="compound">Controller</ref><sp/>*controller);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_SERVER_H</highlight></codeline>
     </programlisting>
     <location file="src/api/networking/Server.h"/>
   </compounddef>

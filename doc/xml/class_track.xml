@@ -14,27 +14,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="20" column="1" bodyfile="src/api/domain/Track.h" bodystart="20" bodyend="-1"/>
+        <location file="src/api/domain/Track.h" line="27" column="1" bodyfile="src/api/domain/Track.h" bodystart="27" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_track_1ae83a160c2c3cc2d1bca88422775081f5" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="class_track_1a755c360b2a48b4598d2d4593da173663" prot="private" static="no" mutable="no">
         <type>std::string</type>
-        <definition>std::string Track::base64EncodedBytes</definition>
+        <definition>std::string Track::fileLocation</definition>
         <argsstring></argsstring>
-        <name>base64EncodedBytes</name>
+        <name>fileLocation</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="29" column="1" bodyfile="src/api/domain/Track.h" bodystart="29" bodyend="-1"/>
+        <location file="src/api/domain/Track.h" line="28" column="1" bodyfile="src/api/domain/Track.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_track_1ad020b3512debba921dd65d3f59cf8b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_track_1a92f6322397b174b830e3c127c852d665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>Track::Track</definition>
-        <argsstring>(int id, std::string bytes, bool encode=true)</argsstring>
+        <argsstring>(int id, std::string fileLocation)</argsstring>
         <name>Track</name>
         <param>
           <type>int</type>
@@ -42,20 +42,30 @@
         </param>
         <param>
           <type>std::string</type>
-          <declname>bytes</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>encode</declname>
-          <defval>true</defval>
+          <declname>fileLocation</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_track" kindref="compound">Track</ref> constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the id of the track </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileLocation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>location of the associated file in filesystem </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="15" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="7" bodyend="9"/>
+        <location file="src/api/domain/Track.h" line="19" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="6" bodyend="7"/>
       </memberdef>
       <memberdef kind="function" id="class_track_1a416e75e66accc8eb9e3fafc3e8555216" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -65,10 +75,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><ref refid="class_track" kindref="compound">Track</ref> destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="17" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="11" bodyend="13"/>
+        <location file="src/api/domain/Track.h" line="24" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="9" bodyend="11"/>
       </memberdef>
       <memberdef kind="function" id="class_track_1a496f793279d918ed573fcc1971c2d983" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -78,50 +88,38 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>id getter <simplesect kind="return"><para>track&apos;s id </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="22" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="15" bodyend="17"/>
+        <location file="src/api/domain/Track.h" line="35" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="13" bodyend="15"/>
       </memberdef>
-      <memberdef kind="function" id="class_track_1ae90e785b8625cf381be9f07349ee39fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_track_1ac32b18dbbd331f50775368ad5b27d4f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const std::string &amp;</type>
-        <definition>const std::string &amp; Track::getBase64EncodedBytes</definition>
+        <definition>const std::string &amp; Track::getFileLocation</definition>
         <argsstring>() const</argsstring>
-        <name>getBase64EncodedBytes</name>
+        <name>getFileLocation</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>file location getter <simplesect kind="return"><para>file location </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/domain/Track.h" line="24" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="19" bodyend="21"/>
-      </memberdef>
-      <memberdef kind="function" id="class_track_1abc465cc8bc4d568c7031667cb831825e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::string</type>
-        <definition>std::string Track::toString</definition>
-        <argsstring>()</argsstring>
-        <name>toString</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/api/domain/Track.h" line="26" column="1"/>
+        <location file="src/api/domain/Track.h" line="41" column="1" bodyfile="src/api/domain/Track.cpp" bodystart="17" bodyend="19"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/api/domain/Track.h" line="12" column="1" bodyfile="src/api/domain/Track.h" bodystart="12" bodyend="30"/>
+    <location file="src/api/domain/Track.h" line="12" column="1" bodyfile="src/api/domain/Track.h" bodystart="12" bodyend="42"/>
     <listofallmembers>
-      <member refid="class_track_1ae83a160c2c3cc2d1bca88422775081f5" prot="private" virt="non-virtual"><scope>Track</scope><name>base64EncodedBytes</name></member>
-      <member refid="class_track_1ae90e785b8625cf381be9f07349ee39fc" prot="public" virt="non-virtual"><scope>Track</scope><name>getBase64EncodedBytes</name></member>
+      <member refid="class_track_1a755c360b2a48b4598d2d4593da173663" prot="private" virt="non-virtual"><scope>Track</scope><name>fileLocation</name></member>
+      <member refid="class_track_1ac32b18dbbd331f50775368ad5b27d4f9" prot="public" virt="non-virtual"><scope>Track</scope><name>getFileLocation</name></member>
       <member refid="class_track_1a496f793279d918ed573fcc1971c2d983" prot="public" virt="non-virtual"><scope>Track</scope><name>getId</name></member>
       <member refid="class_track_1a4c555d3e591011400c96b1133c7b12ee" prot="private" virt="non-virtual"><scope>Track</scope><name>id</name></member>
-      <member refid="class_track_1abc465cc8bc4d568c7031667cb831825e" prot="public" virt="non-virtual"><scope>Track</scope><name>toString</name></member>
-      <member refid="class_track_1ad020b3512debba921dd65d3f59cf8b03" prot="public" virt="non-virtual"><scope>Track</scope><name>Track</name></member>
+      <member refid="class_track_1a92f6322397b174b830e3c127c852d665" prot="public" virt="non-virtual"><scope>Track</scope><name>Track</name></member>
       <member refid="class_track_1a416e75e66accc8eb9e3fafc3e8555216" prot="public" virt="virtual"><scope>Track</scope><name>~Track</name></member>
     </listofallmembers>
   </compounddef>

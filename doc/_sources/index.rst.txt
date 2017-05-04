@@ -19,6 +19,7 @@ Indices
    /doc/rst/json_response
    /doc/rst/mongo_dao
    /doc/rst/ping_controller
+   /doc/rst/tracks_controller
    /doc/rst/request
    /doc/rst/response
    /doc/rst/server
