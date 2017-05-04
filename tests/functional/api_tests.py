@@ -38,9 +38,9 @@ def runTests():
     unittest.TextTestRunner(verbosity=2).run(suite)
 
 
-t1 = Process(target=startAppServer, args=())
+#t1 = Process(target=startAppServer, args=())
 t2 = Process(target=runTests, args=())
-t1.start()
+#t1.start()
 t2.start()
 t2.join()
-killAppServer()
+#killAppServer()
