@@ -6,8 +6,6 @@
 #include "../controllers/TracksController.h"
 #include <spdlog/spdlog.h>
 
-static struct mg_serve_http_opts s_http_server_opts;
-
 void event_handler(struct mg_connection *c, int ev, void *p) {
     if (ev == MG_EV_HTTP_REQUEST) {
         Server *self = (Server *) c->user_data;
@@ -97,4 +95,3 @@ Response *Server::handleRequest(Request &request) {
 void Server::registerController(Controller *controller) {
     controllers.push_back(controller);
 }
-
