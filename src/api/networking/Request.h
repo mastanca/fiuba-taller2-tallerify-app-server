@@ -68,13 +68,39 @@ public:
      */
     void setUrl(const std::string &url);
 
+    /**
+     * Get the associated connection
+     * @return the connection
+     */
+    mg_connection *getConnection() const;
+
+    /**
+     * Get the original http message
+     * @return the http message
+     */
+    http_message *getHttpMessage() const;
+
+    /**
+     * Get the element id as string
+     * @return element id as string
+     */
+    const std::string &getElementIdString() const;
+
+    /**
+     * Set the elementId as a string
+     * @param elementIdString to set
+     */
+    void setElementIdString(const std::string &elementIdString);
+
+
 private:
     mg_connection *connection;
+    http_message *httpMessage;
     std::string url;
     std::string body;
     std::string httpVerb;
     int elementId;
-private:
+    std::string elementIdString;
 
     void parseMessage(http_message *httpMessage);
 };

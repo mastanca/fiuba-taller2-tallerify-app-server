@@ -3,7 +3,8 @@
 #include "Request.h"
 #include "spdlog/spdlog.h"
 
-Request::Request(mg_connection *connection, http_message *httpMessage) : connection(connection), url(""), body(""),
+Request::Request(mg_connection *connection, http_message *httpMessage) : connection(connection),
+                                                                         httpMessage(httpMessage), url(""), body(""),
                                                                          httpVerb(""), elementId(-1) {
     parseMessage(httpMessage);
     spdlog::get("console")->info("Processing request {0} {1}", httpVerb, url);
@@ -54,4 +55,20 @@ void Request::setElementId(int elementId) {
 
 void Request::setUrl(const std::string &url) {
     Request::url = url;
+}
+
+mg_connection *Request::getConnection() const {
+    return connection;
+}
+
+http_message *Request::getHttpMessage() const {
+    return httpMessage;
+}
+
+const std::string &Request::getElementIdString() const {
+    return elementIdString;
+}
+
+void Request::setElementIdString(const std::string &elementIdString) {
+    Request::elementIdString = elementIdString;
 }
