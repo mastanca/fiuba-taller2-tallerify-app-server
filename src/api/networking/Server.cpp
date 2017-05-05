@@ -4,6 +4,7 @@
 #include "../controllers/PingController.h"
 #include "../config/Constants.h"
 #include "../controllers/TracksController.h"
+#include "../controllers/PlayController.h"
 #include <spdlog/spdlog.h>
 
 void event_handler(struct mg_connection *c, int ev, void *p) {
@@ -19,8 +20,10 @@ Server::Server(int port, std::string ip) : server(NULL), connection(NULL), port(
     // Initialize controllers
     PingController *pingController = new PingController();
     TracksController *tracksController = new TracksController();
+    PlayController *playController = new PlayController();
     registerController(pingController);
     registerController(tracksController);
+    registerController(playController);
 }
 
 Server::~Server() {

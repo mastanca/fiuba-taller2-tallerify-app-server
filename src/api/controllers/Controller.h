@@ -57,6 +57,12 @@ public:
 protected:
     std::map<std::string, RequestHandlerBase *> routes;
     std::vector<std::string> urls;
+
+    /**
+     * Set the element id of the request
+     * @param request to set it's element id
+     */
+    void setElementId(Request &request);
 };
 
 

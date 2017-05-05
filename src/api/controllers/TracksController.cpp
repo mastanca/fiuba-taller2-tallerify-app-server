@@ -29,12 +29,7 @@ Response *TracksController::process(Request &request) {
     response = Controller::process(request);
     if (!response && request.getHttpVerb() == HTTP_GET) {
         // It's a GET /tracks/$id
-        std::string elementIdString;
-        std::size_t found = request.getUrl().rfind("/");
-        if (found != std::string::npos) {
-            elementIdString = request.getUrl().substr(found + 1);
-            request.setElementId(std::stoi(elementIdString));
-        }
+        setElementId(request);
         request.setUrl("/tracks/");
         response = Controller::process(request);
     }
