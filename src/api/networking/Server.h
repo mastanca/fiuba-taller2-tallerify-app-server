@@ -49,7 +49,7 @@ private:
 
     void handleRequest(mg_connection *connection, http_message *message);
 
-    friend void event_handler(mg_connection *c, int ev, void *p);
+    friend void event_handler(mg_connection *new_connection, int event, void *event_data);
 
     Response *handleRequest(Request &request);
 

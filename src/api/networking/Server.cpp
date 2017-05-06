@@ -7,12 +7,29 @@
 #include "../controllers/PlayController.h"
 #include <spdlog/spdlog.h>
 
-void event_handler(struct mg_connection *c, int ev, void *p) {
-    if (ev == MG_EV_HTTP_REQUEST) {
-        Server *self = (Server *) c->user_data;
-        if (self != NULL) {
-            self->handleRequest(c, (http_message *) p);
-        }
+struct mg_str upload_fname(struct mg_connection *c, struct mg_str file_name) {
+    // Return the same filename. Do not actually do this except in test!
+    // fname is user-controlled and needs to be sanitized.
+    std::string *final = new std::string("../music/" + std::string(file_name.p));
+    return mg_mk_str(final->c_str());
+}
+
+void event_handler(struct mg_connection *new_connection, int event, void *event_data) {
+    Server *self = NULL;
+    switch (event) {
+        case MG_EV_HTTP_REQUEST:
+            self = (Server *) new_connection->user_data;
+            if (self != NULL) {
+                self->handleRequest(new_connection, (http_message *) event_data);
+            }
+            break;
+        case MG_EV_HTTP_PART_BEGIN:
+        case MG_EV_HTTP_PART_DATA:
+        case MG_EV_HTTP_PART_END:
+            mg_file_upload_handler(new_connection, event, event_data, upload_fname);
+            break;
+        default:
+            break;
     }
 }
 
