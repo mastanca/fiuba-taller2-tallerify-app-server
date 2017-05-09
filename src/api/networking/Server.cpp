@@ -18,6 +18,7 @@ void event_handler(struct mg_connection *new_connection, int event, void *event_
     Server *self = NULL;
     switch (event) {
         case MG_EV_HTTP_REQUEST:
+            spdlog::get("console")->info("Got new request");
             self = (Server *) new_connection->user_data;
             if (self != NULL) {
                 self->handleRequest(new_connection, (http_message *) event_data);
@@ -26,7 +27,13 @@ void event_handler(struct mg_connection *new_connection, int event, void *event_
         case MG_EV_HTTP_PART_BEGIN:
         case MG_EV_HTTP_PART_DATA:
         case MG_EV_HTTP_PART_END:
-            mg_file_upload_handler(new_connection, event, event_data, upload_fname);
+            self = (Server *) new_connection->user_data;
+            if (self != NULL) {
+                self->handleRequest(new_connection, event, event_data);
+            }
+            //TracksController tracksController;
+            //tracksController.post(NULL, );
+            //mg_file_upload_handler(new_connection, event, event_data, upload_fname);
             break;
         default:
             break;
@@ -76,6 +83,10 @@ void Server::stop() {
         mg_mgr_free(server);
         running = false;
     }
+}
+
+void Server::handleRequest(mg_connection *connection, int event, void *event_data) {
+    Request request(connection, event, event_data);
 }
 
 void Server::handleRequest(mg_connection *connection, http_message *message) {

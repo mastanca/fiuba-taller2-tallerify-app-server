@@ -2,10 +2,12 @@
 
 #include "Request.h"
 #include "spdlog/spdlog.h"
+#include "../config/Constants.h"
 
 Request::Request(mg_connection *connection, http_message *httpMessage) : connection(connection),
                                                                          httpMessage(httpMessage), url(""), body(""),
-                                                                         httpVerb(""), elementId(-1) {
+                                                                         httpVerb(""), elementId(-1), event(-1),
+                                                                         eventData(NULL) {
     parseMessage(httpMessage);
     spdlog::get("console")->info("Processing request {0} {1}", httpVerb, url);
 }
@@ -71,4 +73,10 @@ const std::string &Request::getElementIdString() const {
 
 void Request::setElementIdString(const std::string &elementIdString) {
     Request::elementIdString = elementIdString;
+}
+
+Request::Request(mg_connection *connection, int event, void *eventData) : connection(connection), httpMessage(NULL),
+                                                                          url("/tracks"), body(""), httpVerb(HTTP_POST),
+                                                                          elementId(-1), event(event),
+                                                                          eventData(eventData) {
 }

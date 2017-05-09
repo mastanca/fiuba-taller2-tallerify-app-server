@@ -9,6 +9,8 @@ TracksController::TracksController() {
     tracksRegex = "/tracks/.*";
     addRoute(HTTP_GET, "/tracks/",
              new RequestHandler<TracksController, JSONResponse>(this, &TracksController::get));
+    addRoute(HTTP_POST, "/tracks",
+             new RequestHandler<TracksController, JSONResponse>(this, &TracksController::post));
 }
 
 TracksController::~TracksController() {
@@ -46,7 +48,11 @@ void TracksController::get(Request &request, JSONResponse &response) {
                                      response.getCode());
         return;
     }
-    response["songId"] = track->getId();
+    response["trackId"] = track->getId();
     response["url"] = BASE_URL + track->getFileLocation(); // TODO: Get the real one
     delete track;
+}
+
+void TracksController::post(Request &request, JSONResponse &response) {
+    spdlog::get("console")->info("Inside tracks post");
 }

@@ -49,6 +49,8 @@ private:
 
     void handleRequest(mg_connection *connection, http_message *message);
 
+    void handleRequest(mg_connection *connection, int event, void *event_data);
+
     friend void event_handler(mg_connection *new_connection, int event, void *event_data);
 
     Response *handleRequest(Request &request);
