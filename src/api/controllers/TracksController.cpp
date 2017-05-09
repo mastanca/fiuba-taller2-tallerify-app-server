@@ -55,4 +55,5 @@ void TracksController::get(Request &request, JSONResponse &response) {
 
 void TracksController::post(Request &request, JSONResponse &response) {
     spdlog::get("console")->info("Inside tracks post");
+    // TODO: Alter mongoose upload_handler to not close connection and return json response
 }
