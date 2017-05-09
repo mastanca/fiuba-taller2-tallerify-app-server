@@ -56,6 +56,9 @@ private:
     Response *handleRequest(Request &request);
 
     void registerController(Controller *controller);
+
+    void dispatchRequest(Request &request);
+
 };
 
 

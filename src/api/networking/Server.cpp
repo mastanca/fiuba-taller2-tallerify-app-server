@@ -31,8 +31,6 @@ void event_handler(struct mg_connection *new_connection, int event, void *event_
             if (self != NULL) {
                 self->handleRequest(new_connection, event, event_data);
             }
-            //TracksController tracksController;
-            //tracksController.post(NULL, );
             //mg_file_upload_handler(new_connection, event, event_data, upload_fname);
             break;
         default:
@@ -85,19 +83,23 @@ void Server::stop() {
     }
 }
 
-void Server::handleRequest(mg_connection *connection, int event, void *event_data) {
-    Request request(connection, event, event_data);
-}
-
-void Server::handleRequest(mg_connection *connection, http_message *message) {
-    Request request(connection, message);
-
+void Server::dispatchRequest(Request &request) {
     Response *response = handleRequest(request);
 
     if (response != NULL) {
         request.writeResponse(response);
         delete response;
     }
+}
+
+void Server::handleRequest(mg_connection *connection, int event, void *event_data) {
+    Request request(connection, event, event_data);
+    dispatchRequest(request);
+}
+
+void Server::handleRequest(mg_connection *connection, http_message *message) {
+    Request request(connection, message);
+    dispatchRequest(request);
 }
 
 Response *Server::handleRequest(Request &request) {
