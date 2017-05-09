@@ -26,7 +26,7 @@ void TracksControllerTest::testTrackFound() {
     Request request(&connection, &message);
     response = controller.process(request);
 
-    ASSERT_EQ(response->getBody(), "{\"songId\":" + std::to_string(id) + ",\"url\":\"" + BASE_URL + songLocation + "\"}\n");
+    ASSERT_EQ(response->getBody(), "{\"trackId\":" + std::to_string(id) + ",\"url\":\"" + BASE_URL + songLocation + "\"}\n");
     delete response;
 }
 
