@@ -100,6 +100,18 @@ public:
      */
     void setElementIdString(const std::string &elementIdString);
 
+    /**
+     * Event getter
+     * @return the event code
+     */
+    int getEvent() const;
+
+    /**
+     * Event data getter
+     * @return the event data as void*
+     */
+    void *getEventData() const;
+
 
 private:
     mg_connection *connection;

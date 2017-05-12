@@ -80,3 +80,11 @@ Request::Request(mg_connection *connection, int event, void *eventData) : connec
                                                                           elementId(-1), event(event),
                                                                           eventData(eventData) {
 }
+
+int Request::getEvent() const {
+    return event;
+}
+
+void *Request::getEventData() const {
+    return eventData;
+}

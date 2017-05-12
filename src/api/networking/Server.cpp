@@ -7,15 +7,9 @@
 #include "../controllers/PlayController.h"
 #include <spdlog/spdlog.h>
 
-struct mg_str upload_fname(struct mg_connection *c, struct mg_str file_name) {
-    // Return the same filename. Do not actually do this except in test!
-    // fname is user-controlled and needs to be sanitized.
-    std::string *final = new std::string("../music/" + std::string(file_name.p));
-    return mg_mk_str(final->c_str());
-}
-
 void event_handler(struct mg_connection *new_connection, int event, void *event_data) {
     Server *self = NULL;
+    struct returnType* ret;
     switch (event) {
         case MG_EV_HTTP_REQUEST:
             spdlog::get("console")->info("Got new request");
@@ -26,12 +20,15 @@ void event_handler(struct mg_connection *new_connection, int event, void *event_
             break;
         case MG_EV_HTTP_PART_BEGIN:
         case MG_EV_HTTP_PART_DATA:
+            mg_file_upload_handler(new_connection, event, event_data, TracksController::upload_fname);
+            break;
         case MG_EV_HTTP_PART_END:
             self = (Server *) new_connection->user_data;
+            ret = mg_file_upload_handler(new_connection, event, event_data, TracksController::upload_fname);
             if (self != NULL) {
-                self->handleRequest(new_connection, event, event_data);
+                ((TracksController*)self->controllers.back())->post(ret->trackId, ret->filename);
             }
-            //mg_file_upload_handler(new_connection, event, event_data, upload_fname);
+            free(ret);
             break;
         default:
             break;
@@ -41,8 +38,8 @@ void event_handler(struct mg_connection *new_connection, int event, void *event_
 Server::Server(int port, std::string ip) : server(NULL), connection(NULL), port(port), localIp(ip), running(false) {
     // Initialize controllers
     PingController *pingController = new PingController();
-    TracksController *tracksController = new TracksController();
     PlayController *playController = new PlayController();
+    TracksController *tracksController = new TracksController();
     registerController(pingController);
     registerController(tracksController);
     registerController(playController);
@@ -92,10 +89,10 @@ void Server::dispatchRequest(Request &request) {
     }
 }
 
-void Server::handleRequest(mg_connection *connection, int event, void *event_data) {
+/*void Server::handleRequest(mg_connection *connection, int event, void *event_data) {
     Request request(connection, event, event_data);
     dispatchRequest(request);
-}
+}*/
 
 void Server::handleRequest(mg_connection *connection, http_message *message) {
     Request request(connection, message);

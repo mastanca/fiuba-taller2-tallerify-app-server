@@ -7497,9 +7497,10 @@ void mg_serve_http(struct mg_connection *nc, struct http_message *hm,
 }
 
 #if MG_ENABLE_HTTP_STREAMING_MULTIPART
-void mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
+struct returnType* mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
                             mg_fu_fname_fn local_name_fn) {
-  switch (ev) {
+    int trackId;
+    switch (ev) {
     case MG_EV_HTTP_PART_BEGIN: {
       struct mg_http_multipart_part *mp =
           (struct mg_http_multipart_part *) ev_data;
@@ -7517,7 +7518,7 @@ void mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
                   "Not allowed to upload %s\r\n",
                   mp->file_name);
         nc->flags |= MG_F_SEND_AND_CLOSE;
-        return;
+        return NULL;
       }
       fus->lfn = (char *) malloc(lfn.len + 1);
       memcpy(fus->lfn, lfn.p, lfn.len);
@@ -7574,7 +7575,7 @@ void mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
         /* Do not close the connection just yet, discard remainder of the data.
          * This is because at the time of writing some browsers (Chrome) fail to
          * render response before all the data is sent. */
-        return;
+        return NULL;
       }
       fus->num_recd += mp->data.len;
       LOG(LL_DEBUG, ("%p rec'd %d bytes, %d total", nc, (int) mp->data.len,
@@ -7590,12 +7591,12 @@ void mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
       if (mp->status >= 0 && fus->fp != NULL) {
         LOG(LL_DEBUG, ("%p Uploaded %s (%s), %d bytes", nc, mp->file_name,
                        fus->lfn, (int) fus->num_recd));
+          trackId = rand();
         mg_printf(nc,
                   "HTTP/1.1 200 OK\r\n"
-                  "Content-Type: text/plain\r\n"
+                  "Content-Type: application/json\r\n"
                   "Connection: close\r\n\r\n"
-                  "Ok, %s - %d bytes.\r\n",
-                  mp->file_name, (int) fus->num_recd);
+                  "{\"trackId\": %d}\r\n", trackId);
       } else {
         LOG(LL_ERROR, ("Failed to store %s (%s)", mp->file_name, fus->lfn));
         /*
@@ -7608,9 +7609,14 @@ void mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
       free(fus);
       mp->user_data = NULL;
       nc->flags |= MG_F_SEND_AND_CLOSE;
+        struct returnType *ret = malloc(sizeof(struct returnType));
+        ret->trackId = trackId;
+        ret->filename = mp->file_name;
+        return ret;
       break;
     }
   }
+    return NULL;
 }
 
 #endif /* MG_ENABLE_HTTP_STREAMING_MULTIPART */
