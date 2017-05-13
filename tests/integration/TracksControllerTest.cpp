@@ -48,3 +48,13 @@ void TracksControllerTest::testTrackNotFound() {
     delete response;
     delete request;
 }
+
+void TracksControllerTest::testPostTrack() {
+    TracksController controller;
+    std::string filename = "asd";
+    controller.post(124, filename.c_str());
+    MongoDao dao;
+    Track *track = dao.getTrack(124);
+    ASSERT_EQ(track->getId(), 124);
+    delete(track);
+}
