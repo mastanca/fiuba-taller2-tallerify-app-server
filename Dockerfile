@@ -7,7 +7,7 @@ ENV COVERALLS_SERVICE_NAME=$travis_service
 
 WORKDIR fiuba-taller2-tallerify-app-server
 WORKDIR build
-RUN $HOME/usr/bin/cmake -DCOVERALLS=ON -DCMAKE_BUILD_TYPE=Debug ..
+RUN $HOME/usr/bin/cmake -DCOVERALLS=OFF -DCMAKE_BUILD_TYPE=Debug ..
 RUN make
 
 CMD ["./fiuba_taller2_tallerify_app_server", "0.0.0.0"]

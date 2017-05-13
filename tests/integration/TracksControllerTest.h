@@ -15,6 +15,8 @@ public:
     void testTrackNotFound();
 
     void testTrackFound();
+
+    void testPostTrack();
 };
 
 TEST_F(TracksControllerTest, testTrackNotFound
@@ -32,6 +34,15 @@ TracksControllerTest tester;
 tester.
 
 testTrackFound();
+
+}
+
+TEST_F(TracksControllerTest, testPostTrack
+) {
+TracksControllerTest tester;
+tester.
+
+testPostTrack();
 
 }
 

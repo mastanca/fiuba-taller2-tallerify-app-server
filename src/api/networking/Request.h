@@ -22,6 +22,14 @@ public:
     Request(mg_connection *connection, http_message *httpMessage);
 
     /**
+     * Request constructor for multipart requests
+     * @param connection
+     * @param event
+     * @param eventData
+     */
+    Request(mg_connection *connection, int event, void *eventData);
+
+    /**
      * Request destroyer
      */
     virtual ~Request();
@@ -92,6 +100,18 @@ public:
      */
     void setElementIdString(const std::string &elementIdString);
 
+    /**
+     * Event getter
+     * @return the event code
+     */
+    int getEvent() const;
+
+    /**
+     * Event data getter
+     * @return the event data as void*
+     */
+    void *getEventData() const;
+
 
 private:
     mg_connection *connection;
@@ -101,6 +121,8 @@ private:
     std::string httpVerb;
     int elementId;
     std::string elementIdString;
+    int event;
+    void *eventData;
 
     void parseMessage(http_message *httpMessage);
 };

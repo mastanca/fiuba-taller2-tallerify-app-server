@@ -4,7 +4,9 @@
     <compoundname>Constants.h</compoundname>
     <includedby refid="_controller_8cpp" local="yes">src/api/controllers/Controller.cpp</includedby>
     <includedby refid="_ping_controller_8cpp" local="yes">src/api/controllers/PingController.cpp</includedby>
+    <includedby refid="_play_controller_8cpp" local="yes">src/api/controllers/PlayController.cpp</includedby>
     <includedby refid="_tracks_controller_8cpp" local="yes">src/api/controllers/TracksController.cpp</includedby>
+    <includedby refid="_request_8cpp" local="yes">src/api/networking/Request.cpp</includedby>
     <includedby refid="_response_8cpp" local="yes">src/api/networking/Response.cpp</includedby>
     <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
       <sectiondef kind="define">

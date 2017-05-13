@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>TracksController &mdash; Tallerify App Server 0.2.0 documentation</title>
+  <title>TracksController &mdash; Tallerify App Server 0.2.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Tallerify App Server 0.2.0 documentation" href="../../index.html"/>
+    <link rel="top" title="Tallerify App Server 0.2.1 documentation" href="../../index.html"/>
         <link rel="next" title="Request" href="request.html"/>
         <link rel="prev" title="PingController" href="ping_controller.html"/> 
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.2.1
               </div>
             
           
@@ -230,13 +230,26 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N16TracksController4postER7RequestR12JSONResponse">
-<span id="TracksController::post__RequestR.JSONResponseR"></span><span class="target" id="tallerify_app_serverclass_tracks_controller_1a2e356d83c71e374f2768aed68f855cae"></span>void <code class="descname">post</code><span class="sig-paren">(</span><a class="reference internal" href="request.html#_CPPv27Request" title="Request">Request</a> &amp;<em>request</em>, <a class="reference internal" href="json_response.html#_CPPv212JSONResponse" title="JSONResponse">JSONResponse</a> &amp;<em>response</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16TracksController4postER7RequestR12JSONResponse" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N16TracksController4postEiPKc">
+<span id="TracksController::post__i.cCP"></span><span class="target" id="tallerify_app_serverclass_tracks_controller_1a1c2c649404dfb9d6edbb1d8facd977df"></span>void <code class="descname">post</code><span class="sig-paren">(</span>int <em>trackId</em>, <em class="property">const</em> char *<em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16TracksController4postEiPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Post a track to create it <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">request</span></code>: with the song </li>
-<li><code class="docutils literal"><span class="pre">response</span></code>: ok if track was saved, 500 otherwise </li>
+<li><code class="docutils literal"><span class="pre">trackId</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">filename</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16TracksController11setFileNameEPKc">
+<span id="TracksController::setFileName__cCP"></span><span class="target" id="tallerify_app_serverclass_tracks_controller_1a5a99b4dac296c3dba50b0f732432b720"></span>void <code class="descname">setFileName</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16TracksController11setFileNameEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the filename of the file being uploaded <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">fileName</span></code>: </li>
 </ul>
 </dd>
 </dl>
@@ -292,7 +305,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.2.0',
+            VERSION:'0.2.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

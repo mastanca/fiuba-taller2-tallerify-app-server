@@ -5,10 +5,18 @@
 #include "../config/Constants.h"
 #include "../dao/MongoDao.h"
 
-TracksController::TracksController() {
-    tracksRegex = "/tracks/.*";
+struct mg_str TracksController::upload_fname(struct mg_connection *c, struct mg_str file_name) {
+    // Return the same filename. Do not actually do this except in test!
+    // fname is user-controlled and needs to be sanitized.
+    std::string *final = new std::string("../music/" + std::string(file_name.p));
+    return mg_mk_str(final->c_str());
+}
+
+TracksController::TracksController() : tracksRegex("/tracks/.*"), fileName(""){
     addRoute(HTTP_GET, "/tracks/",
              new RequestHandler<TracksController, JSONResponse>(this, &TracksController::get));
+    /*addRoute(HTTP_POST, "/tracks",
+             new RequestHandler<TracksController, JSONResponse>(this, &TracksController::post));*/
 }
 
 TracksController::~TracksController() {
@@ -46,7 +54,19 @@ void TracksController::get(Request &request, JSONResponse &response) {
                                      response.getCode());
         return;
     }
-    response["songId"] = track->getId();
-    response["url"] = BASE_URL + track->getFileLocation(); // TODO: Get the real one
+    response["trackId"] = track->getId();
+    response["url"] = BASE_URL + track->getFileLocation();
     delete track;
+}
+
+void TracksController::post(int trackId, const char* filename) {
+        setFileName(filename);
+        MongoDao dao;
+        Track *track = new Track(trackId, fileName);
+        dao.saveTrack(track);
+        delete track;
+}
+
+void TracksController::setFileName(const char *fileName) {
+    TracksController::fileName = "/music/" + std::string(fileName);
 }

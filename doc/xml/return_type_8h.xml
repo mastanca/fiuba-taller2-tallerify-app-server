@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="return_type_8h" kind="file" language="C++">
+    <compoundname>returnType.h</compoundname>
+    <innerclass refid="structreturn_type" prot="public">returnType</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="structreturn_type" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structreturn_type" kindref="compound">returnType</ref><sp/>{</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackId;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="src/api/domain/returnType.h"/>
+  </compounddef>
+</doxygen>

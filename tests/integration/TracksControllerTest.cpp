@@ -26,7 +26,7 @@ void TracksControllerTest::testTrackFound() {
     Request request(&connection, &message);
     response = controller.process(request);
 
-    ASSERT_EQ(response->getBody(), "{\"songId\":" + std::to_string(id) + ",\"url\":\"" + BASE_URL + songLocation + "\"}\n");
+    ASSERT_EQ(response->getBody(), "{\"trackId\":" + std::to_string(id) + ",\"url\":\"" + BASE_URL + songLocation + "\"}\n");
     delete response;
 }
 
@@ -47,4 +47,15 @@ void TracksControllerTest::testTrackNotFound() {
     ASSERT_EQ(response->getCode(), HTTP_NOT_FOUND);
     delete response;
     delete request;
+}
+
+void TracksControllerTest::testPostTrack() {
+    TracksController controller;
+    std::string filename = "asd";
+    int id = rand();
+    controller.post(id, filename.c_str());
+    MongoDao dao;
+    Track *track = dao.getTrack(id);
+    ASSERT_EQ(track->getId(), id);
+    delete(track);
 }

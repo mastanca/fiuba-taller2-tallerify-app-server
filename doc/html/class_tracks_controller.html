@@ -60,6 +60,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_tracks_controller-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TracksController Class Reference</div>  </div>
@@ -87,8 +88,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a56e1207a64480a2d10befdfc55f6ab95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8694f1ebe4ac4e538a89a76dd530ed28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tracks_controller.html#a8694f1ebe4ac4e538a89a76dd530ed28">get</a> (<a class="el" href="class_request.html">Request</a> &amp;request, <a class="el" href="class_j_s_o_n_response.html">JSONResponse</a> &amp;response)</td></tr>
 <tr class="separator:a8694f1ebe4ac4e538a89a76dd530ed28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e356d83c71e374f2768aed68f855cae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tracks_controller.html#a2e356d83c71e374f2768aed68f855cae">post</a> (<a class="el" href="class_request.html">Request</a> &amp;request, <a class="el" href="class_j_s_o_n_response.html">JSONResponse</a> &amp;response)</td></tr>
-<tr class="separator:a2e356d83c71e374f2768aed68f855cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2c649404dfb9d6edbb1d8facd977df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tracks_controller.html#a1c2c649404dfb9d6edbb1d8facd977df">post</a> (int trackId, const char *filename)</td></tr>
+<tr class="separator:a1c2c649404dfb9d6edbb1d8facd977df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a99b4dac296c3dba50b0f732432b720"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tracks_controller.html#a5a99b4dac296c3dba50b0f732432b720">setFileName</a> (const char *fileName)</td></tr>
+<tr class="separator:a5a99b4dac296c3dba50b0f732432b720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_controller')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_controller.html">Controller</a></td></tr>
 <tr class="memitem:a95c56822d667e94b031451729ce069a9 inherit pub_methods_class_controller"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a> ()</td></tr>
 <tr class="separator:a95c56822d667e94b031451729ce069a9 inherit pub_methods_class_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,8 +102,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe812429430dca0aae5b09b4b304af26 inherit pub_methods_class_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#abe812429430dca0aae5b09b4b304af26">addRoute</a> (std::string httpVerb, std::string route, RequestHandlerBase *handler)</td></tr>
 <tr class="separator:abe812429430dca0aae5b09b4b304af26 inherit pub_methods_class_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aa7db9af256dd07f3fdf65df79b48000e"><td class="memItemLeft" align="right" valign="top"><a id="aa7db9af256dd07f3fdf65df79b48000e"></a>
+static struct mg_str&#160;</td><td class="memItemRight" valign="bottom"><b>upload_fname</b> (struct mg_connection *c, struct mg_str file_name)</td></tr>
+<tr class="separator:aa7db9af256dd07f3fdf65df79b48000e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_controller"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_controller')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_controller.html">Controller</a></td></tr>
+<tr class="memitem:a88c3e72cbf6e8f9a4843a067e4723c8c inherit pro_methods_class_controller"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a88c3e72cbf6e8f9a4843a067e4723c8c">setElementId</a> (<a class="el" href="class_request.html">Request</a> &amp;request)</td></tr>
+<tr class="separator:a88c3e72cbf6e8f9a4843a067e4723c8c inherit pro_methods_class_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_controller"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_controller')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_controller.html">Controller</a></td></tr>
 <tr class="memitem:a8f3775d9453ff7db9e88781bcffbae95 inherit pro_attribs_class_controller"><td class="memItemLeft" align="right" valign="top"><a id="a8f3775d9453ff7db9e88781bcffbae95"></a>
 std::map&lt; std::string, RequestHandlerBase * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>routes</b></td></tr>
@@ -236,8 +248,8 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 
 </div>
 </div>
-<a id="a2e356d83c71e374f2768aed68f855cae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e356d83c71e374f2768aed68f855cae">&#9670;&nbsp;</a></span>post()</h2>
+<a id="a1c2c649404dfb9d6edbb1d8facd977df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2c649404dfb9d6edbb1d8facd977df">&#9670;&nbsp;</a></span>post()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,14 +257,14 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
         <tr>
           <td class="memname">void TracksController::post </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_request.html">Request</a> &amp;&#160;</td>
-          <td class="paramname"><em>request</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>trackId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_j_s_o_n_response.html">JSONResponse</a> &amp;&#160;</td>
-          <td class="paramname"><em>response</em>&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -263,8 +275,8 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 </div><div class="memdoc">
 <p>Post a track to create it </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request</td><td>with the song </td></tr>
-    <tr><td class="paramname">response</td><td>ok if track was saved, 500 otherwise </td></tr>
+    <tr><td class="paramname">trackId</td><td></td></tr>
+    <tr><td class="paramname">filename</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -303,6 +315,30 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <dl class="section return"><dt>Returns</dt><dd>The corresponding response </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_controller.html#afa78a73d099dc2920b22b2927f7870d6">Controller</a>.</p>
+
+</div>
+</div>
+<a id="a5a99b4dac296c3dba50b0f732432b720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a99b4dac296c3dba50b0f732432b720">&#9670;&nbsp;</a></span>setFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TracksController::setFileName </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the filename of the file being uploaded </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
