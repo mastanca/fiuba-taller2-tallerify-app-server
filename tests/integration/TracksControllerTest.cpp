@@ -52,9 +52,10 @@ void TracksControllerTest::testTrackNotFound() {
 void TracksControllerTest::testPostTrack() {
     TracksController controller;
     std::string filename = "asd";
-    controller.post(124, filename.c_str());
+    int id = rand();
+    controller.post(id, filename.c_str());
     MongoDao dao;
-    Track *track = dao.getTrack(124);
-    ASSERT_EQ(track->getId(), 124);
+    Track *track = dao.getTrack(id);
+    ASSERT_EQ(track->getId(), id);
     delete(track);
 }
