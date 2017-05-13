@@ -16,22 +16,22 @@
         </inbodydescription>
         <location file="src/api/networking/Server.h" line="17" column="1" bodyfile="src/api/networking/Server.h" bodystart="17" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="friend" id="class_server_1aa9fd1e810a95407cddc0bece6b625183" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="class_server_1a61e07da61d8763b85a967fb49b3de3a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend void</type>
         <definition>void event_handler</definition>
-        <argsstring>(mg_connection *c, int ev, void *p)</argsstring>
+        <argsstring>(mg_connection *new_connection, int event, void *event_data)</argsstring>
         <name>event_handler</name>
         <param>
           <type>mg_connection *</type>
-          <declname>c</declname>
+          <declname>new_connection</declname>
         </param>
         <param>
           <type>int</type>
-          <declname>ev</declname>
+          <declname>event</declname>
         </param>
         <param>
           <type>void *</type>
-          <declname>p</declname>
+          <declname>event_data</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="52" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="9" bodyend="16"/>
+        <location file="src/api/networking/Server.h" line="54" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="10" bodyend="36"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -159,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="25" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="18" bodyend="24"/>
+        <location file="src/api/networking/Server.h" line="25" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="38" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -172,7 +172,7 @@
 <para><ref refid="class_server" kindref="compound">Server</ref> destroyer </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="30" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="26" bodyend="33"/>
+        <location file="src/api/networking/Server.h" line="30" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="48" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="class_server_1a7eac07d2582fa01c2671362efa955b31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
 <para>Starts the server </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="35" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="35" bodyend="52"/>
+        <location file="src/api/networking/Server.h" line="35" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="57" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="class_server_1a07c45a7e101a3926d8f9685c3c5d14e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,7 +198,7 @@
 <para>Stops the server, cleaning associated resources </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="40" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="54" bodyend="59"/>
+        <location file="src/api/networking/Server.h" line="40" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="76" bodyend="81"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="50" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="61" bodyend="70"/>
+        <location file="src/api/networking/Server.h" line="50" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="97" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_server_1ac9de1554cafa597ec713f3e064c3f2ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_response" kindref="compound">Response</ref> *</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="54" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="72" bodyend="93"/>
+        <location file="src/api/networking/Server.h" line="56" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="102" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="class_server_1abc0fb815029cd6a2672f24b8c66a2378" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -255,18 +255,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/api/networking/Server.h" line="56" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="95" bodyend="97"/>
+        <location file="src/api/networking/Server.h" line="58" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_1acfee03d6558370937cdc349508d3399d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Server::dispatchRequest</definition>
+        <argsstring>(Request &amp;request)</argsstring>
+        <name>dispatchRequest</name>
+        <param>
+          <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/networking/Server.h" line="60" column="1" bodyfile="src/api/networking/Server.cpp" bodystart="83" bodyend="90"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/api/networking/Server.h" line="15" column="1" bodyfile="src/api/networking/Server.h" bodystart="15" bodyend="57"/>
+    <location file="src/api/networking/Server.h" line="15" column="1" bodyfile="src/api/networking/Server.h" bodystart="15" bodyend="62"/>
     <listofallmembers>
       <member refid="class_server_1a8a6f41215b74791bbe1c1d16cb6acf3e" prot="private" virt="non-virtual"><scope>Server</scope><name>connection</name></member>
       <member refid="class_server_1a7e65fc13a3f8c009d8429ba1b78b9ca2" prot="private" virt="non-virtual"><scope>Server</scope><name>controllers</name></member>
-      <member refid="class_server_1aa9fd1e810a95407cddc0bece6b625183" prot="private" virt="non-virtual"><scope>Server</scope><name>event_handler</name></member>
+      <member refid="class_server_1acfee03d6558370937cdc349508d3399d" prot="private" virt="non-virtual"><scope>Server</scope><name>dispatchRequest</name></member>
+      <member refid="class_server_1a61e07da61d8763b85a967fb49b3de3a2" prot="private" virt="non-virtual"><scope>Server</scope><name>event_handler</name></member>
       <member refid="class_server_1aad7bf25135f467cd6dd74cae2bb951da" prot="private" virt="non-virtual"><scope>Server</scope><name>handleRequest</name></member>
       <member refid="class_server_1ac9de1554cafa597ec713f3e064c3f2ab" prot="private" virt="non-virtual"><scope>Server</scope><name>handleRequest</name></member>
       <member refid="class_server_1a7f083ca011556b40eccca5ff694776e7" prot="private" virt="non-virtual"><scope>Server</scope><name>localIp</name></member>

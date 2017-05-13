@@ -134,6 +134,20 @@
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>key<sp/>=<sp/>method<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/>url;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>routes.find(key)<sp/>!=<sp/>routes.end();</highlight></codeline>
 <codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_controller_1a88c3e72cbf6e8f9a4843a067e4723c8c" kindref="member">Controller::setElementId</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>elementIdString;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/>found<sp/>=<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>().rfind(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(found<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elementIdString<sp/>=<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>().substr(found<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request.<ref refid="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" kindref="member">setElementId</ref>(std::stoi(elementIdString));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(...)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::get(</highlight><highlight class="stringliteral">&quot;console&quot;</highlight><highlight class="normal">)-&gt;warn(</highlight><highlight class="stringliteral">&quot;Couldn&apos;t<sp/>set<sp/>{}<sp/>as<sp/>int<sp/>element<sp/>id&quot;</highlight><highlight class="normal">,<sp/>elementIdString);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request.<ref refid="class_request_1a5d44421204028633e4eae9bb19328057" kindref="member">setElementIdString</ref>(elementIdString);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/api/controllers/Controller.cpp"/>
   </compounddef>

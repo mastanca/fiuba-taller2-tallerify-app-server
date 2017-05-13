@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Request &mdash; Tallerify App Server 0.2.0 documentation</title>
+  <title>Request &mdash; Tallerify App Server 0.2.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Tallerify App Server 0.2.0 documentation" href="../../index.html"/>
+    <link rel="top" title="Tallerify App Server 0.2.1 documentation" href="../../index.html"/>
         <link rel="next" title="Response" href="response.html"/>
         <link rel="prev" title="TracksController" href="tracks_controller.html"/> 
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.2.1
               </div>
             
           
@@ -186,6 +186,21 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N7Request7RequestEP13mg_connectioniPv">
+<span id="Request::Request__mg_connectionP.i.voidP"></span><span class="target" id="tallerify_app_serverclass_request_1a18eac53d1c3271949bc437a9fc59eb8d"></span><code class="descname">Request</code><span class="sig-paren">(</span>mg_connection *<em>connection</em>, int <em>event</em>, void *<em>eventData</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N7Request7RequestEP13mg_connectioniPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#tallerify_app_serverclass_request"><span class="std std-ref">Request</span></a> constructor for multipart requests <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">connection</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">event</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">eventData</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N7RequestD0Ev">
 <span id="Request::~Request"></span><span class="target" id="tallerify_app_serverclass_request_1a4d57c725686701f773eb3630630a7ea2"></span><code class="descname">~Request</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N7RequestD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><a class="reference internal" href="#tallerify_app_serverclass_request"><span class="std std-ref">Request</span></a> destroyer </p>
@@ -270,6 +285,69 @@
 </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv2NK7Request13getConnectionEv">
+<span id="Request::getConnectionC"></span><span class="target" id="tallerify_app_serverclass_request_1ae9f922fbd88f6af79cc17a9bff246607"></span>mg_connection *<code class="descname">getConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK7Request13getConnectionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the associated connection <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the connection </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK7Request14getHttpMessageEv">
+<span id="Request::getHttpMessageC"></span><span class="target" id="tallerify_app_serverclass_request_1a60a3e5d7449321bcc5ad0d0e5457f5bd"></span>http_message *<code class="descname">getHttpMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK7Request14getHttpMessageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the original http message <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the http message </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK7Request18getElementIdStringEv">
+<span id="Request::getElementIdStringC"></span><span class="target" id="tallerify_app_serverclass_request_1a4be2ede697baa3c864ee25949a772d2f"></span><em class="property">const</em> std::string &amp;<code class="descname">getElementIdString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK7Request18getElementIdStringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the element id as string <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>element id as string </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N7Request18setElementIdStringERKNSt6stringE">
+<span id="Request::setElementIdString__ssCR"></span><span class="target" id="tallerify_app_serverclass_request_1a5d44421204028633e4eae9bb19328057"></span>void <code class="descname">setElementIdString</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>elementIdString</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N7Request18setElementIdStringERKNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the elementId as a string <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">elementIdString</span></code>: to set </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK7Request8getEventEv">
+<span id="Request::getEventC"></span><span class="target" id="tallerify_app_serverclass_request_1a7433cace2f6288d8e65c7e2529c741f8"></span>int <code class="descname">getEvent</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK7Request8getEventEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Event getter <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the event code </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK7Request12getEventDataEv">
+<span id="Request::getEventDataC"></span><span class="target" id="tallerify_app_serverclass_request_1a56e3fcb4f829a5d23f4e1e7510ff2f05"></span>void *<code class="descname">getEventData</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK7Request12getEventDataEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Event data getter <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the event data as void* </dd>
+</dl>
+</p>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -319,7 +397,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.2.0',
+            VERSION:'0.2.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

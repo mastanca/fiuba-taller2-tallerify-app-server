@@ -7,58 +7,64 @@
     <includedby refid="_controller_8h" local="yes">src/api/controllers/Controller.h</includedby>
     <includedby refid="_request_8cpp" local="yes">src/api/networking/Request.cpp</includedby>
     <incdepgraph>
-      <node id="152">
+      <node id="185">
         <label>src/api/networking/Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="153" relation="include">
+        <childnode refid="186" relation="include">
         </childnode>
-        <childnode refid="154" relation="include">
+        <childnode refid="187" relation="include">
         </childnode>
       </node>
-      <node id="155">
+      <node id="188">
         <label>string</label>
       </node>
-      <node id="156">
+      <node id="189">
         <label>map</label>
       </node>
-      <node id="154">
+      <node id="187">
         <label>Response.h</label>
         <link refid="_response_8h"/>
-        <childnode refid="155" relation="include">
+        <childnode refid="188" relation="include">
         </childnode>
-        <childnode refid="156" relation="include">
+        <childnode refid="189" relation="include">
         </childnode>
       </node>
-      <node id="153">
+      <node id="186">
         <label>mongoose/mongoose.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="157">
+      <node id="190">
         <label>src/api/networking/Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="158" relation="include">
+        <childnode refid="191" relation="include">
         </childnode>
       </node>
-      <node id="158">
+      <node id="191">
         <label>src/api/controllers/Controller.h</label>
         <link refid="_controller_8h"/>
-        <childnode refid="159" relation="include">
+        <childnode refid="192" relation="include">
         </childnode>
-        <childnode refid="160" relation="include">
+        <childnode refid="193" relation="include">
         </childnode>
-        <childnode refid="161" relation="include">
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
         </childnode>
       </node>
-      <node id="160">
+      <node id="194">
         <label>src/api/controllers/TracksController.h</label>
         <link refid="_tracks_controller_8h"/>
       </node>
-      <node id="161">
+      <node id="195">
         <label>src/api/networking/Server.h</label>
         <link refid="_server_8h"/>
       </node>
-      <node id="159">
+      <node id="193">
+        <label>src/api/controllers/PlayController.h</label>
+        <link refid="_play_controller_8h"/>
+      </node>
+      <node id="192">
         <label>src/api/controllers/PingController.h</label>
         <link refid="_ping_controller_8h"/>
       </node>
@@ -82,35 +88,53 @@
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_request_1a135fd74afd31ea5b1934456cd17dbfba" kindref="member">Request</ref>(mg_connection<sp/>*connection,<sp/>http_message<sp/>*httpMessage);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_request_1a4d57c725686701f773eb3630630a7ea2" kindref="member">~Request</ref>();</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1a1858382756bc45a009856c3158402278" kindref="member">writeResponse</ref>(<ref refid="class_response" kindref="compound">Response</ref><sp/>*response);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1ad88074d323ab7bef3182a5108b8ba387" kindref="member">getBody</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_request_1a7f7e7e642947164fab1440d42de239f8" kindref="member">getElementId</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" kindref="member">setElementId</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elementId);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1ab48497486f7a2f86a5354576d66e3472" kindref="member">setUrl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_connection<sp/>*connection;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>url;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>body;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>httpVerb;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elementId;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_request_1a135fd74afd31ea5b1934456cd17dbfba" kindref="member">Request</ref>(mg_connection<sp/>*connection,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*eventData);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_request_1a4d57c725686701f773eb3630630a7ea2" kindref="member">~Request</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1a1858382756bc45a009856c3158402278" kindref="member">writeResponse</ref>(<ref refid="class_response" kindref="compound">Response</ref><sp/>*response);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1ad88074d323ab7bef3182a5108b8ba387" kindref="member">getBody</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_request_1a7f7e7e642947164fab1440d42de239f8" kindref="member">getElementId</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" kindref="member">setElementId</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elementId);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1ab48497486f7a2f86a5354576d66e3472" kindref="member">setUrl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;url);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parseMessage(http_message<sp/>*httpMessage);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_REQUEST_H</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_connection<sp/>*<ref refid="class_request_1ae9f922fbd88f6af79cc17a9bff246607" kindref="member">getConnection</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>http_message<sp/>*<ref refid="class_request_1a60a3e5d7449321bcc5ad0d0e5457f5bd" kindref="member">getHttpMessage</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="class_request_1a4be2ede697baa3c864ee25949a772d2f" kindref="member">getElementIdString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_request_1a5d44421204028633e4eae9bb19328057" kindref="member">setElementIdString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;elementIdString);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_request_1a7433cace2f6288d8e65c7e2529c741f8" kindref="member">getEvent</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="class_request_1a56e3fcb4f829a5d23f4e1e7510ff2f05" kindref="member">getEventData</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_connection<sp/>*connection;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>http_message<sp/>*httpMessage;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>url;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>body;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>httpVerb;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elementId;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>elementIdString;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*eventData;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parseMessage(http_message<sp/>*httpMessage);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_REQUEST_H</highlight></codeline>
     </programlisting>
     <location file="src/api/networking/Request.h"/>
   </compounddef>

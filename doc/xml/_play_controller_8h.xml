@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_play_controller_8h" kind="file" language="C++">
+    <compoundname>PlayController.h</compoundname>
+    <includes local="no">regex</includes>
+    <includes refid="_controller_8h" local="yes">Controller.h</includes>
+    <includes refid="_j_s_o_n_response_8h" local="yes">../networking/JSONResponse.h</includes>
+    <includedby refid="_play_controller_8cpp" local="yes">src/api/controllers/PlayController.cpp</includedby>
+    <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
+    <incdepgraph>
+      <node id="77">
+        <label>../networking/Request.h</label>
+        <link refid="_request_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>jsoncpp/json/json.h</label>
+      </node>
+      <node id="76">
+        <label>Controller.h</label>
+        <link refid="_controller_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>string</label>
+      </node>
+      <node id="81">
+        <label>map</label>
+      </node>
+      <node id="75">
+        <label>regex</label>
+      </node>
+      <node id="82">
+        <label>mongoose/RequestHandler.h</label>
+      </node>
+      <node id="79">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>vector</label>
+      </node>
+      <node id="78">
+        <label>mongoose/mongoose.h</label>
+      </node>
+      <node id="74">
+        <label>src/api/controllers/PlayController.h</label>
+        <link refid="_play_controller_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>../networking/JSONResponse.h</label>
+        <link refid="_j_s_o_n_response_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_play_controller" prot="public">PlayController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_PLAYCONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIUBA_TALLER2_TALLERIFY_APP_SERVER_PLAYCONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_controller_8h" kindref="compound">Controller.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../networking/JSONResponse.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_play_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_play_controller" kindref="compound">PlayController</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_controller" kindref="compound">Controller</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_play_controller_1a6e8eab99df20a4fe2f4d3b69733f8cdf" kindref="member">PlayController</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_play_controller_1a5bfb14e8ddddcad0d7da7a657d072351" kindref="member">~PlayController</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_play_controller_1ae7796954d350d9650e1f4ac1a27f185c" kindref="member">handles</ref>(std::string<sp/>method,<sp/>std::string<sp/>url);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*<ref refid="class_play_controller_1a2bf13cc7b18180c4e5e8facc78dd70f3" kindref="member">process</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::regex<sp/>playRegex;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_PLAYCONTROLLER_H</highlight></codeline>
+    </programlisting>
+    <location file="src/api/controllers/PlayController.h"/>
+  </compounddef>
+</doxygen>

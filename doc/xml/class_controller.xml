@@ -3,6 +3,7 @@
   <compounddef id="class_controller" kind="class" language="C++" prot="public">
     <compoundname>Controller</compoundname>
     <derivedcompoundref refid="class_ping_controller" prot="public" virt="non-virtual">PingController</derivedcompoundref>
+    <derivedcompoundref refid="class_play_controller" prot="public" virt="non-virtual">PlayController</derivedcompoundref>
     <derivedcompoundref refid="class_tracks_controller" prot="public" virt="non-virtual">TracksController</derivedcompoundref>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" prot="protected" static="no" mutable="no">
@@ -64,6 +65,7 @@
         <definition>Response * Controller::process</definition>
         <argsstring>(Request &amp;request)</argsstring>
         <name>process</name>
+        <reimplementedby refid="class_play_controller_1a2bf13cc7b18180c4e5e8facc78dd70f3">process</reimplementedby>
         <reimplementedby refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95">process</reimplementedby>
         <param>
           <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
@@ -164,6 +166,7 @@
         <definition>bool Controller::handles</definition>
         <argsstring>(std::string method, std::string url)</argsstring>
         <name>handles</name>
+        <reimplementedby refid="class_play_controller_1ae7796954d350d9650e1f4ac1a27f185c">handles</reimplementedby>
         <reimplementedby refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc">handles</reimplementedby>
         <param>
           <type>std::string</type>
@@ -198,14 +201,47 @@
         <location file="src/api/controllers/Controller.h" line="55" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="47" bodyend="50"/>
       </memberdef>
       </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_controller_1a88c3e72cbf6e8f9a4843a067e4723c8c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::setElementId</definition>
+        <argsstring>(Request &amp;request)</argsstring>
+        <name>setElementId</name>
+        <param>
+          <type><ref refid="class_request" kindref="compound">Request</ref> &amp;</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the element id of the request <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to set it&apos;s element id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/api/controllers/Controller.h" line="65" column="1" bodyfile="src/api/controllers/Controller.cpp" bodystart="52" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="2">
+      <node id="3">
         <label>TracksController</label>
         <link refid="class_tracks_controller"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PlayController</label>
+        <link refid="class_play_controller"/>
         <childnode refid="0" relation="public-inheritance">
         </childnode>
       </node>
@@ -220,7 +256,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="src/api/controllers/Controller.h" line="14" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="14" bodyend="60"/>
+    <location file="src/api/controllers/Controller.h" line="14" column="1" bodyfile="src/api/controllers/Controller.h" bodystart="14" bodyend="66"/>
     <listofallmembers>
       <member refid="class_controller_1abe812429430dca0aae5b09b4b304af26" prot="public" virt="non-virtual"><scope>Controller</scope><name>addRoute</name></member>
       <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" virt="non-virtual"><scope>Controller</scope><name>Controller</name></member>
@@ -228,6 +264,7 @@
       <member refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" prot="public" virt="virtual"><scope>Controller</scope><name>process</name></member>
       <member refid="class_controller_1a8f3775d9453ff7db9e88781bcffbae95" prot="protected" virt="non-virtual"><scope>Controller</scope><name>routes</name></member>
       <member refid="class_controller_1a53ed1daa58f8458d71a5526e6fe6fcb6" prot="public" virt="non-virtual"><scope>Controller</scope><name>serverInternalError</name></member>
+      <member refid="class_controller_1a88c3e72cbf6e8f9a4843a067e4723c8c" prot="protected" virt="non-virtual"><scope>Controller</scope><name>setElementId</name></member>
       <member refid="class_controller_1acbabc355661618f30e04c613ae8b3340" prot="protected" virt="non-virtual"><scope>Controller</scope><name>urls</name></member>
       <member refid="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" virt="virtual"><scope>Controller</scope><name>~Controller</name></member>
     </listofallmembers>

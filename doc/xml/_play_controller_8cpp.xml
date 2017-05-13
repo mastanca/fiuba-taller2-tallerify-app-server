@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_play_controller_8cpp" kind="file" language="C++">
+    <compoundname>PlayController.cpp</compoundname>
+    <includes refid="_play_controller_8h" local="yes">PlayController.h</includes>
+    <includes refid="_constants_8h" local="yes">../config/Constants.h</includes>
+    <incdepgraph>
+      <node id="63">
+        <label>../networking/Request.h</label>
+        <link refid="_request_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>jsoncpp/json/json.h</label>
+      </node>
+      <node id="62">
+        <label>Controller.h</label>
+        <link refid="_controller_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>src/api/controllers/PlayController.cpp</label>
+        <link refid="_play_controller_8cpp"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>string</label>
+      </node>
+      <node id="67">
+        <label>map</label>
+      </node>
+      <node id="61">
+        <label>regex</label>
+      </node>
+      <node id="72">
+        <label>../config/Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+      <node id="68">
+        <label>mongoose/RequestHandler.h</label>
+      </node>
+      <node id="65">
+        <label>Response.h</label>
+        <link refid="_response_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>vector</label>
+      </node>
+      <node id="64">
+        <label>mongoose/mongoose.h</label>
+      </node>
+      <node id="60">
+        <label>PlayController.h</label>
+        <link refid="_play_controller_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>../networking/JSONResponse.h</label>
+        <link refid="_j_s_o_n_response_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_play_controller_8h" kindref="compound">PlayController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../config/Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="class_play_controller_1a6e8eab99df20a4fe2f4d3b69733f8cdf" kindref="member">PlayController::PlayController</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>playRegex<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/play/.*\\.mp3$&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_controller_1abe812429430dca0aae5b09b4b304af26" kindref="member">addRoute</ref>(HTTP_GET,<sp/></highlight><highlight class="stringliteral">&quot;/play/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;PlayController,<sp/>JSONResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_play_controller_1aa4b6c3587405fd3429d13a0fd6b47edf" kindref="member">PlayController::get</ref>));</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="class_play_controller_1a5bfb14e8ddddcad0d7da7a657d072351" kindref="member">PlayController::~PlayController</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_play_controller_1ae7796954d350d9650e1f4ac1a27f185c" kindref="member">PlayController::handles</ref>(std::string<sp/>method,<sp/>std::string<sp/>url)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>method<sp/>==<sp/>HTTP_GET<sp/>&amp;&amp;<sp/>std::regex_match(url,<sp/>playRegex);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="class_response" kindref="compound">Response</ref><sp/>*<ref refid="class_play_controller_1a2bf13cc7b18180c4e5e8facc78dd70f3" kindref="member">PlayController::process</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*response<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/><ref refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kindref="member">Controller::process</ref>(request);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!response<sp/>&amp;&amp;<sp/>request.<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>()<sp/>==<sp/>HTTP_GET)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It&apos;s<sp/>a<sp/>play<sp/>track</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_controller_1a88c3e72cbf6e8f9a4843a067e4723c8c" kindref="member">setElementId</ref>(request);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request.<ref refid="class_request_1ab48497486f7a2f86a5354576d66e3472" kindref="member">setUrl</ref>(</highlight><highlight class="stringliteral">&quot;/play/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/><ref refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kindref="member">Controller::process</ref>(request);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>response;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_play_controller_1aa4b6c3587405fd3429d13a0fd6b47edf" kindref="member">PlayController::get</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>fileLocation<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;../music/&quot;</highlight><highlight class="normal"><sp/>+<sp/>request.<ref refid="class_request_1a4be2ede697baa3c864ee25949a772d2f" kindref="member">getElementIdString</ref>();<sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Check<sp/>in<sp/>compose<sp/>the<sp/>location</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>mg_http_serve_file(request.<ref refid="class_request_1ae9f922fbd88f6af79cc17a9bff246607" kindref="member">getConnection</ref>(),<sp/>request.<ref refid="class_request_1a60a3e5d7449321bcc5ad0d0e5457f5bd" kindref="member">getHttpMessage</ref>(),<sp/>fileLocation.c_str(),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mg_mk_str(</highlight><highlight class="stringliteral">&quot;audio/mpeg3&quot;</highlight><highlight class="normal">),<sp/>mg_mk_str(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/api/controllers/PlayController.cpp"/>
+  </compounddef>
+</doxygen>
