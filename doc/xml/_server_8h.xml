@@ -8,55 +8,55 @@
     <includedby refid="main_8cpp" local="yes">src/api/main.cpp</includedby>
     <includedby refid="_server_8cpp" local="yes">src/api/networking/Server.cpp</includedby>
     <incdepgraph>
-      <node id="201">
+      <node id="237">
         <label>../networking/Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="199" relation="include">
+        <childnode refid="235" relation="include">
         </childnode>
-        <childnode refid="202" relation="include">
+        <childnode refid="238" relation="include">
         </childnode>
       </node>
-      <node id="200">
+      <node id="236">
         <label>../controllers/Controller.h</label>
         <link refid="_controller_8h"/>
-        <childnode refid="201" relation="include">
+        <childnode refid="237" relation="include">
         </childnode>
-        <childnode refid="205" relation="include">
+        <childnode refid="241" relation="include">
         </childnode>
-        <childnode refid="198" relation="include">
+        <childnode refid="234" relation="include">
         </childnode>
       </node>
-      <node id="197">
+      <node id="233">
         <label>src/api/networking/Server.h</label>
         <link refid="_server_8h"/>
-        <childnode refid="198" relation="include">
+        <childnode refid="234" relation="include">
         </childnode>
-        <childnode refid="199" relation="include">
+        <childnode refid="235" relation="include">
         </childnode>
-        <childnode refid="200" relation="include">
+        <childnode refid="236" relation="include">
         </childnode>
       </node>
-      <node id="203">
+      <node id="239">
         <label>string</label>
       </node>
-      <node id="204">
+      <node id="240">
         <label>map</label>
       </node>
-      <node id="205">
+      <node id="241">
         <label>mongoose/RequestHandler.h</label>
       </node>
-      <node id="202">
+      <node id="238">
         <label>Response.h</label>
         <link refid="_response_8h"/>
-        <childnode refid="203" relation="include">
+        <childnode refid="239" relation="include">
         </childnode>
-        <childnode refid="204" relation="include">
+        <childnode refid="240" relation="include">
         </childnode>
       </node>
-      <node id="198">
+      <node id="234">
         <label>vector</label>
       </node>
-      <node id="199">
+      <node id="235">
         <label>mongoose/mongoose.h</label>
       </node>
     </incdepgraph>
@@ -97,15 +97,20 @@
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleRequest(mg_connection<sp/>*connection,<sp/>http_message<sp/>*message);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>event_handler(mg_connection<sp/>*c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ev,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>handleRequest(mg_connection<sp/>*connection,<sp/>int<sp/>event,<sp/>void<sp/>*event_data);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*handleRequest(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>event_handler(mg_connection<sp/>*new_connection,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*event_data);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>registerController(<ref refid="class_controller" kindref="compound">Controller</ref><sp/>*controller);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*handleRequest(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>registerController(<ref refid="class_controller" kindref="compound">Controller</ref><sp/>*controller);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_SERVER_H</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dispatchRequest(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//FIUBA_TALLER2_TALLERIFY_APP_SERVER_SERVER_H</highlight></codeline>
     </programlisting>
     <location file="src/api/networking/Server.h"/>
   </compounddef>

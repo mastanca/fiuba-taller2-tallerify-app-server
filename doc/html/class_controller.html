@@ -60,6 +60,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_controller-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -73,7 +74,8 @@ Inheritance diagram for Controller:</div>
   <img src="class_controller.png" usemap="#Controller_map" alt=""/>
   <map id="Controller_map" name="Controller_map">
 <area href="class_ping_controller.html" alt="PingController" shape="rect" coords="0,56,106,80"/>
-<area href="class_tracks_controller.html" alt="TracksController" shape="rect" coords="116,56,222,80"/>
+<area href="class_play_controller.html" alt="PlayController" shape="rect" coords="116,56,222,80"/>
+<area href="class_tracks_controller.html" alt="TracksController" shape="rect" coords="232,56,338,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -91,6 +93,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abe812429430dca0aae5b09b4b304af26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c8c0a4a4e853a3b33c1afcf55795f51"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a0c8c0a4a4e853a3b33c1afcf55795f51">handles</a> (std::string method, std::string url)</td></tr>
 <tr class="separator:a0c8c0a4a4e853a3b33c1afcf55795f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a88c3e72cbf6e8f9a4843a067e4723c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a88c3e72cbf6e8f9a4843a067e4723c8c">setElementId</a> (<a class="el" href="class_request.html">Request</a> &amp;request)</td></tr>
+<tr class="separator:a88c3e72cbf6e8f9a4843a067e4723c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -231,7 +238,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if it handles, false otherwise </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_tracks_controller.html#aa1f0de3363e99ea1bdc2837c2f7ca0dc">TracksController</a>.</p>
+<p>Reimplemented in <a class="el" href="class_tracks_controller.html#aa1f0de3363e99ea1bdc2837c2f7ca0dc">TracksController</a>, and <a class="el" href="class_play_controller.html#ae7796954d350d9650e1f4ac1a27f185c">PlayController</a>.</p>
 
 </div>
 </div>
@@ -266,7 +273,7 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>built response, with status code </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_tracks_controller.html#a56e1207a64480a2d10befdfc55f6ab95">TracksController</a>.</p>
+<p>Reimplemented in <a class="el" href="class_tracks_controller.html#a56e1207a64480a2d10befdfc55f6ab95">TracksController</a>, and <a class="el" href="class_play_controller.html#a2bf13cc7b18180c4e5e8facc78dd70f3">PlayController</a>.</p>
 
 </div>
 </div>
@@ -292,6 +299,38 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>500 status code response </dd></dl>
+
+</div>
+</div>
+<a id="a88c3e72cbf6e8f9a4843a067e4723c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c3e72cbf6e8f9a4843a067e4723c8c">&#9670;&nbsp;</a></span>setElementId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Controller::setElementId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_request.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the element id of the request </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>to set it's element id </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

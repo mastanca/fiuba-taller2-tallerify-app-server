@@ -4,23 +4,45 @@
 #include "../controllers/PingController.h"
 #include "../config/Constants.h"
 #include "../controllers/TracksController.h"
+#include "../controllers/PlayController.h"
 #include <spdlog/spdlog.h>
 
-void event_handler(struct mg_connection *c, int ev, void *p) {
-    if (ev == MG_EV_HTTP_REQUEST) {
-        Server *self = (Server *) c->user_data;
-        if (self != NULL) {
-            self->handleRequest(c, (http_message *) p);
-        }
+void event_handler(struct mg_connection *new_connection, int event, void *event_data) {
+    Server *self = NULL;
+    struct returnType* ret;
+    switch (event) {
+        case MG_EV_HTTP_REQUEST:
+            spdlog::get("console")->info("Got new request");
+            self = (Server *) new_connection->user_data;
+            if (self != NULL) {
+                self->handleRequest(new_connection, (http_message *) event_data);
+            }
+            break;
+        case MG_EV_HTTP_PART_BEGIN:
+        case MG_EV_HTTP_PART_DATA:
+            mg_file_upload_handler(new_connection, event, event_data, TracksController::upload_fname);
+            break;
+        case MG_EV_HTTP_PART_END:
+            self = (Server *) new_connection->user_data;
+            ret = mg_file_upload_handler(new_connection, event, event_data, TracksController::upload_fname);
+            if (self != NULL) {
+                ((TracksController*)self->controllers.back())->post(ret->trackId, ret->filename);
+            }
+            free(ret);
+            break;
+        default:
+            break;
     }
 }
 
 Server::Server(int port, std::string ip) : server(NULL), connection(NULL), port(port), localIp(ip), running(false) {
     // Initialize controllers
     PingController *pingController = new PingController();
+    PlayController *playController = new PlayController();
     TracksController *tracksController = new TracksController();
     registerController(pingController);
     registerController(tracksController);
+    registerController(playController);
 }
 
 Server::~Server() {
@@ -58,15 +80,23 @@ void Server::stop() {
     }
 }
 
-void Server::handleRequest(mg_connection *connection, http_message *message) {
-    Request request(connection, message);
-
+void Server::dispatchRequest(Request &request) {
     Response *response = handleRequest(request);
 
     if (response != NULL) {
         request.writeResponse(response);
         delete response;
     }
+}
+
+/*void Server::handleRequest(mg_connection *connection, int event, void *event_data) {
+    Request request(connection, event, event_data);
+    dispatchRequest(request);
+}*/
+
+void Server::handleRequest(mg_connection *connection, http_message *message) {
+    Request request(connection, message);
+    dispatchRequest(request);
 }
 
 Response *Server::handleRequest(Request &request) {

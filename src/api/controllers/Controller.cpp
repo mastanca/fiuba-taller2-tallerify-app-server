@@ -48,3 +48,17 @@ bool Controller::handles(std::string method, std::string url) {
     std::string key = method + ":" + url;
     return routes.find(key) != routes.end();
 }
+
+void Controller::setElementId(Request &request) {
+    std::string elementIdString;
+    std::size_t found = request.getUrl().rfind("/");
+    if (found != std::string::npos) {
+        elementIdString = request.getUrl().substr(found + 1);
+        try {
+            request.setElementId(std::stoi(elementIdString));
+        } catch (...) {
+            spdlog::get("console")->warn("Couldn't set {} as int element id", elementIdString);
+        }
+        request.setElementIdString(elementIdString);
+    }
+}

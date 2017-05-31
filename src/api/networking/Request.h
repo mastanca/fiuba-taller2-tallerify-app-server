@@ -22,6 +22,14 @@ public:
     Request(mg_connection *connection, http_message *httpMessage);
 
     /**
+     * Request constructor for multipart requests
+     * @param connection
+     * @param event
+     * @param eventData
+     */
+    Request(mg_connection *connection, int event, void *eventData);
+
+    /**
      * Request destroyer
      */
     virtual ~Request();
@@ -68,13 +76,53 @@ public:
      */
     void setUrl(const std::string &url);
 
+    /**
+     * Get the associated connection
+     * @return the connection
+     */
+    mg_connection *getConnection() const;
+
+    /**
+     * Get the original http message
+     * @return the http message
+     */
+    http_message *getHttpMessage() const;
+
+    /**
+     * Get the element id as string
+     * @return element id as string
+     */
+    const std::string &getElementIdString() const;
+
+    /**
+     * Set the elementId as a string
+     * @param elementIdString to set
+     */
+    void setElementIdString(const std::string &elementIdString);
+
+    /**
+     * Event getter
+     * @return the event code
+     */
+    int getEvent() const;
+
+    /**
+     * Event data getter
+     * @return the event data as void*
+     */
+    void *getEventData() const;
+
+
 private:
     mg_connection *connection;
+    http_message *httpMessage;
     std::string url;
     std::string body;
     std::string httpVerb;
     int elementId;
-private:
+    std::string elementIdString;
+    int event;
+    void *eventData;
 
     void parseMessage(http_message *httpMessage);
 };

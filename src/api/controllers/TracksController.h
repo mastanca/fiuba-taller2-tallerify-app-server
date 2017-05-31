@@ -47,13 +47,23 @@ public:
 
     /**
      * Post a track to create it
-     * @param request with the song
-     * @param response ok if track was saved, 500 otherwise
+     * @param trackId
+     * @param filename
      */
-    void post(Request &request, JSONResponse &response);
+    void post(int trackId, const char* filename);
+
+    /**
+     * Sets the filename of the file being uploaded
+     * @param fileName
+     */
+    void setFileName(const char *fileName);
+
+    static struct mg_str upload_fname(struct mg_connection *c, struct mg_str file_name);
+
 
 private:
     std::regex tracksRegex;
+    std::string fileName;
 };
 
 

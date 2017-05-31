@@ -7,110 +7,110 @@
     <includes refid="_constants_8h" local="yes">../config/Constants.h</includes>
     <includes refid="_mongo_dao_8h" local="yes">../dao/MongoDao.h</includes>
     <incdepgraph>
-      <node id="62">
+      <node id="91">
         <label>../networking/Request.h</label>
         <link refid="_request_8h"/>
-        <childnode refid="63" relation="include">
+        <childnode refid="92" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="93" relation="include">
         </childnode>
       </node>
-      <node id="70">
+      <node id="99">
         <label>jsoncpp/json/json.h</label>
       </node>
-      <node id="61">
+      <node id="90">
         <label>Controller.h</label>
         <link refid="_controller_8h"/>
-        <childnode refid="62" relation="include">
+        <childnode refid="91" relation="include">
         </childnode>
-        <childnode refid="67" relation="include">
+        <childnode refid="96" relation="include">
         </childnode>
-        <childnode refid="68" relation="include">
+        <childnode refid="97" relation="include">
         </childnode>
       </node>
-      <node id="60">
+      <node id="89">
         <label>TracksController.h</label>
         <link refid="_tracks_controller_8h"/>
-        <childnode refid="61" relation="include">
+        <childnode refid="90" relation="include">
         </childnode>
-        <childnode refid="69" relation="include">
+        <childnode refid="98" relation="include">
         </childnode>
-        <childnode refid="71" relation="include">
+        <childnode refid="100" relation="include">
         </childnode>
       </node>
-      <node id="65">
+      <node id="94">
         <label>string</label>
       </node>
-      <node id="66">
+      <node id="95">
         <label>map</label>
       </node>
-      <node id="71">
+      <node id="100">
         <label>regex</label>
       </node>
-      <node id="72">
+      <node id="101">
         <label>../config/Constants.h</label>
         <link refid="_constants_8h"/>
       </node>
-      <node id="67">
+      <node id="96">
         <label>mongoose/RequestHandler.h</label>
       </node>
-      <node id="73">
+      <node id="102">
         <label>../dao/MongoDao.h</label>
         <link refid="_mongo_dao_8h"/>
-        <childnode refid="74" relation="include">
+        <childnode refid="103" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="104" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="105" relation="include">
         </childnode>
       </node>
-      <node id="74">
+      <node id="103">
         <label>mongocxx/database.hpp</label>
       </node>
-      <node id="59">
+      <node id="88">
         <label>spdlog/spdlog.h</label>
       </node>
-      <node id="58">
+      <node id="87">
         <label>src/api/controllers/TracksController.cpp</label>
         <link refid="_tracks_controller_8cpp"/>
-        <childnode refid="59" relation="include">
+        <childnode refid="88" relation="include">
         </childnode>
-        <childnode refid="60" relation="include">
+        <childnode refid="89" relation="include">
         </childnode>
-        <childnode refid="72" relation="include">
+        <childnode refid="101" relation="include">
         </childnode>
-        <childnode refid="73" relation="include">
+        <childnode refid="102" relation="include">
         </childnode>
       </node>
-      <node id="64">
+      <node id="93">
         <label>Response.h</label>
         <link refid="_response_8h"/>
-        <childnode refid="65" relation="include">
+        <childnode refid="94" relation="include">
         </childnode>
-        <childnode refid="66" relation="include">
+        <childnode refid="95" relation="include">
         </childnode>
       </node>
-      <node id="68">
+      <node id="97">
         <label>vector</label>
       </node>
-      <node id="63">
+      <node id="92">
         <label>mongoose/mongoose.h</label>
       </node>
-      <node id="76">
+      <node id="105">
         <label>../domain/Track.h</label>
         <link refid="_track_8h"/>
-        <childnode refid="65" relation="include">
+        <childnode refid="94" relation="include">
         </childnode>
       </node>
-      <node id="69">
+      <node id="98">
         <label>../networking/JSONResponse.h</label>
         <link refid="_j_s_o_n_response_8h"/>
-        <childnode refid="70" relation="include">
+        <childnode refid="99" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="93" relation="include">
         </childnode>
       </node>
-      <node id="75">
+      <node id="104">
         <label>mongocxx/instance.hpp</label>
       </node>
     </incdepgraph>
@@ -126,56 +126,71 @@
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../config/Constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../dao/MongoDao.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><ref refid="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" kindref="member">TracksController::TracksController</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>tracksRegex<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/tracks/.*&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_controller_1abe812429430dca0aae5b09b4b304af26" kindref="member">addRoute</ref>(HTTP_GET,<sp/></highlight><highlight class="stringliteral">&quot;/tracks/&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;TracksController,<sp/>JSONResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" kindref="member">TracksController::get</ref>));</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><ref refid="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" kindref="member">TracksController::~TracksController</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" kindref="member">TracksController::handles</ref>(std::string<sp/>method,<sp/>std::string<sp/>url)<sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(method<sp/>==<sp/>HTTP_GET<sp/>&amp;&amp;<sp/>url<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;/tracks&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>std::regex_match(url,<sp/>tracksRegex))<sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51" kindref="member">Controller::handles</ref>(method,<sp/>url);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">mg_str<sp/><ref refid="class_tracks_controller" kindref="compound">TracksController</ref>::upload_fname(struct<sp/>mg_connection<sp/>*c,<sp/>struct<sp/>mg_str<sp/>file_name)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>the<sp/>same<sp/>filename.<sp/>Do<sp/>not<sp/>actually<sp/>do<sp/>this<sp/>except<sp/>in<sp/>test!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fname<sp/>is<sp/>user-controlled<sp/>and<sp/>needs<sp/>to<sp/>be<sp/>sanitized.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>*</highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(</highlight><highlight class="stringliteral">&quot;../music/&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string(file_name.p));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mg_mk_str(final-&gt;c_str());</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="class_tracks_controller_1a0a06390b5b3f3b644e7e2eb6eb49cb69" kindref="member">TracksController::TracksController</ref>()<sp/>:<sp/>tracksRegex(</highlight><highlight class="stringliteral">&quot;/tracks/.*&quot;</highlight><highlight class="normal">),<sp/>fileName(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_controller_1abe812429430dca0aae5b09b4b304af26" kindref="member">addRoute</ref>(HTTP_GET,<sp/></highlight><highlight class="stringliteral">&quot;/tracks/&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RequestHandler&lt;TracksController,<sp/>JSONResponse&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" kindref="member">TracksController::get</ref>));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*addRoute(HTTP_POST,<sp/>&quot;/tracks&quot;,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new<sp/>RequestHandler&lt;TracksController,<sp/>JSONResponse&gt;(this,<sp/>&amp;TracksController::post));*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="class_tracks_controller_1af6236ccbd57548cb5ef149c361b1316c" kindref="member">TracksController::~TracksController</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><ref refid="class_response" kindref="compound">Response</ref><sp/>*<ref refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" kindref="member">TracksController::process</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request)<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*response<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/><ref refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kindref="member">Controller::process</ref>(request);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!response<sp/>&amp;&amp;<sp/>request.<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>()<sp/>==<sp/>HTTP_GET)<sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It&apos;s<sp/>a<sp/>GET<sp/>/tracks/$id</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>elementIdString;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>found<sp/>=<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>().rfind(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(found<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elementIdString<sp/>=<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>().substr(found<sp/>+<sp/>1);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request.<ref refid="class_request_1a6a5a44a249ca50f0be6414b95a48bed9" kindref="member">setElementId</ref>(std::stoi(elementIdString));</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request.<ref refid="class_request_1ab48497486f7a2f86a5354576d66e3472" kindref="member">setUrl</ref>(</highlight><highlight class="stringliteral">&quot;/tracks/&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/><ref refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kindref="member">Controller::process</ref>(request);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>response;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1aa1f0de3363e99ea1bdc2837c2f7ca0dc" kindref="member">TracksController::handles</ref>(std::string<sp/>method,<sp/>std::string<sp/>url)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(method<sp/>==<sp/>HTTP_GET<sp/>&amp;&amp;<sp/>url<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;/tracks&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>std::regex_match(url,<sp/>tracksRegex))<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_controller_1a0c8c0a4a4e853a3b33c1afcf55795f51" kindref="member">Controller::handles</ref>(method,<sp/>url);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="class_response" kindref="compound">Response</ref><sp/>*<ref refid="class_tracks_controller_1a56e1207a64480a2d10befdfc55f6ab95" kindref="member">TracksController::process</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_response" kindref="compound">Response</ref><sp/>*response<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/><ref refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kindref="member">Controller::process</ref>(request);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!response<sp/>&amp;&amp;<sp/>request.<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>()<sp/>==<sp/>HTTP_GET)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It&apos;s<sp/>a<sp/>GET<sp/>/tracks/$id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_controller_1a88c3e72cbf6e8f9a4843a067e4723c8c" kindref="member">setElementId</ref>(request);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request.<ref refid="class_request_1ab48497486f7a2f86a5354576d66e3472" kindref="member">setUrl</ref>(</highlight><highlight class="stringliteral">&quot;/tracks/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/><ref refid="class_controller_1afa78a73d099dc2920b22b2927f7870d6" kindref="member">Controller::process</ref>(request);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" kindref="member">TracksController::get</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mongo_dao" kindref="compound">MongoDao</ref><sp/>dao;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_track" kindref="compound">Track</ref><sp/>*track<sp/>=<sp/>dao.<ref refid="class_mongo_dao_1aeeba08599e299353ef9ff99966ce374b" kindref="member">getTrack</ref>(request.<ref refid="class_request_1a7f7e7e642947164fab1440d42de239f8" kindref="member">getElementId</ref>());</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!track)<sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response.setCode(HTTP_NOT_FOUND);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::get(</highlight><highlight class="stringliteral">&quot;console&quot;</highlight><highlight class="normal">)-&gt;warn(</highlight><highlight class="stringliteral">&quot;Response<sp/>from<sp/>{0}<sp/>{1}<sp/>was<sp/>{2}&quot;</highlight><highlight class="normal">,<sp/>request.<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>(),<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>(),</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response.getCode());</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;songId&quot;</highlight><highlight class="normal">]<sp/>=<sp/>track-&gt;<ref refid="class_track_1a496f793279d918ed573fcc1971c2d983" kindref="member">getId</ref>();</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;url&quot;</highlight><highlight class="normal">]<sp/>=<sp/>BASE_URL<sp/>+<sp/>track-&gt;<ref refid="class_track_1ac32b18dbbd331f50775368ad5b27d4f9" kindref="member">getFileLocation</ref>();<sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Get<sp/>the<sp/>real<sp/>one</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>track;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>response;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1a8694f1ebe4ac4e538a89a76dd530ed28" kindref="member">TracksController::get</ref>(<ref refid="class_request" kindref="compound">Request</ref><sp/>&amp;request,<sp/><ref refid="class_j_s_o_n_response" kindref="compound">JSONResponse</ref><sp/>&amp;response)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mongo_dao" kindref="compound">MongoDao</ref><sp/>dao;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_track" kindref="compound">Track</ref><sp/>*track<sp/>=<sp/>dao.<ref refid="class_mongo_dao_1aeeba08599e299353ef9ff99966ce374b" kindref="member">getTrack</ref>(request.<ref refid="class_request_1a7f7e7e642947164fab1440d42de239f8" kindref="member">getElementId</ref>());</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!track)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response.setCode(HTTP_NOT_FOUND);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::get(</highlight><highlight class="stringliteral">&quot;console&quot;</highlight><highlight class="normal">)-&gt;warn(</highlight><highlight class="stringliteral">&quot;Response<sp/>from<sp/>{0}<sp/>{1}<sp/>was<sp/>{2}&quot;</highlight><highlight class="normal">,<sp/>request.<ref refid="class_request_1a7f2ed8ff9dcde8f21a53449a177af6da" kindref="member">getHttpVerb</ref>(),<sp/>request.<ref refid="class_request_1a9dad00a15cff18542801289a24711930" kindref="member">getUrl</ref>(),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response.getCode());</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;trackId&quot;</highlight><highlight class="normal">]<sp/>=<sp/>track-&gt;<ref refid="class_track_1a496f793279d918ed573fcc1971c2d983" kindref="member">getId</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>response[</highlight><highlight class="stringliteral">&quot;url&quot;</highlight><highlight class="normal">]<sp/>=<sp/>BASE_URL<sp/>+<sp/>track-&gt;<ref refid="class_track_1ac32b18dbbd331f50775368ad5b27d4f9" kindref="member">getFileLocation</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>track;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1a1c2c649404dfb9d6edbb1d8facd977df" kindref="member">TracksController::post</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trackId,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setFileName(filename);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mongo_dao" kindref="compound">MongoDao</ref><sp/>dao;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_track" kindref="compound">Track</ref><sp/>*track<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_track" kindref="compound">Track</ref>(trackId,<sp/>fileName);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dao.<ref refid="class_mongo_dao_1a6e2ce85d784142a641d6945251b4746d" kindref="member">saveTrack</ref>(track);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>track;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_tracks_controller_1a5a99b4dac296c3dba50b0f732432b720" kindref="member">TracksController::setFileName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fileName)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>TracksController::fileName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/music/&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string(fileName);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/api/controllers/TracksController.cpp"/>
   </compounddef>

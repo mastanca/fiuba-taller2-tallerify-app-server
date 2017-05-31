@@ -70,6 +70,8 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a135fd74afd31ea5b1934456cd17dbfba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a135fd74afd31ea5b1934456cd17dbfba">Request</a> (mg_connection *connection, http_message *httpMessage)</td></tr>
 <tr class="separator:a135fd74afd31ea5b1934456cd17dbfba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18eac53d1c3271949bc437a9fc59eb8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a18eac53d1c3271949bc437a9fc59eb8d">Request</a> (mg_connection *connection, int event, void *eventData)</td></tr>
+<tr class="separator:a18eac53d1c3271949bc437a9fc59eb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d57c725686701f773eb3630630a7ea2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a4d57c725686701f773eb3630630a7ea2">~Request</a> ()</td></tr>
 <tr class="separator:a4d57c725686701f773eb3630630a7ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1858382756bc45a009856c3158402278"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a1858382756bc45a009856c3158402278">writeResponse</a> (<a class="el" href="class_response.html">Response</a> *response)</td></tr>
@@ -86,10 +88,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6a5a44a249ca50f0be6414b95a48bed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab48497486f7a2f86a5354576d66e3472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#ab48497486f7a2f86a5354576d66e3472">setUrl</a> (const std::string &amp;url)</td></tr>
 <tr class="separator:ab48497486f7a2f86a5354576d66e3472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f922fbd88f6af79cc17a9bff246607"><td class="memItemLeft" align="right" valign="top">mg_connection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#ae9f922fbd88f6af79cc17a9bff246607">getConnection</a> () const</td></tr>
+<tr class="separator:ae9f922fbd88f6af79cc17a9bff246607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a3e5d7449321bcc5ad0d0e5457f5bd"><td class="memItemLeft" align="right" valign="top">http_message *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a60a3e5d7449321bcc5ad0d0e5457f5bd">getHttpMessage</a> () const</td></tr>
+<tr class="separator:a60a3e5d7449321bcc5ad0d0e5457f5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be2ede697baa3c864ee25949a772d2f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a4be2ede697baa3c864ee25949a772d2f">getElementIdString</a> () const</td></tr>
+<tr class="separator:a4be2ede697baa3c864ee25949a772d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d44421204028633e4eae9bb19328057"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a5d44421204028633e4eae9bb19328057">setElementIdString</a> (const std::string &amp;elementIdString)</td></tr>
+<tr class="separator:a5d44421204028633e4eae9bb19328057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7433cace2f6288d8e65c7e2529c741f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a7433cace2f6288d8e65c7e2529c741f8">getEvent</a> () const</td></tr>
+<tr class="separator:a7433cace2f6288d8e65c7e2529c741f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e3fcb4f829a5d23f4e1e7510ff2f05"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_request.html#a56e3fcb4f829a5d23f4e1e7510ff2f05">getEventData</a> () const</td></tr>
+<tr class="separator:a56e3fcb4f829a5d23f4e1e7510ff2f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a135fd74afd31ea5b1934456cd17dbfba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a135fd74afd31ea5b1934456cd17dbfba">&#9670;&nbsp;</a></span>Request()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a135fd74afd31ea5b1934456cd17dbfba">&#9670;&nbsp;</a></span>Request() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,6 +131,48 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">connection</td><td></td></tr>
     <tr><td class="paramname">httpMessage</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a18eac53d1c3271949bc437a9fc59eb8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18eac53d1c3271949bc437a9fc59eb8d">&#9670;&nbsp;</a></span>Request() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Request::Request </td>
+          <td>(</td>
+          <td class="paramtype">mg_connection *&#160;</td>
+          <td class="paramname"><em>connection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>eventData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_request.html">Request</a> constructor for multipart requests </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connection</td><td></td></tr>
+    <tr><td class="paramname">event</td><td></td></tr>
+    <tr><td class="paramname">eventData</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -176,6 +232,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae9f922fbd88f6af79cc17a9bff246607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9f922fbd88f6af79cc17a9bff246607">&#9670;&nbsp;</a></span>getConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mg_connection * Request::getConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the associated connection </p><dl class="section return"><dt>Returns</dt><dd>the connection </dd></dl>
+
+</div>
+</div>
 <a id="a7f7e7e642947164fab1440d42de239f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f7e7e642947164fab1440d42de239f8">&#9670;&nbsp;</a></span>getElementId()</h2>
 
@@ -191,6 +265,78 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get request's element id </p><dl class="section return"><dt>Returns</dt><dd>element id </dd></dl>
+
+</div>
+</div>
+<a id="a4be2ede697baa3c864ee25949a772d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be2ede697baa3c864ee25949a772d2f">&#9670;&nbsp;</a></span>getElementIdString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Request::getElementIdString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the element id as string </p><dl class="section return"><dt>Returns</dt><dd>element id as string </dd></dl>
+
+</div>
+</div>
+<a id="a7433cace2f6288d8e65c7e2529c741f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7433cace2f6288d8e65c7e2529c741f8">&#9670;&nbsp;</a></span>getEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Request::getEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Event getter </p><dl class="section return"><dt>Returns</dt><dd>the event code </dd></dl>
+
+</div>
+</div>
+<a id="a56e3fcb4f829a5d23f4e1e7510ff2f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e3fcb4f829a5d23f4e1e7510ff2f05">&#9670;&nbsp;</a></span>getEventData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * Request::getEventData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Event data getter </p><dl class="section return"><dt>Returns</dt><dd>the event data as void* </dd></dl>
+
+</div>
+</div>
+<a id="a60a3e5d7449321bcc5ad0d0e5457f5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a3e5d7449321bcc5ad0d0e5457f5bd">&#9670;&nbsp;</a></span>getHttpMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">http_message * Request::getHttpMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the original http message </p><dl class="section return"><dt>Returns</dt><dd>the http message </dd></dl>
 
 </div>
 </div>
@@ -264,6 +410,30 @@ Public Member Functions</h2></td></tr>
 <p>Set the request's element id </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">elementId</td><td>the element id to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d44421204028633e4eae9bb19328057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d44421204028633e4eae9bb19328057">&#9670;&nbsp;</a></span>setElementIdString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Request::setElementIdString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>elementIdString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the elementId as a string </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elementIdString</td><td>to set </td></tr>
   </table>
   </dd>
 </dl>

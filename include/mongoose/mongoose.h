@@ -23,6 +23,8 @@
 #ifndef CS_MONGOOSE_SRC_COMMON_H_
 #define CS_MONGOOSE_SRC_COMMON_H_
 
+#include "../../src/api/domain/returnType.h"
+
 #define MG_VERSION "6.7"
 
 /* Local tweaks, applied before any of Mongoose's own headers. */
@@ -4722,7 +4724,7 @@ typedef struct mg_str (*mg_fu_fname_fn)(struct mg_connection *nc,
  * }
  * ```
  */
-void mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
+struct returnType* mg_file_upload_handler(struct mg_connection *nc, int ev, void *ev_data,
                             mg_fu_fname_fn local_name_fn);
 #endif /* MG_ENABLE_HTTP_STREAMING_MULTIPART */
 #endif /* MG_ENABLE_FILESYSTEM */

@@ -10,6 +10,7 @@ find_package(PythonInterp REQUIRED)
 if (CMAKE_COMPILER_IS_GNUCXX)
     add_definitions(-Wall -ansi -Wno-deprecated -pthread)
 endif ()
+add_definitions(-DMG_ENABLE_HTTP_STREAMING_MULTIPART)
 
 #-------------------
 # set common include folder for module

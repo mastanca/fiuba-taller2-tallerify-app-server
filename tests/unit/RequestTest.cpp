@@ -16,7 +16,10 @@ void RequestTest::testHttpInitialization() {
     message.uri = mg_mk_str(uri.c_str());
 
     Request request(NULL, &message);
+    request.getEventData();
     ASSERT_EQ(request.getBody(), body);
     ASSERT_EQ(request.getHttpVerb(), method);
     ASSERT_EQ(request.getUrl(), uri);
+    ASSERT_EQ(request.getEvent(), -1);
+    ASSERT_EQ(request.getElementIdString(), "");
 }
