@@ -4,8 +4,8 @@
 #include "../config/Constants.h"
 
 PlayController::PlayController() {
-    playRegex = "/play/.*\\.mp3$";
-    addRoute(HTTP_GET, "/play/", new RequestHandler<PlayController, JSONResponse>(this, &PlayController::get));
+    playRegex = "/music/.*\\.mp3$";
+    addRoute(HTTP_GET, "/music/", new RequestHandler<PlayController, JSONResponse>(this, &PlayController::get));
 }
 
 PlayController::~PlayController() {
@@ -23,7 +23,7 @@ Response *PlayController::process(Request &request) {
     if (!response && request.getHttpVerb() == HTTP_GET) {
         // It's a play track
         setElementId(request);
-        request.setUrl("/play/");
+        request.setUrl("/music/");
         response = Controller::process(request);
     }
 
@@ -31,7 +31,7 @@ Response *PlayController::process(Request &request) {
 }
 
 void PlayController::get(Request &request, JSONResponse &response) {
-    std::string fileLocation = "../music/" + request.getElementIdString(); // TODO: Check in compose the location
+    std::string fileLocation = "./music/" + request.getElementIdString(); // Compose and console run location
     mg_http_serve_file(request.getConnection(), request.getHttpMessage(), fileLocation.c_str(),
                        mg_mk_str("audio/mpeg3"), mg_mk_str(""));
 }
