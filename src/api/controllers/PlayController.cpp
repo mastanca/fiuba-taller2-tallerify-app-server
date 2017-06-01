@@ -31,7 +31,7 @@ Response *PlayController::process(Request &request) {
 }
 
 void PlayController::get(Request &request, JSONResponse &response) {
-    std::string fileLocation = "./music/" + request.getElementIdString(); // Compose and console run location
+    std::string fileLocation = "../music/" + request.getElementIdString(); // Compose and ide location
     mg_http_serve_file(request.getConnection(), request.getHttpMessage(), fileLocation.c_str(),
                        mg_mk_str("audio/mpeg3"), mg_mk_str(""));
 }
