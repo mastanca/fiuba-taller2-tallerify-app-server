@@ -7523,7 +7523,7 @@ struct returnType* mg_file_upload_handler(struct mg_connection *nc, int ev, void
       fus->lfn = (char *) malloc(lfn.len + 1);
       memcpy(fus->lfn, lfn.p, lfn.len);
       fus->lfn[lfn.len] = '\0';
-      if (lfn.p != mp->file_name) free((char *) lfn.p);
+      //if (lfn.p != mp->file_name) free((char *) lfn.p);
       LOG(LL_DEBUG,
           ("%p Receiving file %s -> %s", nc, mp->file_name, fus->lfn));
       fus->fp = mg_fopen(fus->lfn, "w");
