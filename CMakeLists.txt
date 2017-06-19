@@ -72,6 +72,7 @@ include_directories(${INCLUDE_DIR})
 link_directories(${INCLUDE_DIR})
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+install(TARGETS ${PROJECT_NAME} DESTINATION app_server)
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE ${LIBMONGOCXX_INCLUDE_DIRS}
@@ -103,3 +104,16 @@ target_link_libraries(${PROJECT_TEST_NAME}
 
 add_test(unitAndIntegrationTests ${PROJECT_TEST_NAME})
 add_test (functionalTests ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/tests/functional/api_tests.py)
+
+INCLUDE(InstallRequiredSystemLibraries)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_BINARY_DIR})
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_PACKAGE_NAME ${PROJECT_NAME})
+set(CPACK_DEBIAN_PACKAGE_VERSION "1.0.0")
+set(CPACK_PACKAGE_VERSION_MAJOR "1")
+set(CPACK_PACKAGE_VERSION_MINOR "0")
+set(CPACK_PACKAGE_VERSION_PATCH "0")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Tallerify Inc.")
+
+include(CPack)
